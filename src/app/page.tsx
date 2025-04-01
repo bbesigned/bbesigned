@@ -1,4 +1,7 @@
 import Image from 'next/image';
+
+import Sdf from 'components/example/sdf';
+
 import styles from './page.module.css';
 
 export default function Home() {
@@ -46,6 +49,7 @@ export default function Home() {
           </a>
         </div>
       </main>
+      <Sdf />
       <footer className={styles.footer}>
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"

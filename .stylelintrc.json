@@ -1,0 +1,112 @@
+{
+    "extends": [
+        "stylelint-config-standard",
+        "stylelint-config-recommended"
+    ],
+    "rules": {
+        "keyframe-declaration-no-important": true,
+        "block-no-empty": true,
+        "color-no-invalid-hex": true,
+        "font-family-no-duplicate-names": true,
+        "font-family-no-missing-generic-family-keyword": true,
+        "font-family-name-quotes": "always-unless-keyword",
+		"font-weight-notation": "numeric",
+        "unit-no-unknown": true,
+        "max-nesting-depth": 5,
+        "value-no-vendor-prefix": true,
+        "color-hex-length": "long",
+		"length-zero-no-unit": true,
+		"no-descending-specificity": null,
+		"no-duplicate-selectors": true,
+        "shorthand-property-no-redundant-values": true,
+		"string-no-newline": true,
+		"time-min-milliseconds": 10,
+		"value-keyword-case": "lower",
+        "media-feature-range-notation": "prefix",
+		"number-max-precision": 6,
+		"alpha-value-notation": "number",
+		"color-function-notation": "legacy",
+        "selector-class-pattern": null,
+		"selector-id-pattern": null,
+		"selector-max-attribute": null,
+		"selector-max-class": null,
+		"selector-max-combinators": null,
+		"selector-max-compound-selectors": null,
+		"selector-max-id": 1,
+		"selector-max-specificity": null,
+		"selector-max-type": null,
+		"selector-max-universal": null,
+		"selector-nested-pattern": null,
+		"selector-no-qualifying-type": null,
+		"selector-no-vendor-prefix": true,
+		"selector-pseudo-class-no-unknown": true,
+		"selector-pseudo-element-colon-notation": "double",
+		"selector-pseudo-element-no-unknown": true,
+		"selector-type-case": "lower",
+		"selector-type-no-unknown": true,
+        "declaration-block-no-duplicate-properties": true,
+		"declaration-block-no-redundant-longhand-properties": true,
+		"declaration-block-no-shorthand-property-overrides": true,
+        "at-rule-no-unknown": null,
+		"at-rule-no-deprecated": [
+			true,
+			{	
+				"ignoreAtRules": ["apply"]
+			}	
+		],
+		"declaration-empty-line-before": [
+			"always",
+			{
+				"except": [
+					"after-declaration",
+					"first-nested"
+				],
+				"ignore": [
+					"after-comment",
+					"inside-single-line-block"
+				]
+			}
+		],
+		"declaration-no-important": [
+			true,
+			{
+				"severity": "warning"
+			}
+		],
+        "at-rule-empty-line-before": [
+			"always",
+			{
+				"except": [
+					"blockless-after-same-name-blockless",
+					"first-nested"
+				],
+				"ignore": [
+					"after-comment"
+				],
+				"ignoreAtRules": [
+					"else"
+				]
+			}
+		],
+        "comment-empty-line-before": [
+			"always",
+			{
+				"except": [
+					"first-nested"
+				],
+				"ignore": [
+					"after-comment",
+					"stylelint-commands"
+				]
+			}
+		],
+        "comment-no-empty": true,
+		"comment-whitespace-inside": "always",
+        "no-empty-source": [
+			true,
+			{
+				"severity": "warning"
+			}
+		]
+    }
+}
