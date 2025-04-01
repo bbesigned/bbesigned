@@ -1,3 +1,3 @@
 export type ExampleType = {
-  type1: string;
+	type1: string;
 };
