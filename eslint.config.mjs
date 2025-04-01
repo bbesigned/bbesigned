@@ -20,7 +20,7 @@ export default defineConfig([
   {
     ...pluginReact.configs.flat.recommended,
     rules: {
-      "react/react-in-jsx-scope": "off", // Отключаем правило
+      "react/react-in-jsx-scope": "off",
     },
   },
   sonarjs.configs.recommended,

@@ -14,6 +14,7 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": "src",
+    "forceConsistentCasingInFileNames": false,
     "plugins": [
       {
         "name": "next"

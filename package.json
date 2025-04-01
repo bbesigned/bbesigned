@@ -7,34 +7,38 @@
     "build": "next build",
     "start": "next start",
     "prepare": "husky",
+    "lint": "next lint",
+    "lint:fix": "npm run lint -- --fix",
+    "lint:styles": "stylelint \"src/**/*.{css,scss}\"",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
-    "lint": "eslint \"src/**/*.{js,ts,tsx}\"",
-    "lint:styles": "stylelint \"src/**/*.{css,scss}\""
+    "init": "git add ."
   },
   "lint-staged": {
     "*.{ts,tsx}": "eslint --fix"
   },
   "dependencies": {
-    "next": "15.2.3",
+    "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@eslint/js": "^9.23.0",
-    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9.23.0",
-    "eslint-config-next": "15.2.3",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.4",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.5",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-sonarjs": "^3.0.2",
     "globals": "^16.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.0",
     "prettier": "^3.5.3",
-    "tailwindcss": "^4",
+    "stylelint": "^16.17.0",
+    "stylelint-config-recommended": "^15.0.0",
+    "stylelint-config-standard": "^37.0.0",
     "typescript": "^5",
     "typescript-eslint": "^8.29.0"
   }
