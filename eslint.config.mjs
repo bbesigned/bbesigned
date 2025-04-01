@@ -21,6 +21,7 @@ export default defineConfig([
     ...pluginReact.configs.flat.recommended,
     rules: {
       "react/react-in-jsx-scope": "off",
+      "@typescript-eslint/no-explicit-any": "warn"
     },
   },
   sonarjs.configs.recommended,
