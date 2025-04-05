@@ -1,14 +1,16 @@
 import { dirname } from "path";
 import { fileURLToPath } from "url";
+
 import { FlatCompat } from "@eslint/eslintrc";
-import eslintJs from '@eslint/js';
-import eslintTs from 'typescript-eslint';
+import eslintJs from "@eslint/js";
+import eslintTs from "typescript-eslint";
 import parserTs from "@typescript-eslint/parser";
 
 import eslintReact from "eslint-plugin-react";
 import eslintJsxA11y from "eslint-plugin-jsx-a11y";
 import eslintSonarjs from "eslint-plugin-sonarjs";
 import eslintPrettier from "eslint-plugin-prettier";
+import stylisticJs from "@stylistic/eslint-plugin-js";
 import eslintTypescript from "@typescript-eslint/eslint-plugin";
 import eslintImport from "eslint-plugin-import";
 
@@ -54,11 +56,11 @@ export default eslintTs.config(
             "@typescript-eslint": eslintTypescript,  
             sonarjs: eslintSonarjs, 
             "jsx-a11y": eslintJsxA11y,
+            "@stylistic/js": stylisticJs,
             prettier: eslintPrettier
         },
         rules: {
             "camelcase": "error",
-            "spaced-comment": "error",
             "quotes": ["error", "double"],
             "jsx-quotes": ["error", "prefer-double"],
             "no-duplicate-imports": "error",
@@ -66,12 +68,14 @@ export default eslintTs.config(
             "prefer-const": "warn",
             "max-len": ["error", { "code": 1200 }],
             "no-unused-vars": "warn",
+            "no-undef": "error",
             "prefer-arrow-callback": "error",
             "constructor-super": "error",
             "no-this-before-super": "error",
             "react/react-in-jsx-scope": "off",
             "react/no-unknown-property": "off",
             "react/prop-types": "off",
+            "@stylistic/js/spaced-comment": "error",
             "jsx-a11y/alt-text": "error",
             "jsx-a11y/anchor-has-content": "warn",
             "jsx-a11y/img-redundant-alt": "warn",
