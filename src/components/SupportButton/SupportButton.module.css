@@ -1,0 +1,17 @@
+.supportButton {
+	background-color: #1ed760;
+	width: 6.25rem;
+	height: 6.25rem;
+	border-radius: 50%;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.supportButton__iconElement {
+	width: 2.5rem;
+	height: 2.5rem;
+	color: #fff8f0;
+}
