@@ -1,0 +1,13 @@
+.vector-letter {
+}
+
+.vector-letter--shadow {
+    text-shadow: 0.5em 0.5em 0 rgba(230, 0, 126, 0.5);
+}
+
+.vector-letter__text {
+    font-family: "Verdana", sans-serif;
+    font-weight: bold;
+    font-size: 7.375em;
+    fill: #FFF8F0;
+}
