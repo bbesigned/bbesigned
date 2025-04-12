@@ -6,8 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "prepare": "husky",
+    "prepare": "rimraf .husky/_/pre-commit",
     "preCommit": "lint-staged",
+    "postinstall": "husky",
     "lint": "next lint",
     "lint:fix": "npm run lint -- --fix",
     "lint:styles": "stylelint 'src/**/*.{css,scss}'",
@@ -20,7 +21,6 @@
     "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0",
     "sass": "^1.86.1"
   },
   "devDependencies": {
@@ -45,6 +45,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^15.5.0",
     "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
     "stylelint": "^16.17.0",
     "stylelint-config-recommended": "^15.0.0",
     "stylelint-config-standard": "^37.0.0",
