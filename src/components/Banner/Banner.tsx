@@ -21,7 +21,7 @@ const Banner: React.FC<IBannerProps> = ({ leftText, rightText }) => {
           {rightText.map((text, index) => (
             <div key={index} className={styles["banner__right-text"]}>
               { text.split("").map((letter, letterIndex) => (
-                <VectorLetter key={letterIndex} letter={letter} withShadow={index < 2} />
+                <VectorLetter key={letterIndex} letter={letter} withShadow={index < 2} sizeSet="default"/>
               )) }
             </div>
           ))}

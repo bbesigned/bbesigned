@@ -8,4 +8,6 @@ export interface IVectorLetterProps {
   dominantBaseline?: string;
   textAnchor?: string;
   withShadow?: boolean;
+  letterSizes?: { [key: string]: string };
+  sizeSet?: "default" | "logo";
 }
