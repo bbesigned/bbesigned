@@ -1,11 +1,15 @@
 import Image from "next/image";
 
+import BannerFooter from '../components/BannerFooter/BannerFooter';
+
 import styles from "./page.module.scss";
 
 export default function Home() {
 	return (
 		<div className={styles.page}>
 			<main className={styles.main}>
+				<BannerFooter/>
+
 				<Image
 					className={styles.logo}
 					src="/next.svg"
