@@ -1,0 +1,56 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #FF2E63 0%, #FF5733 100%);
+    z-index: 1000;
+    padding: 1em 0;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 2560px;
+    margin: 0 auto;
+    padding: 2em 5em 0 5em;
+}
+
+.header__logo {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    color: #FFF8F0;
+    text-transform: uppercase;
+}
+
+.header__actions {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.header__button {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    color: #FFF8F0;
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.header__menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header__menu-icon {
+    font-size: 1.5em;
+    color: #FFF8F0;
+}
