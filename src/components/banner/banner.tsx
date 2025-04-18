@@ -1,8 +1,8 @@
 import React from "react";
 
-import VectorLetter from "../VectorLetter/VectorLetter";
+import VectorLetter from "../vector-letter/VectorLetter";
 
-import styles from "./Banner.module.css";
+import styles from "./banner.module.css";
 
 import { IBannerProps } from "./types";
 

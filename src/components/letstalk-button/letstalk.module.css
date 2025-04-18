@@ -1,5 +1,4 @@
 .letsTalk {
-
     color: white;
     font-weight: 400;
     font-size: 24px;
@@ -9,21 +8,14 @@
     border-bottom: 2px solid white;
     position: absolute;
     background: transparent;
-   
-  
-   
   }
 
   .letstalk__container {
-     background: transparent; 
-     padding: 0.5rem 1rem; 
-    left: 75%;
-    top:5%;
-    position: absolute;
-     width: 209px;
-     height: 68px;
-    top: 17,5px;
-    //  &:hover {
-    //   background-color: #1ED760;
-    // }
+      background: transparent;
+      padding: 0.5rem 1rem;
+      left: 75%;
+      top:5%;
+      position: absolute;
+      width: 209px;
+      height: 68px;
   }
