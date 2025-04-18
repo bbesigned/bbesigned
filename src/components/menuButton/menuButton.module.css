@@ -22,15 +22,15 @@
     height: 0.125rem;
     background-color: white;
     margin-bottom: 0.25rem;
-    &:not(:last-child) {
-      margin-bottom: 10px;
-    }
+  }
+
+  .hamburgerLine:not(:last-child) {
+    margin-bottom: 10px;
   }
   
   .hamburgerLine:last-child {
     margin-bottom: 0;
   }
-
 
   .burger__container{
     top: 2.6%;

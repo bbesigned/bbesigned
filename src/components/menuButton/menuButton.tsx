@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import styles from "./menubutton.module.scss";
+import styles from "./menuButton.module.css";
 
 interface IMenuButtonProps {
   onClick?: () => void;

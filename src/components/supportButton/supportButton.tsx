@@ -4,7 +4,7 @@ import React from "react";
 
 import { FaComment } from "react-icons/fa";
 
-import styles from "./SupportButton.module.css";
+import styles from "./supportButton.module.css";
 
 const SupportButton: React.FC = () => {
 	return (

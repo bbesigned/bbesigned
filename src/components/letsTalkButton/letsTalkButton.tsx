@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import styles from "./letstalk.module.css"
+import styles from "./letsTalkButton.module.css"
 
 interface ILetsTalkButtonProps {
     onClick?: () => void;

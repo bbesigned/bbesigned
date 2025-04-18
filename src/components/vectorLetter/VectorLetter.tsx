@@ -57,7 +57,7 @@ const VectorLetter: React.FC<IVectorLetterProps> = ({
 
   return (
     <svg
-      className={`${styles["vector-letter"]} ${withShadow ? styles["vector-letter--shadow"] : ""}`}
+      className={`${styles["vectorLetter"]} ${withShadow ? styles["vectorLetter--shadow"] : ""}`}
       width={letterWidth}
       height={height}
       preserveAspectRatio="xMidYMid meet"

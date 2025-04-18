@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./banner-footer.module.css";
+import styles from "./bannerFooter.module.css";
 
 const BannerFooter: React.FC = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 
-import VectorLetter from "../vector-letter/VectorLetter";
+import VectorLetter from "../vectorLetter/VectorLetter";
 
 import styles from "./banner.module.css";
 
