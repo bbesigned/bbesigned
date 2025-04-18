@@ -1,0 +1,40 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #FF2E63 0%, #FF5733 100%);
+    z-index: 1000;
+    padding: 1em 0;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 2560px;
+    margin: 0 auto;
+    padding: 0 5em 3em 5em;
+}
+
+.footer__actions {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.footer__button {
+    width: 3em;
+    height: 3em;
+    background-color: #00FF00;
+    border: none;
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
