@@ -1,40 +1,30 @@
 .menuButton {
-    padding: 0.5rem;
     background: transparent;
     border: none;
     cursor: pointer;
-    position: absolute;
   }
   
-  .hamburger {
-    width: 68px;
-    height: 68px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid white;
-  }
+.hamburger {
+  width: 6.25em;
+  height: 6.25em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+}
   
-  .hamburgerLine {
-    display: block;
-    width: 37px;
-    height: 0.125rem;
-    background-color: white;
-    margin-bottom: 0.25rem;
-  }
+.hamburgerLine {
+  display: block;
+  width: 3.401em;
+  height: 0.125em;
+  background-color: white;
+}
 
-  .hamburgerLine:not(:last-child) {
-    margin-bottom: 10px;
-  }
+.hamburgerLine:not(:last-child) {
+  margin-bottom: 1.379em;
+}
   
-  .hamburgerLine:last-child {
-    margin-bottom: 0;
-  }
-
-  .burger__container{
-    top: 2.6%;
-    position: absolute;
-    left: 90%;
-    margin-right: 80px;
-  }
+.hamburgerLine:last-child {
+  margin-bottom: 0;
+}

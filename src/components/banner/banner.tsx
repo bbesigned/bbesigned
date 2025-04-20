@@ -1,31 +1,35 @@
 import React from "react";
 
-import VectorLetter from "../vectorLetter/VectorLetter";
+import BannerHeader from "../bannerHeader/bannerHeader";
+
+import BannerContent from "../bannerContent/bannerContent";
+
+import BannerFooter from "../bannerFooter/bannerFooter";
+
+import stylesPage from "../../app/page.module.css";
 
 import styles from "./banner.module.css";
 
-import { IBannerProps } from "./types";
+const Banner: React.FC = () => {
+  const leftText = ["BRANDING", "WEB DEVELOPMENT", "APP DEVELOPMENT"];
+  const rightText = ["YOU DESIRE", "WE", "DESIGN"];
 
-const Banner: React.FC<IBannerProps> = ({ leftText, rightText }) => {
   return (
     <div className={styles.banner}>
-      <div className={styles["banner__container"]}>
-        <div className={styles["banner__left-block"]}>
-          {leftText.map((text, index) => (
-            <p key={index} className={styles["banner__left-text"]}>
-              {text}
-            </p>
-          ))}
-        </div>
-        <div className={styles["banner__right-block"]}>
-          {rightText.map((text, index) => (
-            <div key={index} className={styles["banner__right-text"]}>
-              { text.split("").map((letter, letterIndex) => (
-                <VectorLetter key={letterIndex} letter={letter} withShadow={index < 2} sizeSet="default"/>
-              )) }
-            </div>
-          ))}
-        </div>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className={styles.backgroundVideo}
+      >
+        <source src="/bannerBackgroundVideo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className={stylesPage.container}>
+        <BannerHeader />
+        <BannerContent leftText={leftText} rightText={rightText} />
+        <BannerFooter />
       </div>
     </div>
   );

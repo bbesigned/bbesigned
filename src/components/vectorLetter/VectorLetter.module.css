@@ -2,6 +2,7 @@
 }
 
 .vector-letter--shadow {
+    display: block;
     text-shadow: 0.5em 0.5em 0 rgba(230, 0, 126, 0.5);
 }
 

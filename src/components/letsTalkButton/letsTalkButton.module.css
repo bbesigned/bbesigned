@@ -1,21 +1,16 @@
 .letsTalk {
     color: white;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 2.206em;
     font-family: 'Noto Sans';
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    border-bottom: 2px solid white;
-    position: absolute;
+    border-bottom: 0.125em solid white;
     background: transparent;
-  }
+}
 
-  .letstalk__container {
-      background: transparent;
-      padding: 0.5rem 1rem;
-      left: 75%;
-      top:5%;
-      position: absolute;
-      width: 209px;
-      height: 68px;
-  }
+.letstalk__container {
+    background: transparent;
+    padding: 1.654em 4.203em  1.596em;
+    margin-right: 2.5em;
+}

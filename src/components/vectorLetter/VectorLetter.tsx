@@ -5,20 +5,20 @@ import styles from "./VectorLetter.module.css";
 import { IVectorLetterProps } from "./types";
 
 const VectorLetter: React.FC<IVectorLetterProps> = ({
-                                                     letter,
-                                                     width = letter === "W" ? "8em" :
-                                                       letter === "O" || letter === "U" || letter === "G" || letter === "R" || letter === "D" ? "6em" :
-                                                         letter === " " ? "2.5em" : "5em",
-                                                     height = "7.375em",
-                                                     fill = "none",
-                                                     textX = "50%",
-                                                     textY = "50%",
-                                                     dominantBaseline = "middle",
-                                                     textAnchor = "middle",
-                                                     withShadow = false,
-                                                     letterSizes,
-                                                     sizeSet = "default",
-                                                   }) => {
+                                                      letter,
+                                                      width = letter === "W" ? "8em" :
+                                                        letter === "O" || letter === "U" || letter === "G" || letter === "R" || letter === "D" ? "6em" :
+                                                          letter === " " ? "2.5em" : "5em",
+                                                      height = "7.375em",
+                                                      fill = "none",
+                                                      textX = "50%",
+                                                      textY = "50%",
+                                                      dominantBaseline = "middle",
+                                                      textAnchor = "middle",
+                                                      withShadow = false,
+                                                      letterSizes,
+                                                      sizeSet = "default",
+                                                    }) => {
 
   const defaultLetterSizes: { [key: string]: string } = {
     Y: "6.625em",
@@ -57,7 +57,7 @@ const VectorLetter: React.FC<IVectorLetterProps> = ({
 
   return (
     <svg
-      className={`${styles["vectorLetter"]} ${withShadow ? styles["vectorLetter--shadow"] : ""}`}
+      className={`${styles["vector-letter"]} ${withShadow ? styles["vector-letter--shadow"] : ""}`}
       width={letterWidth}
       height={height}
       preserveAspectRatio="xMidYMid meet"

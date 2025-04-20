@@ -21,3 +21,5 @@ export const MenuButton: React.FC<IMenuButtonProps> = ({ onClick }) => {
     </div>
   );
 }
+
+export default MenuButton;
