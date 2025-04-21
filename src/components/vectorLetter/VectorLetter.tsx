@@ -16,8 +16,6 @@ const VectorLetter: React.FC<IVectorLetterProps> = ({
                                                       dominantBaseline = "middle",
                                                       textAnchor = "middle",
                                                       withShadow = false,
-                                                      letterSizes,
-                                                      sizeSet = "default",
                                                     }) => {
 
   const defaultLetterSizes: { [key: string]: string } = {
@@ -35,23 +33,7 @@ const VectorLetter: React.FC<IVectorLetterProps> = ({
     " ": "2.5em",
   };
 
-  // Задел для лого на будущее
-  const logoLetterSizes: { [key: string]: string } = {
-    Y: "7.5em",
-    O: "8.125em",
-    U: "6.875em",
-    D: "6.875em",
-    E: "5em",
-    S: "5.625em",
-    I: "4.375em",
-    R: "6.875em",
-    W: "11.25em",
-    G: "7.5em",
-    N: "7.5em",
-    " ": "2.5em",
-  };
-
-  const sizes = letterSizes || (sizeSet === "logo" ? logoLetterSizes : defaultLetterSizes);
+  const sizes = defaultLetterSizes;
 
   const letterWidth = width || sizes[letter] || "5em";
 

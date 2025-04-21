@@ -1,17 +1,20 @@
 import React from "react";
 
-import VectorLetter from "../vectorLetter/VectorLetter";
+import Image from "next/image";
 
 import styles from "./bannerLogo.module.css";
 
-import { IBannerLogoProps } from "./types";
-
-const BannerLogo: React.FC<IBannerLogoProps> = ({ mainText }) => {
+const BannerLogo: React.FC = () => {
   return (
     <div className={styles.bannerLogo}>
-      {mainText.split("").map((letter, letterIndex) => (
-        <VectorLetter key={letterIndex} letter={letter} withShadow={false} sizeSet="logo" />
-      ))}
+      <Image
+        src="/logo.webp"
+        alt="Logo"
+        width={715}
+        height={85}
+        priority
+        className={styles.logoImage}
+      />
     </div>
   );
 };
