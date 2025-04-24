@@ -26,7 +26,7 @@ const VectorLetter = ({
     W: "9.3em",
     G: "5.9em",
     N: "6.75em",
-    " ": "3.563em",
+    " ": "2.563em",
   };
 
   const letterWidth = defaultLetterSizes[letter] || "5em";
