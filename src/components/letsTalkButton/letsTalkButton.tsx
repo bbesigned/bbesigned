@@ -1,17 +1,11 @@
-"use client";
-
 import React from "react";
 
-import styles from "./letsTalkButton.module.css"
+import styles from "./letsTalkButton.module.scss"
 
-interface ILetsTalkButtonProps {
-  onClick?: () => void;
-}
-const LetsTalkButton: React.FC<ILetsTalkButtonProps> = ({ onClick }) => {
+const LetsTalkButton = () => {
   return (
-    <div className={styles.letstalk__container}>
+    <div className={styles.letsTalk__container}>
       <button
-        onClick={onClick}
         className={styles.letsTalk}>
         Let&#39;s Talk
       </button>

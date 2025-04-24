@@ -4,13 +4,15 @@ import React from "react";
 
 import { FaComment } from "react-icons/fa";
 
-import styles from "./supportButton.module.css";
+import styles from "./supportButton.module.scss";
 
-const SupportButton: React.FC = () => {
+const SupportButton = () => {
 	return (
-		<button className={styles.supportButton}>
-			<FaComment className={styles.supportButton__iconElement} />
-		</button>
+		<div className={styles.supportButton__container}>
+			<button className={styles.supportButton}>
+				<FaComment className={styles.supportButton__iconElement} />
+			</button>
+		</div>
 	);
 };
 

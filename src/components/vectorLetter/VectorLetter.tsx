@@ -1,41 +1,35 @@
 import React from "react";
 
-import styles from "./VectorLetter.module.css";
+import { IVectorLetter } from "../../types/common/ComponentsProps";
 
-import { IVectorLetterProps } from "./types";
+import styles from "./VectorLetter.module.scss";
 
-const VectorLetter: React.FC<IVectorLetterProps> = ({
+const VectorLetter = ({
                                                       letter,
-                                                      width = letter === "W" ? "8em" :
-                                                        letter === "O" || letter === "U" || letter === "G" || letter === "R" || letter === "D" ? "6em" :
-                                                          letter === " " ? "2.5em" : "5em",
                                                       height = "7.375em",
                                                       fill = "none",
-                                                      textX = "50%",
+                                                      textX = "40%",
                                                       textY = "50%",
                                                       dominantBaseline = "middle",
                                                       textAnchor = "middle",
                                                       withShadow = false,
-                                                    }) => {
+                                                    }: IVectorLetter) => {
 
   const defaultLetterSizes: { [key: string]: string } = {
-    Y: "6.625em",
-    O: "6.9375em",
-    U: "6.0625em",
-    D: "6.0625em",
-    E: "4.1875em",
-    S: "5em",
+    Y: "6.1em",
+    O: "6.938em",
+    U: "6.063em",
+    D: "5.063em",
+    E: "4.188em",
     I: "3.75em",
     R: "6.125em",
-    W: "10.0625em",
-    G: "6.25em",
+    W: "9.3em",
+    G: "5.9em",
     N: "6.75em",
-    " ": "2.5em",
+    " ": "3.563em",
   };
 
-  const sizes = defaultLetterSizes;
-
-  const letterWidth = width || sizes[letter] || "5em";
+  const letterWidth = defaultLetterSizes[letter] || "5em";
 
   return (
     <svg

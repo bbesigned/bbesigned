@@ -1,0 +1,43 @@
+.banner__container {
+    display: flex;
+    flex-direction: row;
+
+    .banner__left-block {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        max-width: 585px;
+        align-self: flex-start;
+        margin-right: 20%;
+
+        .banner__left-block__left-text {
+            font-family: "Noto Sans", sans-serif;
+            font-weight: 500;
+            font-size: 2.688em;
+            color: #FFF8F0;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+    }
+
+    .banner__right-block {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        max-width: 955px;
+        align-self: flex-start;
+
+        .banner__right-block__right-text {
+            display: flex;
+            align-self: flex-start;
+
+            &:not(:last-child) {
+                margin-bottom: 0.938em;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

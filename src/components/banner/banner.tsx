@@ -8,9 +8,9 @@ import BannerFooter from "../bannerFooter/bannerFooter";
 
 import stylesPage from "../../app/page.module.css";
 
-import styles from "./banner.module.css";
+import styles from "./banner.module.scss";
 
-const Banner: React.FC = () => {
+const Banner = () => {
   const leftText = ["BRANDING", "WEB DEVELOPMENT", "APP DEVELOPMENT"];
   const rightText = ["YOU DESIRE", "WE", "DESIGN"];
 
@@ -21,7 +21,7 @@ const Banner: React.FC = () => {
         loop
         muted
         playsInline
-        className={styles.backgroundVideo}
+        className={styles.banner__backgroundVideo}
       >
         <source src="/bannerBackgroundVideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.

@@ -1,0 +1,11 @@
+.footer {
+    width: 100%;
+    background: transparent;
+
+    .footer__container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0.625em 0 3em;
+    }
+}

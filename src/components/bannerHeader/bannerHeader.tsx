@@ -6,16 +6,14 @@ import LetsTalkButton from "../letsTalkButton/letsTalkButton";
 
 import MenuButton from "../menuButton/menuButton";
 
-import styles from "./bannerHeader.module.css";
+import styles from "./bannerHeader.module.scss";
 
-const BannerHeader: React.FC = () => {
-  const mainText = "BESIGNED";
-
+const BannerHeader = () => {
   return (
     <header className={styles.header}>
       <div className={styles["header__container"]}>
-        <BannerLogo mainText={mainText}/>
-        <div className={styles.navigation}>
+        <BannerLogo />
+        <div className={styles.header__navigation}>
           <LetsTalkButton/>
           <MenuButton/>
         </div>
