@@ -11,12 +11,12 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      border: 2px solid #FFF8F0;
+      border: 1px solid #FFF8F0;
 
       .menuButton__hamburger__hamburgerLine {
         display: block;
         width: 3.401em;
-        height: 0.125em;
+        height: 0.063em;
         background-color: #FFF8F0;
 
         &:not(:last-child) {

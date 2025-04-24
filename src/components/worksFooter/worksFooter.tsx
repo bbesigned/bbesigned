@@ -7,10 +7,10 @@ import ScrollTopButton from "../scrollTopButton/scrollTopButton";
 import styles from "./worksFooter.module.scss";
 
 const WorksFooter = () => {
-  return (
+	return (
 		<div className={styles.footer}>
 			<div className={styles.rectangle__container}>
-				<div className={styles.rectangle}/>
+				<div className={styles.rectangle} />
 			</div>
 			<div className={styles.button__container}>
 				<ScrollTopButton />

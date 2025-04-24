@@ -4,6 +4,8 @@ import BannerHeader from "../bannerHeader/bannerHeader";
 
 import WorksFooter from "../worksFooter/worksFooter";
 
+import WorksTitle from "../worksTitle/worksTitle";
+
 import stylesPage from "../../app/page.module.scss";
 
 import styles from "./works.module.scss";
@@ -13,6 +15,7 @@ const Works = () => {
     <div className={styles.works}>
       <div className={stylesPage.container}>
         <BannerHeader smallLogo={true}/>
+        <WorksTitle />
         <WorksFooter />
       </div>
     </div>
