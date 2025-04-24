@@ -12,7 +12,7 @@ const BannerHeader = () => {
   return (
     <header className={styles.header}>
       <div className={styles["header__container"]}>
-        <BannerLogo />
+        <BannerLogo smallLogo={false}/>
         <div className={styles.header__navigation}>
           <LetsTalkButton/>
           <MenuButton/>

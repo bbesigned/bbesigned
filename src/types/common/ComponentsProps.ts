@@ -17,3 +17,7 @@ export interface IVectorLetter {
 	textAnchor?: string;
 	withShadow?: boolean;
 }
+
+export interface IBannerLogo {
+	smallLogo: boolean;
+}
