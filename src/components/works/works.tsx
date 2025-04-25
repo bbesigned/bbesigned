@@ -11,15 +11,15 @@ import stylesPage from "../../app/page.module.scss";
 import styles from "./works.module.scss";
 
 const Works = () => {
-  return (
-    <div className={styles.works}>
-      <div className={stylesPage.container}>
-        <BannerHeader smallLogo={true}/>
-        <WorksTitle />
-        <WorksFooter />
-      </div>
-    </div>
-  )
-}
+	return (
+		<div className={styles.works}>
+			<div className={stylesPage.container}>
+				<BannerHeader smallLogo={true} />
+				<WorksTitle />
+				<WorksFooter />
+			</div>
+		</div>
+	);
+};
 
 export default Works;

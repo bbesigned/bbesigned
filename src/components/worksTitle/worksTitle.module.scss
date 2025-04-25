@@ -1,23 +1,22 @@
 .works {
-  background-image: url('../../assets/backgroundContentWorks.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+	background-image: url("../../assets/backgroundContentWorks.png");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .worksTitle__container {
-
 }
 
 .worksTitle {
-  font-family: "Noto Sans", sans-serif;
-  font-size: 43em;
-  font-weight: 900;
-  color: transparent;
-  background-image: url('../../assets/backgroundContentWorks.png');
-  background-size: contain;
-  background-position: center;
-  background-clip: text;
-  -webkit-background-clip: text;
-  text-align: center;
+	font-family: "Noto Sans", sans-serif;
+	font-size: 43em;
+	font-weight: 900;
+	color: transparent;
+	background-image: url("../../assets/backgroundContentWorks.png");
+	background-size: contain;
+	background-position: center;
+	background-clip: text;
+	-webkit-background-clip: text;
+	text-align: center;
 }

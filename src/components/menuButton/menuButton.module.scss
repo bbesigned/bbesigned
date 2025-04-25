@@ -1,32 +1,32 @@
 .burger__container {
-  .menuButton {
-    background: transparent;
-    border: none;
-    cursor: pointer;
+	.menuButton {
+		background: transparent;
+		border: none;
+		cursor: pointer;
 
-    .menuButton__hamburger {
-      width: 6.25em;
-      height: 6.25em;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid #FFF8F0;
+		.menuButton__hamburger {
+			width: 6.25em;
+			height: 6.25em;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid #fff8f0;
 
-      .menuButton__hamburger__hamburgerLine {
-        display: block;
-        width: 3.401em;
-        height: 0.063em;
-        background-color: #FFF8F0;
+			.menuButton__hamburger__hamburgerLine {
+				display: block;
+				width: 3.401em;
+				height: 0.063em;
+				background-color: #fff8f0;
 
-        &:not(:last-child) {
-          margin-bottom: 1.379em;
-        }
+				&:not(:last-child) {
+					margin-bottom: 1.379em;
+				}
 
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
 }
