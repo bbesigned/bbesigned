@@ -14,7 +14,7 @@ const notoSans = Noto_Sans({
 export default function Home() {
 	return (
 		<div className={`${styles.page} ${notoSans.className}`}>
-			<Banner/>
+			<Banner />
 		</div>
 	);
 }
