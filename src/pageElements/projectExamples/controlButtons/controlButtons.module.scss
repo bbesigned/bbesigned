@@ -1,0 +1,35 @@
+.controlButtons {
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+	&__btn {
+		display: flex;
+		align-items: center;
+		gap: 60px;
+		border-bottom: 1px solid var(--black);
+		border-top: 1px solid var(--black);
+		padding: 14px 0;
+		font-family: var(--font-noto-sans);
+		width: 100%;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 130%;
+		background-color: transparent;
+		&_viewAll {
+			flex-shrink: 0;
+			text-decoration: underline;
+			justify-content: center;
+			color: var(--white);
+			width: 24.12%;
+			background-color: var(--black);
+		}
+		&_left {
+			justify-content: end;
+			padding-right: 90px;
+		}
+		&_right {
+			justify-content: start;
+			padding-left: 90px;
+		}
+	}
+}

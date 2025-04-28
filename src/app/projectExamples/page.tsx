@@ -1,7 +1,8 @@
 import Image from "next/image";
 
+import { ControlButtons } from "pageElements/projectExamples/controlButtons/controlButtons";
+
 import { UpButton } from "../../components/upButton/upButton";
-import { ControlArrow } from "../../pageElements/projectExamples/controlArrow/controlArrow";
 
 import style from "./projectExamples.module.scss";
 export default function Page() {
@@ -51,19 +52,7 @@ export default function Page() {
 					alt="project preview"
 				/>
 			</div>
-			<div className={style.controlButtons}>
-				<button className={style.controlButtons__btn}>
-					<ControlArrow />
-					<span>Previous project</span>
-				</button>
-				<button className={`${style.controlButtons__btn} ${style.controlButtons__btn_viewAll}`}>
-					View All
-				</button>
-				<button className={style.controlButtons__btn}>
-					<span>Next Project</span>
-					<ControlArrow right />
-				</button>
-			</div>
+			<ControlButtons />
 			<UpButton width="107px" height="107px" top="671px" right="80px" />
 		</>
 	);
