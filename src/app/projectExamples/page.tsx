@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { UpButton } from "../../components/upButton/upButton";
 import { ControlArrow } from "../../pageElements/projectExamples/controlArrow/controlArrow";
 
 import style from "./projectExamples.module.scss";
@@ -63,6 +64,7 @@ export default function Page() {
 					<ControlArrow right />
 				</button>
 			</div>
+			<UpButton width="107px" height="107px" top="671px" right="80px" />
 		</>
 	);
 }
