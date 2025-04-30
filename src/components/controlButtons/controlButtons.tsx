@@ -1,4 +1,4 @@
-import { ControlArrow } from "../controlArrow/controlArrow";
+import { ControlArrow } from "../../assets/script/controlArrow/controlArrow";
 
 import style from "./controlButtons.module.scss";
 

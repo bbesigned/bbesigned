@@ -11,13 +11,13 @@
 		display: flex;
 		flex-direction: column;
 
-		&_head {
+		&Head {
 			padding: 28px 0;
 			border-bottom: 1px solid var(--black);
 			border-top: 1px solid var(--black);
 		}
 
-		&_year {
+		&Year {
 			text-align: end;
 			font-weight: 400;
 			font-size: 24px;
@@ -29,7 +29,7 @@
 		padding: 34px 0;
 		border-bottom: 1px solid var(--black);
 
-		&_wrapper {
+		&Wrapper {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -43,7 +43,7 @@
 			line-height: 130%;
 		}
 
-		&_list {
+		&List {
 			display: flex;
 			font-weight: 300;
 			gap: 30px;
@@ -88,4 +88,12 @@
 			letter-spacing: 0.05em;
 		}
 	}
+}
+.upButton {
+	position: fixed;
+	border: 1.33px solid var(--white);
+	width: 107px;
+	height: 107px;
+	top: 671px;
+	right: 80px;
 }

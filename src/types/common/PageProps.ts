@@ -1,3 +1,4 @@
-export type ExampleType = {
-	type1: string;
-};
+export interface IIconsProps {
+	classNames?: string;
+	colorArrow?: string;
+}

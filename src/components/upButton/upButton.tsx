@@ -1,12 +1,9 @@
+import { type IIconsProps } from "../../types/common/PageProps";
+
 import style from "./upButton.module.scss";
-interface IUpButton {
-	width: string;
-	height: string;
-	right: string;
-	top: string;
-}
-export const UpButton = ({ width, height, right, top }: IUpButton) => (
-	<span style={{ width, height, right, top }} className={style.round}>
+
+export const UpButton = ({ classNames, colorArrow = "#FFF8F0" }: IIconsProps) => (
+	<span className={`${style.default} ${classNames}`}>
 		<svg
 			className={style.arrow}
 			width="34"
@@ -16,14 +13,14 @@ export const UpButton = ({ width, height, right, top }: IUpButton) => (
 			xmlns="http://www.w3.org/2000/svg">
 			<path
 				d="M9.91675 11.3333L17.0001 4.25L24.0834 11.3333"
-				stroke="#FFF8F0"
+				stroke={colorArrow}
 				strokeWidth="2"
 				strokeLinecap="round"
 				strokeLinejoin="round"
 			/>
 			<path
 				d="M17 29.75V4.25"
-				stroke="#FFF8F0"
+				stroke={colorArrow}
 				strokeWidth="2"
 				strokeLinecap="round"
 				strokeLinejoin="round"

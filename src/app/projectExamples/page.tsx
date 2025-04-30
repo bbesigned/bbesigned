@@ -1,24 +1,24 @@
 import Image from "next/image";
 
-import { ControlButtons } from "pageElements/projectExamples/controlButtons/controlButtons";
+import { ControlButtons } from "components/controlButtons/controlButtons";
 
 import { UpButton } from "../../components/upButton/upButton";
 
 import style from "./projectExamples.module.scss";
-export default function Page() {
+export default function ProjectExamples() {
 	const projectExampleProcessBlockName = "projectExample__process__block-name";
 	return (
 		<>
 			<div className={style.projectExample}>
 				<div className={style.projectExample__info}>
-					<div className={style.projectExample__info_head}>
-						<p className={style.projectExample__info_year}>2024</p>
+					<div className={style.projectExample__infoHead}>
+						<p className={style.projectExample__infoYear}>2024</p>
 						<h2 className={style.projectExample__headName}>Project name</h2>
 					</div>
 					<div className={style.projectExample__process}>
-						<div className={style.projectExample__process_wrapper}>
+						<div className={style.projectExample__processWrapper}>
 							<p className={style[projectExampleProcessBlockName]}>Process:</p>
-							<div className={style.projectExample__process_list}>
+							<div className={style.projectExample__processList}>
 								<p>UX/UI</p>
 								<p>IA</p>
 								<p>Design System</p>
@@ -53,7 +53,7 @@ export default function Page() {
 				/>
 			</div>
 			<ControlButtons />
-			<UpButton width="107px" height="107px" top="671px" right="80px" />
+			<UpButton classNames={style.upButton} />
 		</>
 	);
 }
