@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 
 import "./reset.css";
 import "./globals.scss";
+
 const notoSans = Noto_Sans({
 	weight: ["300", "400", "500", "600", "900"],
 	subsets: ["latin"],

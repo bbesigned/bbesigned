@@ -5,6 +5,7 @@ import { ControlButtons } from "components/controlButtons/controlButtons";
 import { UpButton } from "../../components/upButton/upButton";
 
 import style from "./projectExamples.module.scss";
+
 export default function ProjectExamples() {
 	const projectExampleProcessBlockName = "projectExample__process__block-name";
 	return (
