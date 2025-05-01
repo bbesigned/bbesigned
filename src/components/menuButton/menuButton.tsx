@@ -1,17 +1,16 @@
 "use client";
 
-import React from "react";
-
-import styles from "./menuButton.module.scss";
+import commonStyles from "./menuButton.module.scss";
 
 export const MenuButton = () => {
 	return (
-		<div className={styles.burger__container}>
-			<button className={styles.menuButton}>
-				<div className={styles.menuButton__hamburger}>
-					<span className={styles["menuButton__hamburger__hamburgerLine"]}></span>
-					<span className={styles["menuButton__hamburger__hamburgerLine"]}></span>
-					<span className={styles["menuButton__hamburger__hamburgerLine"]}></span>
+		<div className={commonStyles["burger__container"]}>
+			<button className={commonStyles["menu-button"]}>
+				<div className={commonStyles["menu-button__hamburger"]}>
+					{/* eslint-disable-next-line sonarjs/no-duplicate-string */}
+					<span className={commonStyles["menu-button__hamburger__hamburger-line"]}></span>
+					<span className={commonStyles["menu-button__hamburger__hamburger-line"]}></span>
+					<span className={commonStyles["menu-button__hamburger__hamburger-line"]}></span>
 				</div>
 			</button>
 		</div>

@@ -2,13 +2,13 @@
 	width: 100%;
 	background: transparent;
 
-	.header__container {
+	&__container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding: 5em 0 0.625em;
 
-		.header__navigation {
+		&__navigation {
 			display: flex;
 		}
 	}

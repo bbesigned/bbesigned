@@ -1,19 +1,17 @@
-import React from "react";
-
 import BannerLogo from "../bannerLogo/bannerLogo";
 
 import LetsTalkButton from "../letsTalkButton/letsTalkButton";
 
 import MenuButton from "../menuButton/menuButton";
 
-import styles from "./bannerHeader.module.scss";
+import commonStyles from "./bannerHeader.module.scss";
 
 const BannerHeader = () => {
 	return (
-		<header className={styles.header}>
-			<div className={styles["header__container"]}>
+		<header className={commonStyles.header}>
+			<div className={commonStyles["header__container"]}>
 				<BannerLogo smallLogo={false} />
-				<div className={styles.header__navigation}>
+				<div className={commonStyles["header__container__navigation"]}>
 					<LetsTalkButton />
 					<MenuButton />
 				</div>

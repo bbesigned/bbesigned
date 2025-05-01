@@ -1,9 +1,9 @@
 .vector-letter {
-	.vector-letter__text {
-		font-family: "Noto Sans", sans-serif;
-		font-weight: 900;
+	&__text {
+		font-family: var(--text-font-family), serif;;
+		font-weight: var(--text-font-weight-large);
 		font-size: 7.375em;
-		fill: #fff8f0;
+		fill: var(--primary-color);
 	}
 }
 

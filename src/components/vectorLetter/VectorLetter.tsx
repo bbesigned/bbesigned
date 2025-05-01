@@ -1,8 +1,8 @@
-import React from "react";
+import cn from "classnames";
 
 import { IVectorLetter } from "../../types/common/ComponentsProps";
 
-import styles from "./VectorLetter.module.scss";
+import commonStyles from "./VectorLetter.module.scss";
 
 const VectorLetter = ({
 	letter,
@@ -32,14 +32,14 @@ const VectorLetter = ({
 
 	return (
 		<svg
-			className={`${styles["vector-letter"]} ${withShadow ? styles["vector-letter--shadow"] : ""}`}
+			className={cn(commonStyles["vector-letter"], { [commonStyles["vector-letter--shadow"]]: withShadow })}
 			width={letterWidth}
 			height={height}
 			preserveAspectRatio="xMidYMid meet"
 			fill={fill}
 			xmlns="http://www.w3.org/2000/svg">
 			<text
-				className={styles["vector-letter__text"]}
+				className={commonStyles["vector-letter__text"]}
 				x={textX}
 				y={textY}
 				dominantBaseline={dominantBaseline}

@@ -5,9 +5,9 @@
 
 	.letsTalk {
 		color: white;
-		font-weight: 400;
+		font-weight: var(--text-font-weight-small);
 		font-size: 2.206em;
-		font-family: "Noto Sans", sans-serif;
+		font-family: var(--text-font-family), serif;
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
 		border-bottom: 0.125em solid white;

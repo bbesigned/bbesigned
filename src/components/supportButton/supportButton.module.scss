@@ -1,5 +1,5 @@
-.supportButton__container {
-	.supportButton {
+.support-button__container {
+	.support-button {
 		background-color: #1ed760;
 		width: 6.25rem;
 		height: 6.25rem;
@@ -10,10 +10,10 @@
 		justify-content: center;
 		cursor: pointer;
 
-		.supportButton__iconElement {
+		&__icon-element {
 			width: 2.5rem;
 			height: 2.333rem;
-			color: #fff8f0;
+			color: var(--primary-color);
 		}
 	}
 }

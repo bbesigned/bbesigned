@@ -10,11 +10,11 @@
 		align-self: flex-start;
 		margin-right: 20%;
 
-		.banner__left-block__left-text {
-			font-family: "Noto Sans", sans-serif;
-			font-weight: 500;
-			font-size: 2.688em;
-			color: #fff8f0;
+		&__left-text {
+			font-family: var(--text-font-family), serif;
+			font-weight: var(--text-font-weight);
+			font-size: var(--text-font-size-large);
+			color: var(--primary-color);
 			line-height: 1;
 			text-transform: uppercase;
 		}
@@ -27,7 +27,7 @@
 		max-width: 955px;
 		align-self: flex-start;
 
-		.banner__right-block__right-text {
+		&__right-text {
 			display: flex;
 			align-self: flex-start;
 

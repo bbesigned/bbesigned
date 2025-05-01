@@ -1,10 +1,10 @@
-.bannerLogo {
-	.bannerLogo__logoImage {
+.banner-logo {
+	&__logo-image {
 		width: 44.688em;
 		height: 5.313em;
 	}
 
-	.bannerLogo__smallLogoImage {
+	&__small-logo-image {
 		width: 23.125em;
 		height: 5.875em;
 	}
