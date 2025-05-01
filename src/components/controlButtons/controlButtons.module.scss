@@ -2,6 +2,7 @@
 	margin-top: 50px;
 	display: flex;
 	justify-content: space-between;
+
 	&__btn {
 		display: flex;
 		align-items: center;
@@ -15,6 +16,7 @@
 		font-size: 32px;
 		line-height: 130%;
 		background-color: transparent;
+
 		&_viewAll {
 			flex-shrink: 0;
 			text-decoration: underline;
@@ -23,10 +25,12 @@
 			width: 24.12%;
 			background-color: var(--black);
 		}
+
 		&_left {
 			justify-content: end;
 			padding-right: 90px;
 		}
+
 		&_right {
 			justify-content: start;
 			padding-left: 90px;
