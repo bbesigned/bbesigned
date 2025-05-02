@@ -7,20 +7,24 @@
 	color: var(--eerie-black);
 	padding-top: 160px;
 }
+
 .projectExampleContainer {
 	display: flex;
 	flex-direction: column;
 }
+
 .infoHeadWrap {
 	padding: 28px 0;
 	border-bottom: 1px solid var(--eerie-black);
 	border-top: 1px solid var(--eerie-black);
+
 	&__title {
 		text-align: end;
 		font-weight: 400;
 		font-size: 24px;
 		line-height: 130%;
 	}
+
 	&__subtitle {
 		font-weight: 500;
 		font-size: 85px;
@@ -39,11 +43,13 @@
 		margin-top: 2px;
 		line-height: 130%;
 	}
+
 	&__headTitle {
 		font-weight: 600;
 		font-size: 24px;
 	}
 }
+
 .processContainer {
 	display: flex;
 	justify-content: space-between;
@@ -75,6 +81,7 @@
 .summaryWrapper {
 	padding: 34px 0 46px;
 }
+
 .summaryContainer {
 	&__titleContent {
 		margin-top: 10px;
@@ -84,6 +91,7 @@
 		letter-spacing: 0.05em;
 	}
 }
+
 .upButton {
 	position: fixed;
 	border: 1.33px solid var(--floral-white);
