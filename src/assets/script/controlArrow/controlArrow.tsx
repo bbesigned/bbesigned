@@ -1,4 +1,6 @@
-export const ControlArrow = ({ right }: { right?: boolean }) => (
+import { type IIconsProps } from "types/common/PageProps";
+
+export const ControlArrow = ({ right }: IIconsProps) => (
 	<svg
 		style={right ? { transform: "rotate(180deg)" } : {}}
 		width="73"
