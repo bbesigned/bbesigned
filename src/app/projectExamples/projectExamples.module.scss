@@ -1,4 +1,4 @@
-.projectExample {
+.projectExampleWrap {
 	position: relative;
 	display: flex;
 	gap: 20px;
@@ -6,90 +6,84 @@
 	font-family: var(--font-noto-sans);
 	color: var(--eerie-black);
 	padding-top: 160px;
-
-	&__info {
-		display: flex;
-		flex-direction: column;
-
-		&Head {
-			padding: 28px 0;
-			border-bottom: 1px solid var(--eerie-black);
-			border-top: 1px solid var(--eerie-black);
-		}
-
-		&Year {
-			text-align: end;
-			font-weight: 400;
-			font-size: 24px;
-			line-height: 130%;
-		}
+}
+.projectExampleContainer {
+	display: flex;
+	flex-direction: column;
+}
+.infoHeadWrap {
+	padding: 28px 0;
+	border-bottom: 1px solid var(--eerie-black);
+	border-top: 1px solid var(--eerie-black);
+	&__title {
+		text-align: end;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 130%;
 	}
-
-	&__process {
-		padding: 34px 0;
-		border-bottom: 1px solid var(--eerie-black);
-
-		&Wrapper {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
-
-		&__programmingText {
-			text-align: end;
-			font-weight: 300;
-			font-size: 24px;
-			margin-top: 2px;
-			line-height: 130%;
-		}
-
-		&List {
-			display: flex;
-			font-weight: 300;
-			gap: 30px;
-			font-size: 24px;
-			line-height: 130%;
-		}
-
-		&__block-name {
-			font-weight: 600;
-			font-size: 24px;
-		}
-	}
-
-	&__client {
-		padding: 34px 0;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		border-bottom: 1px solid var(--eerie-black);
-
-		&__companyName {
-			font-size: 24px;
-			font-weight: 300;
-			line-height: 130%;
-		}
-	}
-
-	&__headName {
+	&__subtitle {
 		font-weight: 500;
 		font-size: 85px;
 		line-height: 130%;
 	}
+}
 
-	&__summary {
-		padding: 34px 0 46px;
+.processWrapper {
+	padding: 34px 0;
+	border-bottom: 1px solid var(--eerie-black);
 
-		&__text {
-			margin-top: 10px;
-			font-weight: 300;
-			font-size: 24px;
-			line-height: 130%;
-			letter-spacing: 0.05em;
-		}
+	&__title {
+		text-align: end;
+		font-weight: 300;
+		font-size: 24px;
+		margin-top: 2px;
+		line-height: 130%;
+	}
+	&__headTitle {
+		font-weight: 600;
+		font-size: 24px;
+	}
+}
+.processContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.processContainerTitleList {
+	display: flex;
+	font-weight: 300;
+	gap: 30px;
+	font-size: 24px;
+	line-height: 130%;
+}
+
+.clientWrap {
+	padding: 34px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid var(--eerie-black);
+
+	&__title {
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 130%;
 	}
 }
 
+.summaryWrapper {
+	padding: 34px 0 46px;
+}
+.summaryContainer {
+	&__titleContent {
+		margin-top: 10px;
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 130%;
+		letter-spacing: 0.05em;
+	}
+}
 .upButton {
 	position: fixed;
 	border: 1.33px solid var(--floral-white);
