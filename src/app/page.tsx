@@ -1,10 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "./page.module.scss";
 
 export default function Home() {
 	return (
 		<div className={styles.page}>
+			<Link href={"/personalData"}>Personal data</Link>
 			<main className={styles.main}>
 				<Image
 					className={styles.logo}

@@ -1,0 +1,31 @@
+.personalDataTop {
+	background: url("../../../public/personalDataBackground.jpg");
+	font-family: var(--font-noto-sans);
+	color: var(--floral-white);
+	&__title {
+		font-size: 160px;
+		font-weight: 700;
+		text-align: center;
+	}
+}
+
+.navigationWrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__backButton {
+		flex: 0 0 auto;
+		color: var(--floral-white);
+		font-size: 28px;
+		background-color: transparent;
+		border: 1.36px solid var(--floral-white);
+		padding: 22px 68px;
+	}
+}
+.navigationList {
+	display: flex;
+	font-weight: 300;
+	gap: 56px;
+	list-style: none;
+	font-size: 42px;
+}
