@@ -2,28 +2,41 @@
 	background: url("../../../public/personalDataBackground.jpg");
 	font-family: var(--font-noto-sans);
 	color: var(--floral-white);
+	padding: 80px 80px 60px 80px;
 	&__title {
+		line-height: 72%;
 		font-size: 160px;
 		font-weight: 700;
 		text-align: center;
+		margin: 336px 0 271px 0;
 	}
 }
 
 .navigationWrap {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	// justify-content: space-between;
 	align-items: center;
 	&__backButton {
+		display: flex;
+		align-items: center;
+		grid-column: 1/2;
+		grid-row: 1/2;
+		justify-self: start;
+		gap: 16px;
 		flex: 0 0 auto;
 		color: var(--floral-white);
 		font-size: 28px;
 		background-color: transparent;
-		border: 1.36px solid var(--floral-white);
-		padding: 22px 68px;
+		border: 1px solid var(--floral-white);
+		padding: 21px 66px;
 	}
 }
 .navigationList {
+	grid-column: 1/2;
+	grid-row: 1/2;
+	justify-self: center;
 	display: flex;
+	margin: 0 auto;
 	font-weight: 300;
 	gap: 56px;
 	list-style: none;

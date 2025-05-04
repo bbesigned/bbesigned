@@ -1,3 +1,5 @@
+import { BackArrow } from "assets/script/backArrow/backArrow";
+
 import style from "./personalData.module.scss";
 
 export default function PersonalData() {
@@ -5,7 +7,10 @@ export default function PersonalData() {
 		<div className={style.personalDataTop}>
 			<h1 className={style.personalDataTop__title}>Personal Data</h1>
 			<div className={style.navigationWrap}>
-				<button className={style.navigationWrap__backButton}>Back</button>
+				<button className={style.navigationWrap__backButton}>
+					<BackArrow />
+					<p>Back</p>
+				</button>
 				<nav className={style.navigationList}>
 					<li className={style.navigationList__item}>FAQ</li>
 					<li className={style.navigationList__item}>Personal Data</li>
