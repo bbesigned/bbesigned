@@ -4,21 +4,21 @@ import BannerContent from "../bannerContent/bannerContent";
 
 import BannerFooter from "../bannerFooter/bannerFooter";
 
-import stylesPage from "../../app/page.module.css";
+import commonStyles from "../../app/page.module.scss";
 
-import commonStyles from "./banner.module.scss";
+import styles from "./banner.module.scss";
 
 const Banner = () => {
 	const leftText = ["BRANDING", "WEB DEVELOPMENT", "APP DEVELOPMENT"];
 	const rightText = ["YOU DESIRE", "WE", "DESIGN"];
 
 	return (
-		<div className={commonStyles.banner}>
-			<video autoPlay loop muted playsInline className={commonStyles["banner__background-video"]}>
+		<div className={styles["styles.bannerWrap"]}>
+			<video autoPlay loop muted playsInline className={styles["bannerWrap__backgroundVideo"]}>
 				<source src="/bannerBackgroundVideo.mp4" type="video/mp4" />
 				Your browser does not support the video tag.
 			</video>
-			<div className={stylesPage.container}>
+			<div className={commonStyles.container}>
 				<BannerHeader />
 				<BannerContent leftText={leftText} rightText={rightText} />
 				<BannerFooter />

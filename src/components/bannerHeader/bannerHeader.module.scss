@@ -1,14 +1,14 @@
-.header {
+.headerWrap {
 	width: 100%;
 	background: transparent;
 
-	&__container {
+	.headerContainer {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding: 5em 0 0.625em;
 
-		&__navigation {
+		.navigationWrap {
 			display: flex;
 		}
 	}

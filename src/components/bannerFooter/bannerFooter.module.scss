@@ -1,8 +1,8 @@
-.footer {
+.footerWrap {
 	width: 100%;
 	background: transparent;
 
-	&__container {
+	.footerContainer {
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;

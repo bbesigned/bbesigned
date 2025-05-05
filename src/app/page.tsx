@@ -1,11 +1,11 @@
 import Banner from "../components/banner/banner";
 
-import commonStyles from "./page.module.css";
+import styles from "./page.module.scss";
 
 
 export default function Home() {
 	return (
-		<div className={`${commonStyles.page}`}>
+		<div className={`${styles.page}`}>
 			<Banner />
 		</div>
 	);

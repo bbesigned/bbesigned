@@ -1,11 +1,11 @@
 import SupportButton from "../supportButton/supportButton";
 
-import commonStyles from "./bannerFooter.module.scss";
+import styles from "./bannerFooter.module.scss";
 
 const BannerFooter = () => {
 	return (
-		<footer className={commonStyles.footer}>
-			<div className={commonStyles["footer__container"]}>
+		<footer className={styles["footerWrap"]}>
+			<div className={styles["footerContainer"]}>
 				<SupportButton />
 			</div>
 		</footer>

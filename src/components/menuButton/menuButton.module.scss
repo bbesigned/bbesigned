@@ -1,10 +1,10 @@
-.burger__container {
-	.menu-button {
+.burgerMenuWrap {
+	.burgerMenuActionElement {
 		background: transparent;
 		border: none;
 		cursor: pointer;
 
-		&__hamburger {
+		&__burgerMenuContainer {
 			width: 6.25em;
 			height: 6.25em;
 			display: flex;
@@ -13,7 +13,7 @@
 			align-items: center;
 			border: 2px solid var(--primary-color);
 
-			&__hamburger-line {
+			.burgerMenuContainer__line {
 				display: block;
 				width: 3.401em;
 				height: 0.125em;

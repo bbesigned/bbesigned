@@ -2,13 +2,13 @@
 
 import { FaComment } from "react-icons/fa";
 
-import commonStyles from "./supportButton.module.scss";
+import styles from "./supportButton.module.scss";
 
 const SupportButton = () => {
 	return (
-		<div className={commonStyles["support-button__container"]}>
-			<button className={commonStyles["support-button"]}>
-				<FaComment className={commonStyles["support-button__icon-element"]} />
+		<div className={styles["supportButtonWrapper"]}>
+			<button className={styles["supportButtonContainer"]}>
+				<FaComment className={styles["supportButtonContainer__iconElement"]} />
 			</button>
 		</div>
 	);

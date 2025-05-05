@@ -2,7 +2,7 @@ import cn from "classnames";
 
 import { IVectorLetter } from "../../types/common/ComponentsProps";
 
-import commonStyles from "./VectorLetter.module.scss";
+import styles from "./VectorLetter.module.scss";
 
 const VectorLetter = ({
 	letter,
@@ -32,14 +32,14 @@ const VectorLetter = ({
 
 	return (
 		<svg
-			className={cn(commonStyles["vector-letter"], { [commonStyles["vector-letter--shadow"]]: withShadow })}
+			className={cn(styles["vector-letter"], { [styles["vector-letter--shadow"]]: withShadow })}
 			width={letterWidth}
 			height={height}
 			preserveAspectRatio="xMidYMid meet"
 			fill={fill}
 			xmlns="http://www.w3.org/2000/svg">
 			<text
-				className={commonStyles["vector-letter__text"]}
+				className={styles["vector-letter__text"]}
 				x={textX}
 				y={textY}
 				dominantBaseline={dominantBaseline}

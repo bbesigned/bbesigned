@@ -1,9 +1,9 @@
-import commonStyles from "./letsTalkButton.module.scss";
+import styles from "./letsTalkButton.module.scss";
 
 const LetsTalkButton = () => {
 	return (
-		<div className={commonStyles.letsTalk__container}>
-			<button className={commonStyles.letsTalk}>Let&#39;s Talk</button>
+		<div className={styles.letsTalkWrapper}>
+			<button className={styles.letsTalk__actionElement}>Let&#39;s Talk</button>
 		</div>
 	);
 };

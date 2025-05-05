@@ -2,12 +2,12 @@ import VectorLetter from "../vectorLetter/VectorLetter";
 
 import { IBannerContent } from "../../types/common/ComponentsProps";
 
-import commonStyles from "./bannerContent.module.scss";
+import styles from "./bannerContent.module.scss";
 
 const BannerContent = ({ leftText, rightText }: IBannerContent) => {
 	const renderLeftText = () => {
 		return leftText.map((text, index) => (
-			<p key={index} className={commonStyles["banner__left-block__left-text"]}>
+			<p key={index} className={styles["leftBlockBanner__title"]}>
 				{text}
 			</p>
 		));
@@ -15,7 +15,7 @@ const BannerContent = ({ leftText, rightText }: IBannerContent) => {
 
 	const renderRightText = () => {
 		return rightText.map((text, index) => (
-			<div key={index} className={commonStyles["banner__right-block__right-text"]}>
+			<div key={index} className={styles["rightBlockBanner__title"]}>
 				{text.split("").map((letter, letterIndex) => (
 					<VectorLetter key={letterIndex} letter={letter} withShadow={index < 2} />
 				))}
@@ -24,11 +24,11 @@ const BannerContent = ({ leftText, rightText }: IBannerContent) => {
 	};
 
 	return (
-		<div className={commonStyles["banner__container"]}>
-			<div className={commonStyles["banner__left-block"]}>
+		<div className={styles["bannerContentWrap"]}>
+			<div className={styles["leftBlockBanner"]}>
 				{renderLeftText()}
 			</div>
-			<div className={commonStyles["banner__right-block"]}>
+			<div className={styles["rightBlockBanner"]}>
 				{renderRightText()}
 			</div>
 		</div>
