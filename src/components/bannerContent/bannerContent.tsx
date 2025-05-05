@@ -1,4 +1,4 @@
-import VectorLetter from "../vectorLetter/VectorLetter";
+import cn from "classnames";
 
 import { IBannerContent } from "../../types/common/ComponentsProps";
 
@@ -17,7 +17,13 @@ const BannerContent = ({ leftText, rightText }: IBannerContent) => {
 		return rightText.map((text, index) => (
 			<div key={index} className={styles["rightBlockBanner__title"]}>
 				{text.split("").map((letter, letterIndex) => (
-					<VectorLetter key={letterIndex} letter={letter} withShadow={index < 2} />
+					<span
+						key={letterIndex}
+						className={cn(styles["rightBlockBanner__title__letter"], {
+							[styles["rightBlockBanner__title__letter--shadow"]]: index < 2,
+						})}>
+						{letter}
+					</span>
 				))}
 			</div>
 		));
@@ -25,12 +31,8 @@ const BannerContent = ({ leftText, rightText }: IBannerContent) => {
 
 	return (
 		<div className={styles["bannerContentWrap"]}>
-			<div className={styles["leftBlockBanner"]}>
-				{renderLeftText()}
-			</div>
-			<div className={styles["rightBlockBanner"]}>
-				{renderRightText()}
-			</div>
+			<div className={styles["leftBlockBanner"]}>{renderLeftText()}</div>
+			<div className={styles["rightBlockBanner"]}>{renderRightText()}</div>
 		</div>
 	);
 };
