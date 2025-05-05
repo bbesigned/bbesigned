@@ -1,7 +1,13 @@
 import { type IIconsProps } from "types/common/PageProps";
 
-export const BackArrow = ({ colorArrow = "#FFF8F0" }: IIconsProps) => (
-	<svg width="33" height="34" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+export const BackArrow = ({ colorArrow = "#FFF8F0", classNames }: IIconsProps) => (
+	<svg
+		className={classNames}
+		width="33"
+		height="34"
+		viewBox="0 0 33 34"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg">
 		<path
 			d="M25.8561 17H6.87305"
 			stroke={colorArrow}
