@@ -1,7 +1,10 @@
 /* eslint-disable camelcase */
+
+import { Noto_Sans } from "next/font/google";
 import { ReactNode } from "react";
 
 import { Noto_Sans } from "next/font/google";
+
 
 import type { Metadata } from "next";
 

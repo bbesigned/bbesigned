@@ -129,6 +129,7 @@ export default eslintTs.config(
             "import/no-unresolved": "off",
             "import/first": "error",
             "import/no-duplicates": "error",
+            "import/newline-after-import": "warn",
             "import/order": [
                 "error",
                 {
