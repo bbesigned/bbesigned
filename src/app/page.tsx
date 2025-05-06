@@ -1,6 +1,6 @@
-import Banner from "../components/banner/banner";
-
 import Link from "next/link";
+
+import Banner from "../components/banner/banner";
 
 import styles from "./page.module.scss";
 
