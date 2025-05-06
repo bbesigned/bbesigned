@@ -8,10 +8,10 @@ import styles from "./bannerHeader.module.scss";
 
 const BannerHeader = () => {
 	return (
-		<header className={styles["headerWrap"]}>
-			<div className={styles["headerContainer"]}>
+		<header className={styles.headerWrap}>
+			<div className={styles.headerContainer}>
 				<BannerLogo smallLogo={false} />
-				<div className={styles["navigationWrap"]}>
+				<div className={styles.navigationWrap}>
 					<LetsTalkButton />
 					<MenuButton />
 				</div>

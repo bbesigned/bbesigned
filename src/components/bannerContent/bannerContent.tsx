@@ -7,7 +7,7 @@ import styles from "./bannerContent.module.scss";
 const BannerContent = ({ leftText, rightText }: IBannerContent) => {
 	const renderLeftText = () => {
 		return leftText.map((text, index) => (
-			<p key={index} className={styles["leftBlockBanner__title"]}>
+			<p key={index} className={styles.leftBlockBannerWrapper__title}>
 				{text}
 			</p>
 		));
@@ -15,12 +15,12 @@ const BannerContent = ({ leftText, rightText }: IBannerContent) => {
 
 	const renderRightText = () => {
 		return rightText.map((text, index) => (
-			<div key={index} className={styles["rightBlockBanner__title"]}>
+			<div key={index} className={styles.rightBlockBannerContainer}>
 				{text.split("").map((letter, letterIndex) => (
 					<span
 						key={letterIndex}
-						className={cn(styles["rightBlockBanner__title__letter"], {
-							[styles["rightBlockBanner__title__letter--shadow"]]: index < 2,
+						className={cn(styles.rightBlockBannerContainer__letter, {
+							[styles.rightBlockBannerContainer__letter_shadow]: index < 2,
 						})}>
 						{letter}
 					</span>
@@ -30,9 +30,9 @@ const BannerContent = ({ leftText, rightText }: IBannerContent) => {
 	};
 
 	return (
-		<div className={styles["bannerContentWrap"]}>
-			<div className={styles["leftBlockBanner"]}>{renderLeftText()}</div>
-			<div className={styles["rightBlockBanner"]}>{renderRightText()}</div>
+		<div className={styles.bannerContentWrap}>
+			<div className={styles.leftBlockBannerWrapper}>{renderLeftText()}</div>
+			<div className={styles.rightBlockBannerWrap}>{renderRightText()}</div>
 		</div>
 	);
 };

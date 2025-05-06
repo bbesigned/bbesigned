@@ -6,9 +6,9 @@ import styles from "./supportButton.module.scss";
 
 const SupportButton = () => {
 	return (
-		<div className={styles["supportButtonWrapper"]}>
-			<button className={styles["supportButtonContainer"]}>
-				<FaComment className={styles["supportButtonContainer__iconElement"]} />
+		<div className={styles.supportButtonWrapper}>
+			<button className={styles.supportButtonContainer}>
+				<FaComment className={styles.supportButtonContainer__iconElement} />
 			</button>
 		</div>
 	);

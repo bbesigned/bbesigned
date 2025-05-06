@@ -4,8 +4,8 @@ import styles from "./bannerFooter.module.scss";
 
 const BannerFooter = () => {
 	return (
-		<footer className={styles["footerWrap"]}>
-			<div className={styles["footerContainer"]}>
+		<footer className={styles.footerWrap}>
+			<div className={styles.footerContainer}>
 				<SupportButton />
 			</div>
 		</footer>

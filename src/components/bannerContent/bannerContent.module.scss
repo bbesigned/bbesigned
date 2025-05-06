@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: row;
 
-	.leftBlockBanner {
+	.leftBlockBannerWrapper {
 		display: flex;
 		flex-direction: column;
 		gap: 1em;
@@ -19,13 +19,13 @@
 		}
 	}
 
-	.rightBlockBanner {
+	.rightBlockBannerWrap {
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
 		max-width: 955px;
 
-		&__title {
+		.rightBlockBannerContainer {
 			display: inline-block;
 			vertical-align: middle;
 			height: 10.375em;
@@ -39,7 +39,7 @@
 				white-space: pre;
 			}
 
-			&__letter--shadow {
+			&__letter_shadow {
 				text-shadow: 0.05em 0.05em 0 rgba(230, 0, 126, 0.5);
 			}
 

@@ -13,8 +13,8 @@ const Banner = () => {
 	const rightText = ["YOU DESIRE", "WE", "DESIGN"];
 
 	return (
-		<div className={styles["styles.bannerWrap"]}>
-			<video autoPlay loop muted playsInline className={styles["bannerWrap__backgroundVideo"]}>
+		<div className={styles.bannerWrap}>
+			<video autoPlay loop muted playsInline className={styles.bannerWrap__backgroundVideo}>
 				<source src="/bannerBackgroundVideo.mp4" type="video/mp4" />
 				Your browser does not support the video tag.
 			</video>
