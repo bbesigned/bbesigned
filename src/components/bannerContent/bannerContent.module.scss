@@ -1,0 +1,55 @@
+.bannerContentWrap {
+	display: flex;
+	flex-direction: row;
+
+	.leftBlockBannerWrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		max-width: 585px;
+		margin-right: 10%;
+
+		&__title {
+			font-family: var(--text-font-family), serif;
+			font-weight: 500;
+			font-size: 2.688em;
+			color: var(--primary-color);
+			line-height: 1;
+			text-transform: uppercase;
+		}
+	}
+
+	.rightBlockBannerWrap {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		max-width: 955px;
+
+		.rightBlockBannerContainer {
+			display: inline-block;
+			vertical-align: middle;
+			height: 10.375em;
+			line-height: 7.5em;
+
+			&__letter {
+				font-family: var(--font-family), serif;
+				font-weight: 900;
+				font-size: 10.375em;
+				color: var(--primary-color);
+				white-space: pre;
+			}
+
+			&__letter_shadow {
+				text-shadow: 0.05em 0.05em 0 rgba(230, 0, 126, 0.5);
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 0.938em;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
