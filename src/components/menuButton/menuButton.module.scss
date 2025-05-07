@@ -1,0 +1,32 @@
+.burgerMenuWrap {
+	.burgerMenuActionElement {
+		background: transparent;
+		border: none;
+		cursor: pointer;
+
+		&__burgerMenuContainer {
+			width: 6.25em;
+			height: 6.25em;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border: 2px solid var(--primary-color);
+
+			.burgerMenuContainer__line {
+				display: block;
+				width: 3.401em;
+				height: 0.125em;
+				background-color: var(--primary-color);
+
+				&:not(:last-child) {
+					margin-bottom: 1.379em;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
