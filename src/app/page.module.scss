@@ -9,6 +9,8 @@
 	z-index: 1;
 }
 
-body {
+.page {
 	background-color: var(--floral-white);
+	position: relative;
+	z-index: -500;
 }
