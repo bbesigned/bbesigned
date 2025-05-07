@@ -10,9 +10,10 @@ import "./reset.css";
 import "./globals.scss";
 
 const notoSans = Noto_Sans({
-	weight: ["300", "600", "900"],
+	weight: ["300", "400", "500", "600", "700", "900"],
 	subsets: ["latin"],
 	display: "swap",
+	variable: "--font-noto-sans",
 });
 
 export const metadata: Metadata = {
