@@ -1,6 +1,7 @@
 import { type IIconsProps } from "types/common/PageProps";
+import { colorPalette } from "helpers/colorPalette";
 
-export const Linkedin = ({ colorArrow = "#191919", classNames }: IIconsProps) => (
+export const Linkedin = ({ colorArrow = colorPalette.eerieBlack, classNames }: IIconsProps) => (
 	<svg
 		className={classNames}
 		xmlns="http://www.w3.org/2000/svg"

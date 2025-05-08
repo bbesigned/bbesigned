@@ -1,8 +1,10 @@
+import { colorPalette } from "helpers/colorPalette";
+
 import { type IIconsProps } from "../../types/common/PageProps";
 
 import style from "./upButton.module.scss";
 
-export const UpButton = ({ classNames, colorArrow = "#FFF8F0" }: IIconsProps) => (
+export const UpButton = ({ classNames, colorArrow = colorPalette.floralWhite }: IIconsProps) => (
 	<span className={`${style.default} ${classNames}`}>
 		<svg
 			className={style.arrow}

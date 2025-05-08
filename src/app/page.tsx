@@ -10,7 +10,7 @@ export default function Home() {
 	return (
 		<div className={`${styles.page}`}>
 			<Banner />
-			<Link style={{ fontSize: "3em" }} href={"/projectExamples"}>
+			<Link className={styles.page__link} href={"/projectExamples"}>
 				Project Examples link
 			</Link>
 			<Footer />

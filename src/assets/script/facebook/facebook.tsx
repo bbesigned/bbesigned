@@ -1,6 +1,7 @@
 import { type IIconsProps } from "types/common/PageProps";
+import { colorPalette } from "helpers/colorPalette";
 
-export const Facebook = ({ colorArrow = "#191919", classNames }: IIconsProps) => (
+export const Facebook = ({ colorArrow = colorPalette.eerieBlack, classNames }: IIconsProps) => (
 	<svg className={classNames} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 52 52">
 		<path
 			fill={colorArrow}

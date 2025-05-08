@@ -1,7 +1,7 @@
 import { type IIconsProps } from "types/common/PageProps";
-
+import { colorPalette } from "helpers/colorPalette";
 /* eslint-disable max-len */
-export const Instagram = ({ colorArrow = "#191919", classNames }: IIconsProps) => (
+export const Instagram = ({ colorArrow = colorPalette.eerieBlack, classNames }: IIconsProps) => (
 	<svg
 		className={classNames}
 		xmlns="http://www.w3.org/2000/svg"

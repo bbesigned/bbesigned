@@ -4,6 +4,8 @@ import { ReactNode } from "react";
 
 import { Noto_Sans } from "next/font/google";
 
+import style from "./layout.module.scss";
+
 import type { Metadata } from "next";
 
 import "./reset.css";
@@ -28,7 +30,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${notoSans.className}`}>{children}</body>
+			<body className={`${notoSans.className} ${style.layoutBackground}`}>{children}</body>
 		</html>
 	);
 }
