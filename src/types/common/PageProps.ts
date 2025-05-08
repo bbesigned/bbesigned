@@ -1,5 +1,5 @@
 export interface IIconsProps {
 	classNames?: string;
-	colorArrow?: string;
+	color?: string;
 	right?: boolean;
 }
