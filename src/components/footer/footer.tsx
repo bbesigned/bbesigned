@@ -45,7 +45,7 @@ export const Footer = () => {
 						</ul>
 					</div>
 					<div
-						className={`${style.footerNavigationContainer} ${style.footerNavigationContainer_social}`}>
+						className={`${style.footerNavigationContainer} ${style.footerNavigationContainer__socialMediaWrap}`}>
 						<h3>Social media</h3>
 						<ul>
 							<li>Instagram</li>
