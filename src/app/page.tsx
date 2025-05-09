@@ -9,6 +9,7 @@ export default function Home() {
 		<div className={`${styles.page}`}>
 			<Banner />
 			<Link href={"/projectExamples"}>Project Examples</Link>
+			<Link href={"/personalData"}>Personal Data</Link>
 		</div>
 	);
 }
