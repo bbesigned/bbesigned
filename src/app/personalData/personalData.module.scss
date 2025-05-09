@@ -6,13 +6,14 @@
 	position: relative;
 	background: url("../../../public/personalDataBackground.jpg");
 	color: var(--floral-white);
-	padding: 80px 80px 60px 80px;
+	padding: 80px 80px 60px;
+
 	&__title {
 		line-height: 72%;
 		font-size: clamp(64px, 6.25vw, 160px);
 		font-weight: 700;
 		text-align: center;
-		margin: 241px 0 271px 0;
+		margin: 241px 0 271px;
 	}
 }
 
@@ -37,6 +38,7 @@
 	flex-direction: column;
 	gap: 70px;
 	list-style: none;
+
 	&__item {
 		h3 {
 			margin-left: 14px;
@@ -44,6 +46,7 @@
 			margin-bottom: 13px;
 			line-height: 130%;
 		}
+
 		p {
 			line-height: 137%;
 			text-indent: 2.41%;
@@ -53,9 +56,10 @@
 
 @media (max-width: 1921px) {
 	.personalDataTopContainer {
-		padding: 80px 80px 46px 80px;
+		padding: 80px 80px 46px;
+
 		&__title {
-			margin: 232px 0 203px 0;
+			margin: 232px 0 203px;
 		}
 	}
 
@@ -69,11 +73,13 @@
 
 	.topicsList {
 		gap: 56px;
+
 		&__item {
 			h3 {
 				margin-left: 12px;
 				margin-bottom: 10px;
 			}
+
 			p {
 				line-height: 138%;
 			}
@@ -83,9 +89,10 @@
 
 @media (max-width: 1441px) {
 	.personalDataTopContainer {
-		padding: 80px 80px 36px 80px;
+		padding: 80px 80px 36px;
+
 		&__title {
-			margin: 154px 0 150px 0;
+			margin: 154px 0 150px;
 		}
 	}
 
@@ -99,6 +106,7 @@
 
 	.topicsList {
 		gap: 41px;
+
 		&__item {
 			h3 {
 				margin-left: 9px;
@@ -110,10 +118,11 @@
 
 @media (max-width: 1171px) {
 	.personalDataTopContainer {
-		padding: 80px 80px 28px 80px;
+		padding: 80px 80px 28px;
+
 		&__title {
 			font-size: clamp(48px, 6.25vw, 72px);
-			margin: 111px 0 122px 0;
+			margin: 111px 0 122px;
 		}
 	}
 
@@ -127,11 +136,13 @@
 
 	.topicsList {
 		gap: 23px;
+
 		&__item {
 			h3 {
 				margin-left: 7px;
 				margin-bottom: 5px;
 			}
+
 			p {
 				line-height: 135%;
 			}
@@ -141,9 +152,10 @@
 
 @media (max-width: 1025px) {
 	.personalDataTopContainer {
-		padding: 40px 40px 25px 40px;
+		padding: 40px 40px 25px;
+
 		&__title {
-			margin: 126px 0 108px 0;
+			margin: 126px 0 108px;
 		}
 	}
 
@@ -157,6 +169,7 @@
 
 	.topicsList {
 		gap: 28px;
+
 		&__item {
 			h3 {
 				margin-left: 7px;
@@ -172,10 +185,11 @@
 	}
 
 	.personalDataTopContainer {
-		padding: 20px 20px 8px 20px;
+		padding: 20px 20px 8px;
+
 		&__title {
 			font-size: 48px;
-			margin: 105px 0 77px 0;
+			margin: 105px 0 77px;
 		}
 	}
 
@@ -190,11 +204,13 @@
 
 	.topicsList {
 		gap: 21px;
+
 		&__item {
 			h3 {
 				margin-left: 6px;
 				margin-bottom: 3px;
 			}
+
 			p {
 				line-height: 139%;
 				text-indent: 3.5%;

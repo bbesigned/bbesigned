@@ -15,10 +15,12 @@
 	background-color: transparent;
 	border: 1px solid var(--floral-white);
 	padding: 21px 66px;
+
 	&__arrow {
 		flex-shrink: 0;
 		width: 34px;
 	}
+
 	p {
 		flex-shrink: 0;
 	}
@@ -40,6 +42,7 @@
 		font-size: 20px;
 		gap: 12px;
 		padding: 16px 50px;
+
 		&__arrow {
 			width: 24px;
 			height: 24px;
@@ -52,11 +55,13 @@
 		font-size: 16px;
 		gap: 9px;
 		padding: 12px 38px;
+
 		&__arrow {
 			width: 19px;
 			height: 19px;
 		}
 	}
+
 	.navigationListWrap {
 		gap: 32px;
 	}
@@ -67,11 +72,13 @@
 		font-size: 14px;
 		gap: 8px;
 		padding: 9px 30px;
+
 		&__arrow {
 			width: 15px;
 			height: 15px;
 		}
 	}
+
 	.navigationListWrap {
 		gap: 26px;
 	}
@@ -82,11 +89,13 @@
 		font-size: 12px;
 		gap: 6px;
 		padding: 8px 26px;
+
 		&__arrow {
 			width: 13px;
 			height: 13px;
 		}
 	}
+
 	.navigationListWrap {
 		font-size: 18px;
 		gap: 22px;
@@ -98,11 +107,13 @@
 		font-size: 14px;
 		gap: 4px;
 		padding: 9px 32px;
+
 		&__arrow {
 			width: 15px;
 			height: 15px;
 		}
 	}
+
 	.navigationListWrap {
 		font-size: 14px;
 		gap: 32px;
