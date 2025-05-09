@@ -1,6 +1,7 @@
 .personalDataWrap {
 	font-size: clamp(20px, 1.6625vw, 42px);
 }
+
 .personalDataTopContainer {
 	position: relative;
 	background: url("../../../public/personalDataBackground.jpg");
@@ -11,43 +12,12 @@
 		font-size: clamp(64px, 6.25vw, 160px);
 		font-weight: 700;
 		text-align: center;
-		margin: 336px 0 271px 0;
+		margin: 241px 0 271px 0;
 	}
 }
 
-.navigationWrap {
-	display: grid;
-	align-items: center;
-}
-.backButton {
-	display: flex;
-	align-items: center;
-	grid-column: 1/2;
-	grid-row: 1/2;
-	justify-self: start;
-	gap: 16px;
-	font-size: 28px;
-	color: var(--floral-white);
-	background-color: transparent;
-	border: 1px solid var(--floral-white);
-	padding: 21px 66px;
-	&__arrow {
-		flex-shrink: 0;
-		width: 34px;
-	}
-	p {
-		flex-shrink: 0;
-	}
-}
-.navigationListWrap {
-	grid-column: 1/2;
-	grid-row: 1/2;
-	justify-self: center;
-	display: flex;
-	margin: 0 auto;
-	font-weight: 300;
-	gap: 56px;
-	list-style: none;
+.bannerWrapper {
+	font-size: 14px;
 }
 
 .personalDataTopicsWrapper {
@@ -89,19 +59,6 @@
 		}
 	}
 
-	.backButton {
-		font-size: 20px;
-		gap: 12px;
-		padding: 16px 50px;
-		&__arrow {
-			width: 24px;
-			height: 24px;
-		}
-	}
-	.navigationListWrap {
-		gap: 42px;
-	}
-
 	.personalDataTopicsWrapper {
 		width: 91.666vw;
 	}
@@ -132,19 +89,6 @@
 		}
 	}
 
-	.backButton {
-		font-size: 16px;
-		gap: 9px;
-		padding: 12px 38px;
-		&__arrow {
-			width: 19px;
-			height: 19px;
-		}
-	}
-	.navigationListWrap {
-		gap: 32px;
-	}
-
 	.personalDataTopicsWrapper {
 		width: 88.888vw;
 	}
@@ -173,18 +117,6 @@
 		}
 	}
 
-	.backButton {
-		font-size: 14px;
-		gap: 8px;
-		padding: 9px 30px;
-		&__arrow {
-			width: 15px;
-			height: 15px;
-		}
-	}
-	.navigationListWrap {
-		gap: 26px;
-	}
 	.personalDataTopicsWrapper {
 		width: 86.325vw;
 	}
@@ -215,20 +147,6 @@
 		}
 	}
 
-	.backButton {
-		font-size: 12px;
-		gap: 6px;
-		padding: 8px 26px;
-		&__arrow {
-			width: 13px;
-			height: 13px;
-		}
-	}
-	.navigationListWrap {
-		font-size: 18px;
-		gap: 22px;
-	}
-
 	.personalDataTopicsWrapper {
 		width: 92.1875vw;
 	}
@@ -252,6 +170,7 @@
 	.personalDataWrap {
 		font-size: 18px;
 	}
+
 	.personalDataTopContainer {
 		padding: 20px 20px 8px 20px;
 		&__title {
@@ -260,22 +179,10 @@
 		}
 	}
 
-	.backButton {
-		font-size: 14px;
-		gap: 4px;
-		padding: 9px 32px;
-		&__arrow {
-			width: 15px;
-			height: 15px;
-		}
-	}
-	.navigationListWrap {
-		font-size: 14px;
-		gap: 32px;
-	}
 	.personalDataTopicsWrapper {
 		width: 94.661vw;
 	}
+
 	.personalDataTopicsContainer {
 		width: 74.5%;
 		margin: 68px auto;

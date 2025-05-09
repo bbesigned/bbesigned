@@ -1,4 +1,6 @@
-import { BackArrow } from "assets/script/backArrow/backArrow";
+import BannerHeader from "components/bannerHeader/bannerHeader";
+
+import { NavigationBlock } from "components/personalData/navigationBlock/navigationBlock";
 
 import style from "./personalData.module.scss";
 
@@ -6,18 +8,11 @@ export default function PersonalData() {
 	return (
 		<div className={style.personalDataWrap}>
 			<div className={style.personalDataTopContainer}>
-				<h1 className={style.personalDataTopContainer__title}>Personal Data</h1>
-				<div className={style.navigationWrap}>
-					<button className={style.backButton}>
-						<BackArrow classNames={style.backButton__arrow} />
-						<p>Back</p>
-					</button>
-					<nav className={style.navigationListWrap}>
-						<li className={style.navigationListWrap__item}>FAQ</li>
-						<li className={style.navigationListWrap__item}>Personal Data</li>
-						<li className={style.navigationListWrap__item}>Privacy Policy</li>
-					</nav>
+				<div className={style.bannerWrapper}>
+					<BannerHeader />
 				</div>
+				<h1 className={style.personalDataTopContainer__title}>Personal Data</h1>
+				<NavigationBlock />
 			</div>
 			<div className={style.personalDataTopicsWrapper}>
 				<div className={style.personalDataTopicsContainer}>
