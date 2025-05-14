@@ -30,7 +30,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${notoSans.className} ${style.layoutBackground}`}>{children}</body>
+			<body className={`${notoSans.className} ${notoSans.variable} ${style.layoutBackground}`}>
+				{children}
+			</body>
 		</html>
 	);
 }
