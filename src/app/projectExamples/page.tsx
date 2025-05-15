@@ -44,9 +44,9 @@ export default function ProjectExamples() {
 					</div>
 				</div>
 				<Image
-					style={{ flexShrink: "0", height: "720px" }}
-					width={950}
-					height={720}
+					className={style.projectExampleWrap__image}
+					width={1270}
+					height={947}
 					priority
 					src="/project_preview.jpg"
 					alt="project preview"

@@ -1,19 +1,19 @@
 .controlButtons {
-	margin-top: 50px;
+	margin-top: 80px;
 	display: flex;
 	justify-content: space-between;
 
 	&__btn {
 		display: flex;
 		align-items: center;
-		gap: 60px;
+		gap: 80px;
 		border-bottom: 1px solid var(--eerie-black);
 		border-top: 1px solid var(--eerie-black);
-		padding: 14px 0;
+		padding: 25px 0;
 		font-family: var(--font-noto-sans);
 		width: 100%;
 		font-weight: 400;
-		font-size: 32px;
+		font-size: 42px;
 		line-height: 130%;
 		background-color: transparent;
 
@@ -28,12 +28,16 @@
 
 		&_left {
 			justify-content: end;
-			padding-right: 90px;
+			padding-right: 120px;
 		}
 
 		&_right {
 			justify-content: start;
-			padding-left: 90px;
+			padding-left: 120px;
 		}
 	}
+}
+
+.controlButtons__arrow {
+	width: 93px;
 }

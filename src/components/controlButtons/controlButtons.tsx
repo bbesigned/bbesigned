@@ -5,7 +5,7 @@ import style from "./controlButtons.module.scss";
 export const ControlButtons = () => (
 	<div className={style.controlButtons}>
 		<button className={`${style.controlButtons__btn} ${style.controlButtons__btn_left}`}>
-			<ControlArrow />
+			<ControlArrow classNames={style.controlButtons__arrow} />
 			<span>Previous project</span>
 		</button>
 		<button className={`${style.controlButtons__btn} ${style.controlButtons__btn_viewAll}`}>
