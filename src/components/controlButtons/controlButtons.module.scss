@@ -1,5 +1,4 @@
 .controlButtons {
-	margin-top: 80px;
 	display: flex;
 	justify-content: space-between;
 
@@ -13,7 +12,7 @@
 		font-family: var(--font-noto-sans);
 		width: 100%;
 		font-weight: 400;
-		font-size: 42px;
+		font-size: clamp(18px, 1.7vw, 42px);
 		line-height: 130%;
 		background-color: transparent;
 
@@ -38,6 +37,86 @@
 	}
 }
 
-.controlButtons__arrow {
-	width: 93px;
+@media (max-width: 1921px) {
+	.controlButtons {
+		&__btn {
+			gap: 60px;
+			padding: 18px 0;
+
+			&_left {
+				padding-right: 90px;
+			}
+
+			&_right {
+				padding-left: 90px;
+			}
+		}
+	}
+
+	.controlButtons__arrow {
+		height: 14px;
+	}
+}
+
+@media (max-width: 1441px) {
+	.controlButtons {
+		&__btn {
+			gap: 45px;
+			padding: 14px 0;
+
+			&_left {
+				padding-right: 68px;
+			}
+
+			&_right {
+				padding-left: 68px;
+			}
+		}
+	}
+
+	.controlButtons__arrow {
+		height: 11px;
+	}
+}
+
+@media (max-width: 1171px) {
+	.controlButtons {
+		&__btn {
+			gap: 36px;
+			padding: 11px 0;
+
+			&_left {
+				padding-right: 55px;
+			}
+
+			&_right {
+				padding-left: 55px;
+			}
+		}
+	}
+
+	.controlButtons__arrow {
+		height: 9px;
+	}
+}
+
+@media (max-width: 1025px) {
+	.controlButtons {
+		&__btn {
+			gap: 32px;
+			padding: 9px 0;
+
+			&_left {
+				padding-right: 48px;
+			}
+
+			&_right {
+				padding-left: 48px;
+			}
+		}
+	}
+
+	.controlButtons__arrow {
+		height: 8px;
+	}
 }

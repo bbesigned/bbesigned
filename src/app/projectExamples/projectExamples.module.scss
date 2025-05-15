@@ -7,11 +7,11 @@
 	font-family: var(--font-noto-sans);
 	color: var(--eerie-black);
 	padding-top: 213px;
-	font-size: 32px;
+	font-size: clamp(14px, 1.24vw, 32px);
 	line-height: 130%;
 	&__image {
+		width: 51%;
 		flex-grow: 1;
-		// height: 720px;
 	}
 }
 
@@ -33,7 +33,7 @@
 
 	&__subtitle {
 		font-weight: 500;
-		font-size: 112px;
+		font-size: clamp(45px, 4.4vw, 112px);
 		line-height: 130%;
 	}
 }
@@ -78,7 +78,7 @@
 }
 
 .summaryWrapper {
-	padding: 46px 0;
+	padding-top: 46px;
 }
 
 .summaryContainer {
@@ -88,11 +88,181 @@
 	}
 }
 
+.controlButtons {
+	margin-top: 80px;
+}
 .upButton {
 	position: fixed;
 	border: 1.33px solid var(--floral-white);
-	width: 107px;
-	height: 107px;
+	width: 100px;
+	height: 100px;
 	top: 671px;
 	right: 80px;
+}
+
+@media (max-width: 1921px) {
+	.controlButtons {
+		margin-top: 50px;
+	}
+	.projectExampleWrap {
+		padding-top: 160px;
+	}
+
+	.infoHeadWrap {
+		padding: 28px 0;
+	}
+
+	.processWrapper {
+		padding: 34px 0;
+	}
+
+	.processContainerTitleList {
+		gap: 30px;
+	}
+
+	.clientWrap {
+		padding: 34px 0;
+	}
+
+	.summaryWrapper {
+		padding-top: 34px;
+	}
+
+	.summaryContainer {
+		&__titleContent {
+			margin-top: 10px;
+		}
+	}
+
+	.upButton {
+		width: 82px;
+		height: 82px;
+	}
+}
+
+@media (max-width: 1441px) {
+	.controlButtons {
+		margin-top: 38px;
+	}
+	.projectExampleWrap {
+		padding-top: 177px;
+	}
+
+	.infoHeadWrap {
+		padding: 21px 0;
+		&__subtitle {
+			font-size: clamp(45px, 4.3vw, 112px);
+		}
+	}
+
+	.processWrapper {
+		padding: 25px 0;
+	}
+
+	.processContainerTitleList {
+		gap: 22px;
+	}
+
+	.clientWrap {
+		padding: 25px 0;
+	}
+
+	.summaryWrapper {
+		padding-top: 25px;
+	}
+
+	.summaryContainer {
+		&__titleContent {
+			margin-top: 8px;
+		}
+	}
+
+	.upButton {
+		width: 64px;
+		height: 64px;
+	}
+}
+
+@media (max-width: 1171px) {
+	.controlButtons {
+		margin-top: 31px;
+	}
+	.projectExampleWrap {
+		padding-top: 140px;
+	}
+
+	.infoHeadWrap {
+		padding: 17px 0;
+		&__subtitle {
+			font-size: clamp(45px, 4.3vw, 112px);
+		}
+	}
+
+	.processWrapper {
+		padding: 20px 0;
+	}
+
+	.processContainerTitleList {
+		gap: 18px;
+	}
+
+	.clientWrap {
+		padding: 20px 0;
+	}
+
+	.summaryWrapper {
+		padding-top: 20px;
+	}
+
+	.summaryContainer {
+		&__titleContent {
+			margin-top: 6px;
+		}
+	}
+
+	.upButton {
+		width: 49px;
+		height: 49px;
+	}
+}
+@media (max-width: 1025px) {
+	.controlButtons {
+		margin-top: 26px;
+	}
+	.projectExampleWrap {
+		padding-top: 126px;
+	}
+
+	.infoHeadWrap {
+		padding: 16px 0 13px;
+		&__subtitle {
+			font-size: clamp(45px, 4.3vw, 112px);
+		}
+	}
+
+	.processWrapper {
+		padding: 18px 0 14px;
+	}
+
+	.processContainerTitleList {
+		gap: 16px;
+	}
+
+	.clientWrap {
+		padding: 17px 0;
+	}
+
+	.summaryWrapper {
+		padding: 19px 0;
+	}
+
+	.summaryContainer {
+		&__titleContent {
+		}
+	}
+
+	.upButton {
+		width: 43px;
+		height: 43px;
+	}
 }

@@ -52,7 +52,7 @@ export default function ProjectExamples() {
 					alt="project preview"
 				/>
 			</div>
-			<ControlButtons />
+			<ControlButtons classnames={style.controlButtons} />
 			<UpButton classNames={style.upButton} />
 		</>
 	);
