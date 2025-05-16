@@ -21,3 +21,7 @@ export interface IVectorLetter {
 export interface IBannerLogo {
 	smallLogo: boolean;
 }
+
+export interface IControlButtons {
+	classnames?: string;
+}

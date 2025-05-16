@@ -1,52 +1,55 @@
 .projectExampleWrap {
 	position: relative;
-	display: flex;
-	gap: 20px;
-	margin-left: 80px;
+	display: grid;
+	padding-top: 20px;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 20px;
 	font-family: var(--font-noto-sans);
 	color: var(--eerie-black);
-	padding-top: 160px;
+	font-size: clamp(14px, 1.24vw, 32px);
+	line-height: 130%;
+
+	&__image {
+		height: 100%;
+		width: 100%;
+	}
 }
 
 .projectExampleContainer {
 	display: flex;
 	flex-direction: column;
+	margin-left: 3.1vw;
 }
 
 .infoHeadWrap {
-	padding: 28px 0;
+	padding: 36px 0 40px;
 	border-bottom: 1px solid var(--eerie-black);
 	border-top: 1px solid var(--eerie-black);
 
 	&__title {
 		text-align: end;
 		font-weight: 400;
-		font-size: 24px;
-		line-height: 130%;
 	}
 
 	&__subtitle {
 		font-weight: 500;
-		font-size: 85px;
+		font-size: clamp(45px, 4.4vw, 112px);
 		line-height: 130%;
 	}
 }
 
 .processWrapper {
-	padding: 34px 0;
+	padding: 45px 0 46px;
 	border-bottom: 1px solid var(--eerie-black);
 
 	&__title {
 		text-align: end;
 		font-weight: 300;
-		font-size: 24px;
 		margin-top: 2px;
-		line-height: 130%;
 	}
 
 	&__headTitle {
 		font-weight: 600;
-		font-size: 24px;
 	}
 }
 
@@ -59,44 +62,271 @@
 .processContainerTitleList {
 	display: flex;
 	font-weight: 300;
-	gap: 30px;
-	font-size: 24px;
-	line-height: 130%;
+	gap: 40px;
 }
 
 .clientWrap {
-	padding: 34px 0;
+	padding: 45px 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	border-bottom: 1px solid var(--eerie-black);
 
 	&__title {
-		font-size: 24px;
 		font-weight: 300;
-		line-height: 130%;
 	}
 }
 
 .summaryWrapper {
-	padding: 34px 0 46px;
+	padding-top: 46px;
 }
 
 .summaryContainer {
+	display: block;
+
 	&__titleContent {
-		margin-top: 10px;
+		margin-top: 14px;
 		font-weight: 300;
-		font-size: 24px;
-		line-height: 130%;
-		letter-spacing: 0.05em;
 	}
+}
+
+.controlButtons {
+	margin-top: 80px;
 }
 
 .upButton {
 	position: fixed;
 	border: 1.33px solid var(--floral-white);
-	width: 107px;
-	height: 107px;
+	width: 100px;
+	height: 100px;
 	top: 671px;
 	right: 80px;
+}
+
+@media (max-width: 1921px) {
+	.controlButtons {
+		margin-top: 50px;
+	}
+
+	.projectExampleContainer {
+		margin-left: 4.2vw;
+	}
+
+	.infoHeadWrap {
+		padding: 28px 0;
+	}
+
+	.processWrapper {
+		padding: 34px 0;
+	}
+
+	.processContainerTitleList {
+		gap: 30px;
+	}
+
+	.clientWrap {
+		padding: 34px 0;
+	}
+
+	.summaryWrapper {
+		padding-top: 34px;
+	}
+
+	.summaryContainer {
+		display: block;
+
+		&__titleContent {
+			margin-top: 10px;
+		}
+	}
+
+	.upButton {
+		width: 82px;
+		height: 82px;
+	}
+}
+
+@media (max-width: 1441px) {
+	.controlButtons {
+		margin-top: 38px;
+	}
+
+	.infoHeadWrap {
+		padding: 21px 0;
+
+		&__subtitle {
+			font-size: clamp(45px, 4.3vw, 112px);
+		}
+	}
+
+	.processWrapper {
+		padding: 25px 0;
+	}
+
+	.processContainerTitleList {
+		gap: 22px;
+	}
+
+	.clientWrap {
+		padding: 25px 0;
+	}
+
+	.summaryWrapper {
+		padding-top: 25px;
+	}
+
+	.summaryContainer {
+		display: block;
+
+		&__titleContent {
+			margin-top: 8px;
+		}
+	}
+
+	.upButton {
+		width: 64px;
+		height: 64px;
+	}
+}
+
+@media (max-width: 1171px) {
+	.controlButtons {
+		margin-top: 31px;
+	}
+
+	.projectExampleContainer {
+		margin-left: 6.8vw;
+	}
+
+	.infoHeadWrap {
+		padding: 17px 0;
+
+		&__subtitle {
+			font-size: clamp(45px, 4.3vw, 112px);
+		}
+	}
+
+	.processWrapper {
+		padding: 20px 0;
+	}
+
+	.processContainerTitleList {
+		gap: 18px;
+	}
+
+	.clientWrap {
+		padding: 20px 0;
+	}
+
+	.summaryWrapper {
+		padding-top: 20px;
+	}
+
+	.summaryContainer {
+		display: block;
+
+		&__titleContent {
+			margin-top: 6px;
+		}
+	}
+
+	.upButton {
+		width: 49px;
+		height: 49px;
+	}
+}
+
+@media (max-width: 1025px) {
+	.controlButtons {
+		margin-top: 26px;
+	}
+
+	.projectExampleContainer {
+		margin-left: 3.9vw;
+	}
+
+	.infoHeadWrap {
+		padding: 16px 0 13px;
+
+		&__subtitle {
+			font-size: clamp(45px, 4.3vw, 112px);
+		}
+	}
+
+	.processWrapper {
+		padding: 18px 0 14px;
+	}
+
+	.processContainerTitleList {
+		gap: 16px;
+	}
+
+	.clientWrap {
+		padding: 17px 0;
+	}
+
+	.summaryWrapper {
+		padding: 19px 0;
+	}
+
+	.upButton {
+		width: 43px;
+		height: 43px;
+	}
+}
+
+@media (max-width: 769px) {
+	.controlButtons {
+		margin: 0;
+		order: 2;
+		grid-area: auto;
+	}
+
+	.projectExampleWrap {
+		grid-template-columns: 1fr;
+		font-size: 20px;
+		gap: 0;
+
+		&__image {
+			order: 1;
+			content: url("../../../public/projectPreviewTablet.jpg");
+		}
+	}
+
+	.projectExampleContainer {
+		margin: 0 auto;
+		width: 79.2vw;
+		order: 3;
+		margin-top: 10px;
+	}
+
+	.infoHeadWrap {
+		padding: 14px 0;
+		border-top: none;
+
+		&__subtitle {
+			font-size: 72px;
+		}
+	}
+
+	.processWrapper {
+		padding: 14px 0;
+	}
+
+	.processContainerTitleList {
+		gap: 16px;
+	}
+
+	.clientWrap {
+		padding: 17px 0;
+	}
+
+	.summaryWrapper {
+		padding: 19px 0;
+	}
+
+	.upButton {
+		width: 43px;
+		height: 43px;
+	}
 }
