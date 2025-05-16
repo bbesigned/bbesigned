@@ -22,6 +22,6 @@ export interface IBannerLogo {
 	smallLogo: boolean;
 }
 
-export interface IContorlButtons {
+export interface IControlButtons {
 	classnames?: string;
 }
