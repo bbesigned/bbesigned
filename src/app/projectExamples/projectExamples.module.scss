@@ -1,24 +1,23 @@
 .projectExampleWrap {
 	position: relative;
-	display: flex;
-	gap: 20px;
-	width: 95.6vw;
-	margin-left: auto;
+	display: grid;
+	padding-top: 20px;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 20px;
 	font-family: var(--font-noto-sans);
 	color: var(--eerie-black);
-	padding-top: 213px;
 	font-size: clamp(14px, 1.24vw, 32px);
 	line-height: 130%;
 	&__image {
-		width: 51%;
-		flex-grow: 1;
+		height: 100%;
+		width: 100%;
 	}
 }
 
 .projectExampleContainer {
 	display: flex;
 	flex-direction: column;
-	width: 48%;
+	margin-left: 3.1vw;
 }
 
 .infoHeadWrap {
@@ -104,8 +103,8 @@
 	.controlButtons {
 		margin-top: 50px;
 	}
-	.projectExampleWrap {
-		padding-top: 160px;
+	.projectExampleContainer {
+		margin-left: 4.2vw;
 	}
 
 	.infoHeadWrap {
@@ -144,10 +143,6 @@
 	.controlButtons {
 		margin-top: 38px;
 	}
-	.projectExampleWrap {
-		padding-top: 177px;
-	}
-
 	.infoHeadWrap {
 		padding: 21px 0;
 		&__subtitle {
@@ -187,8 +182,9 @@
 	.controlButtons {
 		margin-top: 31px;
 	}
-	.projectExampleWrap {
-		padding-top: 140px;
+
+	.projectExampleContainer {
+		margin-left: 6.8vw;
 	}
 
 	.infoHeadWrap {
@@ -229,8 +225,8 @@
 	.controlButtons {
 		margin-top: 26px;
 	}
-	.projectExampleWrap {
-		padding-top: 126px;
+	.projectExampleContainer {
+		margin-left: 3.9vw;
 	}
 
 	.infoHeadWrap {
@@ -256,9 +252,56 @@
 		padding: 19px 0;
 	}
 
-	.summaryContainer {
-		&__titleContent {
+	.upButton {
+		width: 43px;
+		height: 43px;
+	}
+}
+
+@media (max-width: 769px) {
+	.controlButtons {
+		margin: 0;
+		order: 2;
+		grid-area: auto;
+	}
+	.projectExampleWrap {
+		grid-template-columns: 1fr;
+		font-size: 20px;
+		gap: 0;
+		&__image {
+			order: 1;
+			content: url("../../../public/projectPreviewTablet.jpg");
 		}
+	}
+	.projectExampleContainer {
+		margin: 0 auto;
+		width: 79.2vw;
+		order: 3;
+		margin-top: 10px;
+	}
+
+	.infoHeadWrap {
+		padding: 14px 0;
+		border-top: none;
+		&__subtitle {
+			font-size: 72px;
+		}
+	}
+
+	.processWrapper {
+		padding: 14px 0;
+	}
+
+	.processContainerTitleList {
+		gap: 16px;
+	}
+
+	.clientWrap {
+		padding: 17px 0;
+	}
+
+	.summaryWrapper {
+		padding: 19px 0;
 	}
 
 	.upButton {

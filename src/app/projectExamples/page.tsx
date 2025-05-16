@@ -48,11 +48,11 @@ export default function ProjectExamples() {
 					width={1270}
 					height={947}
 					priority
-					src="/project_preview.jpg"
+					src="/projectPreviewDesktop.jpg"
 					alt="project preview"
 				/>
+				<ControlButtons classnames={style.controlButtons} />
 			</div>
-			<ControlButtons classnames={style.controlButtons} />
 			<UpButton classNames={style.upButton} />
 		</>
 	);
