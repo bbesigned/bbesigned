@@ -8,6 +8,7 @@
 	color: var(--eerie-black);
 	font-size: clamp(14px, 1.24vw, 32px);
 	line-height: 130%;
+
 	&__image {
 		height: 100%;
 		width: 100%;
@@ -90,6 +91,7 @@
 .controlButtons {
 	margin-top: 80px;
 }
+
 .upButton {
 	position: fixed;
 	border: 1.33px solid var(--floral-white);
@@ -103,6 +105,7 @@
 	.controlButtons {
 		margin-top: 50px;
 	}
+
 	.projectExampleContainer {
 		margin-left: 4.2vw;
 	}
@@ -143,8 +146,10 @@
 	.controlButtons {
 		margin-top: 38px;
 	}
+
 	.infoHeadWrap {
 		padding: 21px 0;
+
 		&__subtitle {
 			font-size: clamp(45px, 4.3vw, 112px);
 		}
@@ -189,6 +194,7 @@
 
 	.infoHeadWrap {
 		padding: 17px 0;
+
 		&__subtitle {
 			font-size: clamp(45px, 4.3vw, 112px);
 		}
@@ -221,16 +227,19 @@
 		height: 49px;
 	}
 }
+
 @media (max-width: 1025px) {
 	.controlButtons {
 		margin-top: 26px;
 	}
+
 	.projectExampleContainer {
 		margin-left: 3.9vw;
 	}
 
 	.infoHeadWrap {
 		padding: 16px 0 13px;
+
 		&__subtitle {
 			font-size: clamp(45px, 4.3vw, 112px);
 		}
@@ -264,15 +273,18 @@
 		order: 2;
 		grid-area: auto;
 	}
+
 	.projectExampleWrap {
 		grid-template-columns: 1fr;
 		font-size: 20px;
 		gap: 0;
+
 		&__image {
 			order: 1;
 			content: url("../../../public/projectPreviewTablet.jpg");
 		}
 	}
+
 	.projectExampleContainer {
 		margin: 0 auto;
 		width: 79.2vw;
@@ -283,6 +295,7 @@
 	.infoHeadWrap {
 		padding: 14px 0;
 		border-top: none;
+
 		&__subtitle {
 			font-size: 72px;
 		}
