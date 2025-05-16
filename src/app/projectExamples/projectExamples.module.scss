@@ -82,6 +82,8 @@
 }
 
 .summaryContainer {
+	display: block;
+
 	&__titleContent {
 		margin-top: 14px;
 		font-weight: 300;
@@ -131,6 +133,8 @@
 	}
 
 	.summaryContainer {
+		display: block;
+
 		&__titleContent {
 			margin-top: 10px;
 		}
@@ -172,6 +176,8 @@
 	}
 
 	.summaryContainer {
+		display: block;
+
 		&__titleContent {
 			margin-top: 8px;
 		}
@@ -217,6 +223,8 @@
 	}
 
 	.summaryContainer {
+		display: block;
+
 		&__titleContent {
 			margin-top: 6px;
 		}
