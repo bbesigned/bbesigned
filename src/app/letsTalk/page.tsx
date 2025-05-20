@@ -2,22 +2,27 @@
 
 import { useState } from "react";
 
+import Link from "next/link";
+
 import SubmitLetsTalkButton from "components/submitLetsTalkButton/submitLetsTalkButton";
 
-import styles from "./letsTalk.module.scss";
-import Link from "next/link";
 import ModalLetsTalk from "components/modalLetsTalk/modalLetsTalk";
 
-export default function LetsTalk() {
+import styles from "./letsTalk.module.scss";
+import SelectActivity from "components/selectActivity/selectActivity";
+
+const LetsTalk = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [activity, setActivity] = useState("");
 	const [agree, setAgree] = useState(false);
-	const [isModalOpen, setIsModalOpen] = useState(true);
+	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [isSubmit, setIsSubmit] = useState(false);
 
-	const openModal = () => setIsModalOpen(true);
-	const closeModal = () => setIsModalOpen(false);
-
+	const closeModal = () => {
+		setIsModalOpen(false);
+		setIsSubmit(false);
+	};
 	const data = [name, email, activity, agree];
 
 	const handleClickReset = () => {
@@ -25,13 +30,17 @@ export default function LetsTalk() {
 		setEmail("");
 		setActivity("");
 		setAgree(false);
+		setIsSubmit(false);
 	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		setIsSubmit(true);
 		try {
+			setTimeout(() => {
+				setIsModalOpen(true);
+			}, 2000);
 			console.log(data);
-			setIsModalOpen(true)
 		} catch {
 			console.log("ERROR");
 		}
@@ -102,11 +111,12 @@ export default function LetsTalk() {
 								<button type="button" className={styles.letsTalk__reset} onClick={handleClickReset}>
 									RESET
 								</button>
-								<SubmitLetsTalkButton />
+								<SubmitLetsTalkButton submit={isSubmit} />
 							</div>
 						</div>
 					</form>
 				</div>
+				<SelectActivity />
 				<div className={styles.letsTalk__footer}>
 					<div className={styles.letsTalk__copyright}>
 						<span>© 2025 BeSigned</span>. All rights reserved.
@@ -118,7 +128,9 @@ export default function LetsTalk() {
 					</div>
 				</div>
 			</div>
-			<ModalLetsTalk visible={isModalOpen} onClose={closeModal}/>
+			<ModalLetsTalk visible={isModalOpen} onClose={closeModal} />
 		</>
 	);
-}
+};
+
+export default LetsTalk;

@@ -1,23 +1,19 @@
-"use client";
-
-import { useState } from "react";
-
-import styles from "./modalLetsTalk.module.scss";
 import Link from "next/link";
+
 import Image from "next/image";
 
 import message from "../../../public/message.png";
 
-export default function ModalLetsTalk({ visible, onClose }) {
-	const [name, setName] = useState("");
+import styles from "./modalLetsTalk.module.scss";
 
+const ModalLetsTalk = ({ visible, onClose }) => {
 	return (
 		<>
 			{visible && (
 				<div className={styles.modal}>
 					<div className={styles.overlay}>
 						<div className={styles.modalLetsTalk}>
-							<button href="/letsTalk" className={styles.modalLetsTalk__close} onClick={onClose}>
+							<button className={styles.modalLetsTalk__close} onClick={onClose}>
 								close x
 							</button>
 							<div className={styles.modalLetsTalk__image}>
@@ -29,7 +25,10 @@ export default function ModalLetsTalk({ visible, onClose }) {
 								Your request has been received and we will get back to you shortly.
 							</div>
 							<div className={styles.modalLetsTalk__buttons}>
-								<Link href="/" className={`${styles.modalLetsTalk__button} ${styles["modalLetsTalk__button--black"]}`} onClick={onClose}>
+								<Link
+									href="/"
+									className={`${styles.modalLetsTalk__button} ${styles["modalLetsTalk__button--black"]}`}
+									onClick={onClose}>
 									Go to homepage
 								</Link>
 								<button type="button" className={styles.modalLetsTalk__button} onClick={onClose}>
@@ -43,3 +42,5 @@ export default function ModalLetsTalk({ visible, onClose }) {
 		</>
 	);
 }
+
+export default ModalLetsTalk;

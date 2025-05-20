@@ -1,18 +1,21 @@
 "use client";
 import Image from "next/image";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import arrow from "../../../public/arrow.svg";
 
 import styles from "./submitLetsTalkButton.module.scss";
 
-const SubmitLetsTalkButton = () => {
-	const [active, setActive] = useState(false);
+const SubmitLetsTalkButton = ({ submit }) => {
+	const [active, setActive] = useState(submit);
+
+	useEffect(() => {
+		setActive(submit);
+	}, [submit]);
 
 	const handleClick = () => {
 		setActive(!active);
-	
 	};
 
 	return (
@@ -20,7 +23,7 @@ const SubmitLetsTalkButton = () => {
 			<div
 				className={`${styles.submitLetsTalkButton__slide} ${active ? styles.active : ""}`}
 				onClick={handleClick}>
-				Slide to send
+				{active ? "Successful send" : "Slide to send"}
 			</div>
 			{!active && (
 				<div className={styles.submitLetsTalkButton__arrows}>
