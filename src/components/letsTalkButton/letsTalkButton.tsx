@@ -4,9 +4,13 @@ import styles from "./letsTalkButton.module.scss";
 
 const LetsTalkButton = () => {
 	return (
-		<div className={styles.letsTalkWrapper}>
-			<Link className={styles.letsTalk__actionElement} href="/letsTalk">Let&#39;s Talk</Link>
-		</div>
+		<>
+			<div className={styles.letsTalkWrapper}>
+				<Link href="/letsTalk" className={styles.letsTalk__actionElement} >
+					Let&#39;s Talk
+				</Link>
+			</div>
+		</>
 	);
 };
 

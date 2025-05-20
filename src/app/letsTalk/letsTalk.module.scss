@@ -4,10 +4,13 @@
 	max-width: 1920px;
 	margin: 0 auto;
 	padding: 64px 80px 0 80px;
+	background-color: var(--pure-white);
 
 	&__close {
 		font-family: Noto Sans;
 		align-self: flex-end;
+		text-align: center;
+
 		color: rgba(25, 25, 25, 1);
 		width: 128px;
 		margin-bottom: 84px;
@@ -30,6 +33,7 @@
 	&__container {
 		display: flex;
 		gap: 148px;
+		margin-bottom: 252px;
 	}
 
 	&__title {
@@ -40,23 +44,28 @@
 		font-family: Noto Sans;
 		font-weight: 700;
 		font-size: 85px;
+		line-height: 100%;
 		text-transform: uppercase;
 		margin-bottom: 45px;
-		line-height: normal;
 	}
 
 	&__text {
 		color: rgba(182, 182, 182, 1);
 		font-size: 24px;
 		letter-spacing: 0%;
-		line-height: normal;
+		line-height: 37px;
 	}
 
 	&__form {
+		// margin-bottom: 252px;
+	}
+
+	&__wrapper {
 		display: flex;
 		flex-direction: column;
 		gap: 25px;
 		flex-grow: 1;
+		margin-bottom: 90px;
 	}
 
 	&__item {
@@ -64,10 +73,8 @@
 		gap: 25px;
 		font-weight: 600;
 		font-size: 64px;
-		// line-height: normal;
-
-		&__text {
-		}
+		line-height: 100%;
+		// line-height: 78px;
 
 		& input {
 			flex-grow: 1;
@@ -76,6 +83,72 @@
 			font-family: Noto Sans;
 			font-weight: 700;
 			font-size: 36px;
+		}
+	}
+
+	&__agree {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		font-weight: 300;
+		font-size: 20px;
+		margin-bottom: 32px;
+
+		& span {
+			text-transform: uppercase;
+			text-decoration: underline;
+		}
+
+		& input {
+			width: 23px;
+			height: 23px;
+		}
+	}
+
+	&__submit {
+		display: flex;
+		gap: 29px;
+	}
+
+	&__reset {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid rgba(0, 0, 0, 1);
+		background-color: var(--pure-white);
+		width: 100px;
+		height: 80px;
+		font-weight: 500;
+		font-size: 20px;
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 36px;
+	}
+
+	&__copyright {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 140%;
+
+		& span {
+			color: rgba(180, 1, 94, 1);
+		}
+	}
+
+	&__links {
+		display: flex;
+		gap: 40px;
+		font-family: Noto Sans;
+		font-weight: 400;
+		font-size: 24px;
+		text-transform: uppercase;
+		text-decoration: underline;
+
+		& a {
+			color: inherit;
 		}
 	}
 }

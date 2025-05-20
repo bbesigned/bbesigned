@@ -31,7 +31,7 @@ html,
 body {
 	height: 100%;
 	width: 100%;
-	line-height: 1;
+	/* line-height: 1; */
 	font-size: 14px;
 	text-size-adjust: 100%;
 }
@@ -58,6 +58,8 @@ button::-moz-focus-inner {
 a,
 a:visited {
 	text-decoration: none;
+	cursor: pointer;
+	/* all: unset; */
 }
 a:hover {
 	text-decoration: none;

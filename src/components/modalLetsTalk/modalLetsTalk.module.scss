@@ -1,0 +1,89 @@
+.modal {
+	position: fixed;
+	inset: 0;
+	z-index: 9999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modalLetsTalk {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 64px 80px 0 80px;
+	background-color: var(--pure-white);
+	width: 100%;
+	height: 100%;
+
+	&__close {
+		font-family: Noto Sans;
+		align-self: flex-end;
+		text-align: center;
+		color: rgba(25, 25, 25, 1);
+		width: 128px;
+		margin-bottom: 84px;
+		font-size: 24px;
+		position: relative;
+		background-color: var(--pure-white);
+		text-transform: uppercase;
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			bottom: 0;
+			left: 0;
+			background-color: rgba(25, 25, 25, 1);
+		}
+	}
+
+	&__image {
+		margin-bottom: 71px;
+	}
+
+	&__title {
+		width: 642px;
+		font-weight: 700;
+		font-size: 64px;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 25px;
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 32px;
+		margin-bottom: 110px;
+	}
+
+	&__buttons {
+		display: flex;
+		gap: 29px;
+	}
+
+	&__button {
+		padding: 30px 29px;
+		font-weight: 500;
+		font-size: 20px;
+        border: 1px solid rgba(25, 25, 25, 1);
+        background-color: var(--pure-white);
+
+        &--black {
+            background-color: rgba(25, 25, 25, 1);
+            color: var(--pure-white);
+        }
+	}
+}

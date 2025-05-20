@@ -12,10 +12,11 @@ const SubmitLetsTalkButton = () => {
 
 	const handleClick = () => {
 		setActive(!active);
+	
 	};
 
 	return (
-		<button type="button" className={styles.submitLetsTalkButton}>
+		<button type="submit" className={styles.submitLetsTalkButton}>
 			<div
 				className={`${styles.submitLetsTalkButton__slide} ${active ? styles.active : ""}`}
 				onClick={handleClick}>
