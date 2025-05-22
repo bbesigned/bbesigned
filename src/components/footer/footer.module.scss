@@ -3,21 +3,22 @@
 	margin: 0 auto;
 	font-size: clamp(14px, 1.25vw, 32px);
 	line-height: 130%;
-	width: 93.75%;
+	width: 93.7vw;
 }
 
 .footerContainer {
 	display: flex;
-	gap: 9.21%;
+	justify-content: space-between;
 	margin-bottom: 158px;
 }
 
 .subscribeWrapper {
 	flex-grow: 1;
+	max-width: 32.8%;
 
 	&__head {
 		line-height: 130%;
-		font-size: clamp(20px, 1.875vw, 48px);
+		font-size: clamp(20px, 1.87vw, 48px);
 		margin-bottom: 32px;
 		font-weight: 500;
 	}
@@ -30,7 +31,7 @@
 		min-width: 74.8%;
 		font-weight: 700;
 		line-height: 130%;
-		font-size: clamp(12px, 0.9375vw, 24px);
+		font-size: clamp(12px, 0.94vw, 24px);
 		padding: 30px 40px 30px 32px;
 		border: 1px solid var(--eerie-black);
 
@@ -64,12 +65,12 @@
 
 .footerNavigationWrapper {
 	display: flex;
-	margin-right: 2.7%;
-	min-width: 55.3%;
+	flex-grow: 1;
+	max-width: 58%;
 }
 
 .footerNavigationContainer {
-	flex-shrink: 0;
+	width: 100%;
 
 	h3 {
 		font-weight: 600;
@@ -94,12 +95,9 @@
 	}
 }
 
-.footerNavigationContainer:nth-child(1) {
-	margin-right: 15%;
-}
-
+.footerNavigationContainer:nth-child(1),
 .footerNavigationContainer:nth-child(2) {
-	margin-right: 10%;
+	max-width: 29%;
 }
 
 .footerBottomText {
@@ -107,7 +105,7 @@
 	color: var(--dark-silver);
 
 	span {
-		color: var(--jazzberry-jam);
+		color: var(--mexican-pink);
 	}
 }
 
@@ -167,10 +165,10 @@
 
 	.footerContainer {
 		margin-bottom: 80px;
-		gap: 8%;
 	}
 
 	.subscribeWrapper {
+		max-width: 34%;
 		&__head {
 			margin-bottom: 18px;
 		}
@@ -188,10 +186,6 @@
 				padding: 8px 8px 8px 0;
 			}
 		}
-	}
-
-	.footerNavigationWrapper {
-		min-width: 55%;
 	}
 
 	.formWrapper {
@@ -243,10 +237,6 @@
 		}
 	}
 
-	.footerNavigationContainer:nth-child(1) {
-		margin-right: 14%;
-	}
-
 	.formWrapper {
 		&__input {
 			padding: 13px 18px 13px 10px;
@@ -270,16 +260,18 @@
 	.footerWrapper {
 		padding: 53px 0 20px;
 		width: 92.2%;
+		font-size: clamp(12px, 1.37vw, 14px);
 	}
 
 	.footerContainer {
 		margin-bottom: 54px;
-		gap: 10%;
 	}
 
 	.subscribeWrapper {
+		max-width: 32.3%;
 		&__head {
 			margin-bottom: 14px;
+			font-size: clamp(17px, 1.96vw, 20px);
 		}
 	}
 
@@ -295,14 +287,6 @@
 				padding: 5px 7px 5px 0;
 			}
 		}
-	}
-
-	.footerNavigationContainer:nth-child(1) {
-		margin-right: 14%;
-	}
-
-	.footerNavigationContainer:nth-child(2) {
-		margin-right: 9%;
 	}
 
 	.formWrapper {
@@ -329,7 +313,7 @@
 
 @media (max-width: 769px) {
 	.footerWrapper {
-		width: 94.75vw;
+		width: 94.7vw;
 		padding: 53px 0 20px;
 		font-size: 22px;
 	}
