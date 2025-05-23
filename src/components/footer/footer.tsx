@@ -1,5 +1,6 @@
-import { Facebook } from "assets/script/facebook/facebook";
+import Link from "next/link";
 
+import { Facebook } from "assets/script/facebook/facebook";
 import { Instagram } from "assets/script/instagram/instagram";
 import { Linkedin } from "assets/script/linkedin/linkedin";
 
@@ -30,7 +31,9 @@ export const Footer = () => {
 							<li>Home</li>
 							<li>About us</li>
 							<li>Works</li>
-							<li>Reviews</li>
+							<li>
+								<Link href={"/projectExamples"}>Reviews</Link>
+							</li>
 							<li>Contact us</li>
 						</ul>
 					</div>
@@ -38,7 +41,9 @@ export const Footer = () => {
 						<h3>More</h3>
 						<ul>
 							<li>FAQ</li>
-							<li>Personal Data</li>
+							<li>
+								<Link href={"/personalData"}>Personal Data</Link>
+							</li>
 							<li>Privacy policy</li>
 							<li>Terms of use</li>
 							<li>Cookie policy</li>

@@ -4,6 +4,7 @@
 	font-size: clamp(14px, 1.25vw, 32px);
 	line-height: 130%;
 	width: 93.7vw;
+	color: var(--eerie-black);
 }
 
 .footerContainer {
@@ -87,6 +88,13 @@
 
 		li {
 			padding: 13px 13px 13px 0;
+			a {
+				color: var(--eerie-black);
+				list-style: none;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 
