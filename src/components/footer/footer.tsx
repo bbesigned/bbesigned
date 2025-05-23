@@ -1,4 +1,5 @@
 import Link from "next/link";
+import cn from "classnames";
 
 import { Facebook } from "assets/script/facebook/facebook";
 import { Instagram } from "assets/script/instagram/instagram";
@@ -50,7 +51,10 @@ export const Footer = () => {
 						</ul>
 					</div>
 					<div
-						className={`${style.footerNavigationContainer} ${style.footerNavigationContainer__socialMediaWrap}`}>
+						className={cn(
+							style.footerNavigationContainer,
+							style.footerNavigationContainer_socialMediaWrap,
+						)}>
 						<h3>Social media</h3>
 						<ul>
 							<li>Instagram</li>
