@@ -2,9 +2,15 @@
 
 import { useState } from "react";
 
+import { ISelectActivityProps } from "types/common/ComponentsProps";
+
 import styles from "./selectActivity.module.scss";
 
-const SelectActivity = () => {
+
+
+const SelectActivity = ({ selected, onChange, onClose }: ISelectActivityProps) => {
+	const [localSelected, setLocalSelected] = useState<string[]>(selected);
+
 	const activityList = [
 		"UX/UI Design",
 		"Mobile App",
@@ -14,36 +20,35 @@ const SelectActivity = () => {
 		"Video editing",
 	];
 
-	const [selectedActivities, setSelectedActivities] = useState<string[]>([]);
-
 	const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const value = e.target.value;
-
-		setSelectedActivities((prev) =>
-			e.target.checked ? [...prev, value] : prev.filter((item) => item !== value),
+		setLocalSelected((prev) =>
+			e.target.checked ? [...prev, value] : prev.filter((item) => item !== value)
 		);
 	};
 
-	const handleSubmit = (e: React.FormEvent) => {
-		e.preventDefault();
-		console.log(selectedActivities);
+	const handleApply = (e: React.MouseEvent<HTMLButtonElement>) => {
+		e.preventDefault(); 
+		onChange(localSelected);
+		onClose(); 
 	};
 
 	const handleCancel = () => {
-		setSelectedActivities([]);
+		setLocalSelected([]);
+		onChange([]);
+		onClose();
 	};
 
 	return (
-		<form className={styles.selectActivity} onSubmit={handleSubmit}>
+		<div className={styles.selectActivity}>
 			<div className={styles.selectActivity__options}>
 				{activityList.map((item, index) => (
 					<label className={styles.selectActivity__label} key={index}>
 						<input
 							className={styles.selectActivity__check}
 							type="checkbox"
-							name="activity"
 							value={item}
-							checked={selectedActivities.includes(item)}
+							checked={localSelected.includes(item)}
 							onChange={handleCheckboxChange}
 						/>
 						{item}
@@ -53,19 +58,22 @@ const SelectActivity = () => {
 
 			<div className={styles.selectActivity__buttons}>
 				<button
-					className={`${styles.selectActivity__button} ${styles["selectActivity__button--cancel"]}`}
 					type="button"
-					onClick={handleCancel}>
+					className={`${styles.selectActivity__button} ${styles["selectActivity__button--cancel"]}`}
+					onClick={handleCancel}
+				>
 					Cancel
 				</button>
 
 				<button
+					type="button"
 					className={`${styles.selectActivity__button} ${styles["selectActivity__button--apply"]}`}
-					type="submit">
+					onClick={handleApply}
+				>
 					Apply
 				</button>
 			</div>
-		</form>
+		</div>
 	);
 };
 

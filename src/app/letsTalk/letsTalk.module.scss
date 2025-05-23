@@ -74,16 +74,18 @@
 		font-weight: 600;
 		font-size: 64px;
 		line-height: 100%;
-		// line-height: 78px;
+	}
 
-		& input {
-			flex-grow: 1;
-			position: relative;
-			border-bottom: 1px solid rgba(132, 132, 132, 1);
-			font-family: Noto Sans;
-			font-weight: 700;
-			font-size: 36px;
-		}
+	&__input {
+		flex-grow: 1;
+		border-bottom: 1px solid rgba(132, 132, 132, 1);
+		font-family: Noto Sans;
+		font-weight: 700;
+		font-size: 36px;
+	}
+
+	&__select {
+		position: relative;
 	}
 
 	&__agree {

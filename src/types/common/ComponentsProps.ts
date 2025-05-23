@@ -25,3 +25,9 @@ export interface IBannerLogo {
 export interface IControlButtons {
 	classnames?: string;
 }
+
+export interface ISelectActivityProps {
+	selected: string[];
+	onChange: (selected: string[]) => void;
+	onClose: () => void;
+}
