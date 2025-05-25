@@ -23,23 +23,22 @@ const LetsTalk = () => {
 	const router = useRouter();
 
 	useEffect(() => {
-  const isFormDirty = name || email || activity || agree;
+		const isFormDirty = name || email || activity || agree;
 
-  const handleBeforeUnload = (e: BeforeUnloadEvent) => {
-    if (isFormDirty && !isSubmit) {
-      e.preventDefault();
-      e.returnValue = ""; // Chrome требует установку returnValue
-      return ""; // для старых браузеров
-    }
-  };
+		const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+			if (isFormDirty && !isSubmit) {
+				e.preventDefault();
+				e.returnValue = ""; 
+				return ""; 
+			}
+		};
 
-  window.addEventListener("beforeunload", handleBeforeUnload);
+		window.addEventListener("beforeunload", handleBeforeUnload);
 
-  return () => {
-    window.removeEventListener("beforeunload", handleBeforeUnload);
-  };
-}, [name, email, activity, agree, isSubmit]);
-
+		return () => {
+			window.removeEventListener("beforeunload", handleBeforeUnload);
+		};
+	}, [name, email, activity, agree, isSubmit]);
 
 	const handleActivityChange = (selected: string[]) => {
 		setSelectedActivities(selected);
@@ -67,16 +66,18 @@ const LetsTalk = () => {
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
-		setIsSubmit(true);
+		if (agree) {
+			setIsSubmit(true);
 
-		try {
-			setTimeout(() => {
-				setIsModalOpen(true);
-			}, 2000);
+			try {
+				setTimeout(() => {
+					setIsModalOpen(true);
+				}, 2000);
 
-			console.log([name, email, activity, agree]);
-		} catch (err) {
-			console.error("ERROR", err);
+				console.log([name, email, activity, agree]);
+			} catch (err) {
+				console.error("ERROR", err);
+			}
 		}
 	};
 
@@ -89,7 +90,11 @@ const LetsTalk = () => {
 
 				<div className={styles.letsTalk__container}>
 					<div className={styles.letsTalk__title}>
-						<div className={styles.letsTalk__info}>YOU CLICK — WE BUILD IT QUICK</div>
+						<div className={styles.letsTalk__info}>
+							YOU
+							<br /> CLICK —<br /> WE BUILD
+							<br /> IT QUICK
+						</div>
 						<div className={styles.letsTalk__text}>
 							This is just a brief form to gather basic information about you. <br />
 							Feel free to fill it out! 😊
@@ -159,7 +164,7 @@ const LetsTalk = () => {
 								<button type="button" className={styles.letsTalk__reset} onClick={handleClickReset}>
 									RESET
 								</button>
-								<SubmitLetsTalkButton submit={isSubmit} />
+								<SubmitLetsTalkButton submit={isSubmit} agree={agree} />
 							</div>
 						</div>
 					</form>

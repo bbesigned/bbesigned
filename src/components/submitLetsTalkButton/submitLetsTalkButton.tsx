@@ -7,7 +7,7 @@ import arrow from "../../../public/arrow.svg";
 
 import styles from "./submitLetsTalkButton.module.scss";
 
-const SubmitLetsTalkButton = ({ submit }) => {
+const SubmitLetsTalkButton = ({ submit, agree }) => {
 	const [active, setActive] = useState(submit);
 
 	useEffect(() => {
@@ -21,11 +21,11 @@ const SubmitLetsTalkButton = ({ submit }) => {
 	return (
 		<button type="submit" className={styles.submitLetsTalkButton}>
 			<div
-				className={`${styles.submitLetsTalkButton__slide} ${active ? styles.active : ""}`}
+				className={`${styles.submitLetsTalkButton__slide} ${active && agree ? styles.active : ""}`}
 				onClick={handleClick}>
-				{active ? "Successful send" : "Slide to send"}
+				{active && agree ? "Successful send" : "Click to send"}
 			</div>
-			{!active && (
+			{!active && agree && (
 				<div className={styles.submitLetsTalkButton__arrows}>
 					<Image src={arrow} alt="Photo" width={24} height={24} />
 					<Image src={arrow} alt="Photo" width={24} height={24} />
