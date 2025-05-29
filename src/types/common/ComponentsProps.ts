@@ -25,3 +25,7 @@ export interface IBannerLogo {
 export interface IControlButtons {
 	classnames?: string;
 }
+
+export interface IComponent {
+	classnames?: string;
+}
