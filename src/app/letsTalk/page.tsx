@@ -1,14 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 import SubmitLetsTalkButton from "components/submitLetsTalkButton/submitLetsTalkButton";
 import ModalLetsTalk from "components/modalLetsTalk/modalLetsTalk";
 import SelectActivity from "components/selectActivity/selectActivity";
 
+import { Instagram } from "assets/script/instagram/instagram";
+import { Linkedin } from "assets/script/linkedin/linkedin";
+import { Facebook } from "assets/script/facebook/facebook";
+
 import styles from "./letsTalk.module.scss";
-import { useRouter } from "next/navigation";
+
+// Разрешение 2560 в разработке
 
 const LetsTalk = () => {
 	const [name, setName] = useState("");
@@ -20,16 +25,15 @@ const LetsTalk = () => {
 	const [isSelect, setIsSelect] = useState(false);
 	const [selectedActivities, setSelectedActivities] = useState<string[]>([]);
 
-	const router = useRouter();
+	const isFormDirty = name || email || activity || agree;
+	const data = name && email && activity && agree;
 
 	useEffect(() => {
-		const isFormDirty = name || email || activity || agree;
-
 		const handleBeforeUnload = (e: BeforeUnloadEvent) => {
 			if (isFormDirty && !isSubmit) {
 				e.preventDefault();
-				e.returnValue = ""; 
-				return ""; 
+				e.returnValue = "";
+				return "";
 			}
 		};
 
@@ -64,17 +68,19 @@ const LetsTalk = () => {
 		setIsSubmit(false);
 	};
 
+	// eslint-disable-next-line no-undef
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
-		if (agree) {
+		if (agree && data) {
 			setIsSubmit(true);
+			setAgree(true);
 
 			try {
 				setTimeout(() => {
 					setIsModalOpen(true);
 				}, 2000);
 
-				console.log([name, email, activity, agree]);
+				console.log(data);
 			} catch (err) {
 				console.error("ERROR", err);
 			}
@@ -85,15 +91,13 @@ const LetsTalk = () => {
 		<>
 			<div className={styles.letsTalk}>
 				<Link href="/" className={styles.letsTalk__close}>
-					close x
+					<span className={styles.letsTalk__span}>close</span> &#10005;
 				</Link>
 
 				<div className={styles.letsTalk__container}>
 					<div className={styles.letsTalk__title}>
 						<div className={styles.letsTalk__info}>
-							YOU
-							<br /> CLICK —<br /> WE BUILD
-							<br /> IT QUICK
+							YOU<br className={styles.hideOnMobile} /> CLICK —<br /> WE BUILD IT QUICK
 						</div>
 						<div className={styles.letsTalk__text}>
 							This is just a brief form to gather basic information about you. <br />
@@ -141,7 +145,7 @@ const LetsTalk = () => {
 								<input
 									className={styles.letsTalk__input}
 									type="email"
-									placeholder="youremail@gmail.com"
+									placeholder="your@mail.com"
 									onChange={(e) => setEmail(e.target.value)}
 									value={email}
 								/>
@@ -175,9 +179,18 @@ const LetsTalk = () => {
 						<span>© 2025 BeSigned</span>. All rights reserved.
 					</div>
 					<div className={styles.letsTalk__links}>
-						<a href="#FACEBOOK">FACEBOOK</a>
-						<a href="#LINKEDIN">LINKEDIN</a>
-						<a href="#INSTAGRAM">INSTAGRAM</a>
+						<div>
+							<a href="#FACEBOOK">FACEBOOK</a>
+							<Facebook classNames={styles.letsTalk__social} />
+						</div>
+						<div>
+							<a href="#LINKEDIN">LINKEDIN</a>
+							<Linkedin classNames={styles.letsTalk__social} />
+						</div>
+						<div>
+							<a href="#INSTAGRAM">INSTAGRAM</a>
+							<Instagram classNames={styles.letsTalk__social} />
+						</div>
 					</div>
 				</div>
 			</div>

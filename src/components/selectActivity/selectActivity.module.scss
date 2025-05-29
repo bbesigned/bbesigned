@@ -12,6 +12,18 @@
 	line-height: 100%;
 	background-color: var(--pure-white);
 
+	@media (max-width: 1024px) {
+		width: 324px;
+		padding: 20px;
+		font-size: 30px;
+	}
+
+	@media (max-width: 768px) {
+		width: 300px;
+		padding: 20px;
+		font-size: 25px;
+	}
+
 	&__options {
 		display: flex;
 		flex-direction: column;

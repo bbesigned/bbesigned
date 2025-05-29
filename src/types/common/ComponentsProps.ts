@@ -31,3 +31,13 @@ export interface ISelectActivityProps {
 	onChange: (selected: string[]) => void;
 	onClose: () => void;
 }
+
+export interface IModalLetsTalkProps {
+	visible: boolean;
+	onClose: () => void;
+}
+
+export interface ISubmitLetsTalkButtonProps {
+	submit: boolean
+	agree: boolean
+}

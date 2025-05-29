@@ -20,6 +20,7 @@ const SelectActivity = ({ selected, onChange, onClose }: ISelectActivityProps) =
 		"Video editing",
 	];
 
+	// eslint-disable-next-line no-undef
 	const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const value = e.target.value;
 		setLocalSelected((prev) =>
@@ -27,6 +28,7 @@ const SelectActivity = ({ selected, onChange, onClose }: ISelectActivityProps) =
 		);
 	};
 
+	// eslint-disable-next-line no-undef
 	const handleApply = (e: React.MouseEvent<HTMLButtonElement>) => {
 		e.preventDefault(); 
 		onChange(localSelected);

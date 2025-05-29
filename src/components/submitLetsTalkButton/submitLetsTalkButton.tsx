@@ -3,11 +3,13 @@ import Image from "next/image";
 
 import { useEffect, useState } from "react";
 
+import { ISubmitLetsTalkButtonProps } from "types/common/ComponentsProps";
+
 import arrow from "../../../public/arrow.svg";
 
 import styles from "./submitLetsTalkButton.module.scss";
 
-const SubmitLetsTalkButton = ({ submit, agree }) => {
+const SubmitLetsTalkButton = ({ submit, agree }: ISubmitLetsTalkButtonProps) => {
 	const [active, setActive] = useState(submit);
 
 	useEffect(() => {
@@ -15,7 +17,9 @@ const SubmitLetsTalkButton = ({ submit, agree }) => {
 	}, [submit]);
 
 	const handleClick = () => {
-		setActive(!active);
+		if (active) {
+			setActive(!active);
+		}
 	};
 
 	return (

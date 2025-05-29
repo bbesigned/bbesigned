@@ -20,6 +20,24 @@
 		font-size: 16px;
 	}
 
+	@media (max-width: 1170px) {
+		width: 219px;
+		height: 49px;
+		font-size: 14px;
+	}
+
+	@media (max-width: 1024px) {
+		width: 192px;
+		height: 43px;
+		font-size: 12px;
+	}
+
+	@media (max-width: 768px) {
+		width: 270px;
+		height: 60px;
+		font-size: 16px;
+	}
+
 	&__slide {
 		display: flex;
 		width: 181px;
@@ -30,8 +48,20 @@
 		transition: 2s;
 
 		@media (max-width: 1440px) {
-		width: 135px;
-	}
+			width: 135px;
+		}
+
+		@media (max-width: 1170px) {
+			width: 110px;
+		}
+
+		@media (max-width: 1024px) {
+			width: 96px;
+		}
+
+		@media (max-width: 768px) {
+			width: 135px;
+		}
 
 		&.active {
 			transform: translateX(calc(100% - 4px));
