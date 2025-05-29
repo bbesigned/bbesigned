@@ -5,6 +5,8 @@ import { Facebook } from "assets/script/facebook/facebook";
 import { Instagram } from "assets/script/instagram/instagram";
 import { Linkedin } from "assets/script/linkedin/linkedin";
 
+import { BottomAllRightsText } from "components/bottomAllRightsText/bottomAllRightsText";
+
 import style from "./footer.module.scss";
 
 export const Footer = () => {
@@ -71,9 +73,7 @@ export const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<p className={style.footerBottomText}>
-				<span>© 2025 BeSigned.</span> All rights reserved.
-			</p>
+			<BottomAllRightsText />
 		</div>
 	);
 };
