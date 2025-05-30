@@ -1,0 +1,183 @@
+.badConnectWrap {
+	width: 93.7vw;
+	margin: 0 auto;
+	height: 100vh;
+}
+
+.badConnectContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	line-height: normal;
+	color: var(--eerie-black);
+	height: 100%;
+	&__image {
+		margin-bottom: 78px;
+		width: 35.6%;
+	}
+
+	&__title {
+		font-size: clamp(52px, 5.2vw, 130px);
+		font-weight: 700;
+	}
+
+	&__description {
+		font-size: 36px;
+		font-weight: 300;
+	}
+}
+.restartTimerButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+	border: 1px solid var(--eerie-black);
+	padding: 36px 0;
+	gap: 14px;
+	width: 28%;
+	margin-top: 120px;
+	&__text {
+		font-size: clamp(14px, 1.3vw, 32px);
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+	&_textShadow {
+		background-color: var(--philippine-gray);
+		color: transparent;
+		text-shadow: 1px 1px 1px var(--chinese-silver-shadow);
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		background-clip: text;
+	}
+	&_textTimer {
+		color: var(--dark-silver);
+	}
+	margin-bottom: 77px;
+}
+.bottomText {
+	align-self: flex-start;
+	margin-top: auto;
+	margin-bottom: 20px;
+}
+
+@media (max-width: 1921px) {
+	.badConnectWrap {
+		width: 92vw;
+	}
+	.badConnectContainer {
+		display: flex;
+
+		&__image {
+			margin-bottom: 40px;
+		}
+
+		&__description {
+			font-size: 32px;
+		}
+	}
+	.restartTimerButton {
+		padding: 25px 0;
+		gap: 10px;
+		margin-top: 86px;
+		margin-bottom: 58px;
+	}
+}
+
+@media (max-width: 1441px) {
+	.badConnectWrap {
+		width: 90vw;
+	}
+	.badConnectContainer {
+		display: flex;
+
+		&__image {
+			width: 37%;
+			margin-bottom: 40px;
+		}
+
+		&__description {
+			font-size: 30px;
+		}
+	}
+	.restartTimerButton {
+		width: 29%;
+		padding: 20px 0;
+		gap: 8px;
+		margin-top: 68px;
+		margin-bottom: 44px;
+	}
+}
+
+@media (max-width: 1171px) {
+	.badConnectWrap {
+		width: 86vw;
+	}
+	.badConnectContainer {
+		display: flex;
+
+		&__image {
+			width: 39%;
+			margin-bottom: 27px;
+		}
+
+		&__description {
+			font-size: 24px;
+		}
+	}
+	.restartTimerButton {
+		width: 30%;
+		padding: 15px 0;
+		gap: 6px;
+		margin-top: 54px;
+		margin-bottom: 33px;
+	}
+}
+
+@media (max-width: 1025px) {
+	.badConnectWrap {
+		width: 92vw;
+	}
+	.badConnectContainer {
+		display: flex;
+
+		&__image {
+			width: 36%;
+			margin-bottom: 32px;
+		}
+
+		&__description {
+			font-size: 18px;
+		}
+	}
+	.restartTimerButton {
+		width: 32%;
+		margin-top: 40px;
+		margin-bottom: 16px;
+	}
+}
+
+@media (max-width: 769px) {
+	.badConnectWrap {
+		width: 93.8vw;
+	}
+	.badConnectContainer {
+		display: flex;
+
+		&__image {
+			margin-bottom: 28px;
+			width: 54%;
+		}
+		&__title {
+			font-size: 60px;
+		}
+
+		&__description {
+			font-size: 24px;
+		}
+	}
+	.restartTimerButton {
+		width: 42%;
+		margin-top: 55px;
+		margin-bottom: 178px;
+	}
+}
