@@ -20,10 +20,12 @@ export default function Page() {
 				<h2 className={style.badConnectContainer__title}>Oops! Reconstruction</h2>
 				<p className={style.badConnectContainer__description}>Thank you for waiting</p>
 				<button className={style.restartTimerButton}>
-					<span className={cn(style.restartTimerButton__text, style.restartTimerButton_textShadow)}>
+					<span
+						className={cn(style.restartTimerButton__text, style.restartTimerButton__text_shadow)}>
 						Restart in
 					</span>
-					<span className={cn(style.restartTimerButton__text, style.restartTimerButton_textTimer)}>
+					<span
+						className={cn(style.restartTimerButton__text, style.restartTimerButton__text_timer)}>
 						00:30:00
 					</span>
 				</button>

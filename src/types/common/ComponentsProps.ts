@@ -26,6 +26,6 @@ export interface IControlButtons {
 	classnames?: string;
 }
 
-export interface IComponent {
+export interface IBottomAllRightsText {
 	classnames?: string;
 }

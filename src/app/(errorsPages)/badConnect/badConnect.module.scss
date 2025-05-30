@@ -38,6 +38,7 @@
 	gap: 14px;
 	width: 28%;
 	margin-top: 120px;
+	margin-bottom: 77px;
 
 	&__text {
 		font-size: clamp(14px, 1.3vw, 32px);
@@ -49,8 +50,6 @@
 		width: clamp(30px, 2.5vw, 64px);
 		height: clamp(30px, 2.5vw, 64px);
 	}
-
-	margin-bottom: 77px;
 }
 
 .bottomText {
