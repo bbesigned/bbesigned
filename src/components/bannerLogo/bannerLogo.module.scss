@@ -2,10 +2,76 @@
 	&__mediumLogoImage {
 		width: 44.688em;
 		height: 5.313em;
+
+		@media (max-width: 2560px) {
+			width: 800px;
+			height: 94px;
+		}
+		@media (max-width: 1920px) {
+			width: 570px;
+			height: 68px;
+		}
+		@media (max-width: 1440px) {
+			width: 436px;
+			height: 52px;
+		}
+
+		@media (max-width: 1170px) {
+			width: 352px;
+			height: 42px;
+		}
+
+		@media (max-width: 1024px) {
+			width: 302px;
+			height: 36px;
+		}
+
+		@media (max-width: 768px) {
+			width: 420px;
+			height: 50px;
+		}
+
+		@media (max-width: 320px) {
+			width: 212px;
+			height: 25px;
+		}
 	}
 
 	&__smallLogoImage {
 		width: 23.125em;
 		height: 5.875em;
+
+		@media (max-width: 2560px) {
+			width: 370px;
+			height: 94px;
+		}
+		@media (max-width: 1920px) {
+			width: 265px;
+			height: 68px;
+		}
+		@media (max-width: 1440px) {
+			width: 202px;
+			height: 52px;
+		}
+
+		@media (max-width: 1170px) {
+			width: 164px;
+			height: 42px;
+		}
+
+		@media (max-width: 1024px) {
+			width: 142px;
+			height: 36px;
+		}
+
+		@media (max-width: 768px) {
+			width: 198px;
+			height: 50px;
+		}
+
+		@media (max-width: 320px) {
+			width: 82px;
+			height: 38px;
+		}
 	}
 }

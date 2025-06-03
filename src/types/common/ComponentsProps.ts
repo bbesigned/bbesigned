@@ -19,7 +19,8 @@ export interface IVectorLetter {
 }
 
 export interface IBannerLogo {
-	smallLogo: boolean;
+	smallLogo?: boolean;
+	dark?: boolean
 }
 
 export interface IControlButtons {
@@ -40,4 +41,17 @@ export interface IModalLetsTalkProps {
 export interface ISubmitLetsTalkButtonProps {
 	submit: boolean
 	agree: boolean
+}
+
+export interface ILetsTalkButtonProps {
+	dark?: boolean
+}
+
+export interface IBurgerButtonProps {
+	dark?: boolean
+}
+
+export interface IBannerHeaderProps {
+	dark?: boolean
+	smallLogo?: boolean
 }
