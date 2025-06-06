@@ -29,3 +29,7 @@ export interface IControlButtons {
 export interface IBottomAllRightsText {
 	classnames?: string;
 }
+
+export interface IBackButton {
+	classname?: string;
+}
