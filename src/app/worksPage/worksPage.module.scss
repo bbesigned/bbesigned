@@ -1,0 +1,28 @@
+.worksPageWrapper {
+	width: 100vw;
+	background-color: var(--eerie-black);
+}
+
+.worksPageContainer {
+	margin: 0 auto;
+	width: 93.75vw;
+	&__imageTitle {
+		margin: 190px 0 210px 0;
+	}
+}
+
+.backButton {
+	margin-top: 42px;
+}
+
+@media (max-width: 1921px) {
+	.worksPageContainer {
+		// width: 91.6vw;
+	}
+}
+
+@media (max-width: 1441px) {
+	.worksPageContainer {
+		// width: 88.8vw;
+	}
+}
