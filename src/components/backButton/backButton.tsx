@@ -4,11 +4,13 @@ import { BackArrow } from "assets/script/backArrow/backArrow";
 
 import { IBackButton } from "types/common/ComponentsProps";
 
+import { Button } from "components/button/button";
+
 import style from "./backButton.module.scss";
 
 export const BackButton = ({ classname }: IBackButton) => (
-	<button className={cn(classname, style.backButton)}>
+	<Button variant="transparent" className={cn(classname, style.backButton)}>
 		<BackArrow classNames={style.backButton__arrow} />
 		<p>Back</p>
-	</button>
+	</Button>
 );

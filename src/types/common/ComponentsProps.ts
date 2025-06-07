@@ -1,3 +1,5 @@
+import { ComponentProps } from "react";
+
 export type ExampleType = {
 	type1: string;
 };
@@ -32,4 +34,8 @@ export interface IBottomAllRightsText {
 
 export interface IBackButton {
 	classname?: string;
+}
+
+export interface IButton extends ComponentProps<"button"> {
+	variant: "transparent" | "dark" | "light";
 }
