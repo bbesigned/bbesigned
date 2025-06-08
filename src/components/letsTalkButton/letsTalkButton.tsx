@@ -6,7 +6,7 @@ const LetsTalkButton = () => {
 	return (
 		<>
 			<div className={styles.letsTalkWrapper}>
-				<Link href="/letsTalk" className={styles.letsTalk__actionElement} >
+				<Link href="/letsTalk" className={styles.letsTalk__actionElement}>
 					Let&#39;s Talk
 				</Link>
 			</div>

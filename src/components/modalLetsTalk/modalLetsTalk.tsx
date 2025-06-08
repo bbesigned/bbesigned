@@ -6,7 +6,6 @@ import { IModalLetsTalkProps } from "types/common/ComponentsProps";
 
 import message from "../../../public/message.png";
 
-
 import styles from "./modalLetsTalk.module.scss";
 
 const ModalLetsTalk = ({ visible, onClose }: IModalLetsTalkProps) => {
@@ -16,7 +15,7 @@ const ModalLetsTalk = ({ visible, onClose }: IModalLetsTalkProps) => {
 				<div className={styles.modal}>
 					<div className={styles.overlay}>
 						<div className={styles.modalLetsTalk}>
-							<button  className={styles.modalLetsTalk__close} onClick={onClose}>
+							<button className={styles.modalLetsTalk__close} onClick={onClose}>
 								<span className={styles.modalLetsTalk__span}>close</span> &#10005;
 							</button>
 							<div className={styles.modalLetsTalk__image}>

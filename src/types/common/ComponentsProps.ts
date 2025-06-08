@@ -38,6 +38,6 @@ export interface IModalLetsTalkProps {
 }
 
 export interface ISubmitLetsTalkButtonProps {
-	submit: boolean
-	agree: boolean
+	submit: boolean;
+	agree: boolean;
 }

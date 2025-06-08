@@ -97,7 +97,8 @@ const LetsTalk = () => {
 				<div className={styles.letsTalk__container}>
 					<div className={styles.letsTalk__title}>
 						<div className={styles.letsTalk__info}>
-							YOU<br className={styles.hideOnMobile} /> CLICK —<br /> WE BUILD IT QUICK
+							YOU
+							<br className={styles.hideOnMobile} /> CLICK —<br /> WE BUILD IT QUICK
 						</div>
 						<div className={styles.letsTalk__text}>
 							This is just a brief form to gather basic information about you. <br />
