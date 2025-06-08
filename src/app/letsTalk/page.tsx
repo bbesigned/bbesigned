@@ -13,8 +13,6 @@ import { Facebook } from "assets/script/facebook/facebook";
 
 import styles from "./letsTalk.module.scss";
 
-// Разрешение 2560 в разработке
-
 const LetsTalk = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
@@ -25,6 +23,7 @@ const LetsTalk = () => {
 	const [isSelect, setIsSelect] = useState(false);
 	const [selectedActivities, setSelectedActivities] = useState<string[]>([]);
 
+	const delay = 2000;
 	const isFormDirty = name || email || activity || agree;
 	const data = name && email && activity && agree;
 
@@ -78,9 +77,7 @@ const LetsTalk = () => {
 			try {
 				setTimeout(() => {
 					setIsModalOpen(true);
-				}, 2000);
-
-				console.log(data);
+				}, delay);
 			} catch (err) {
 				console.error("ERROR", err);
 			}
