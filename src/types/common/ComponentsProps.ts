@@ -26,6 +26,7 @@ export interface IControlButtons {
 	classnames?: string;
 }
 
+
 export interface ISelectActivityProps {
 	selected: string[];
 	onChange: (selected: string[]) => void;
@@ -40,4 +41,8 @@ export interface IModalLetsTalkProps {
 export interface ISubmitLetsTalkButtonProps {
 	submit: boolean
 	agree: boolean
+}
+
+export interface IBottomAllRightsText {
+	classnames?: string;
 }

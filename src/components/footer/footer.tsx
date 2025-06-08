@@ -1,7 +1,11 @@
-import { Facebook } from "assets/script/facebook/facebook";
+import Link from "next/link";
+import cn from "classnames";
 
+import { Facebook } from "assets/script/facebook/facebook";
 import { Instagram } from "assets/script/instagram/instagram";
 import { Linkedin } from "assets/script/linkedin/linkedin";
+
+import { BottomAllRightsText } from "components/bottomAllRightsText/bottomAllRightsText";
 
 import style from "./footer.module.scss";
 
@@ -30,7 +34,9 @@ export const Footer = () => {
 							<li>Home</li>
 							<li>About us</li>
 							<li>Works</li>
-							<li>Reviews</li>
+							<li>
+								<Link href={"/projectExamples"}>Reviews</Link>
+							</li>
 							<li>Contact us</li>
 						</ul>
 					</div>
@@ -38,14 +44,19 @@ export const Footer = () => {
 						<h3>More</h3>
 						<ul>
 							<li>FAQ</li>
-							<li>Personal Data</li>
+							<li>
+								<Link href={"/personalData"}>Personal Data</Link>
+							</li>
 							<li>Privacy policy</li>
 							<li>Terms of use</li>
 							<li>Cookie policy</li>
 						</ul>
 					</div>
 					<div
-						className={`${style.footerNavigationContainer} ${style.footerNavigationContainer__socialMediaWrap}`}>
+						className={cn(
+							style.footerNavigationContainer,
+							style.footerNavigationContainer_socialMediaWrap,
+						)}>
 						<h3>Social media</h3>
 						<ul>
 							<li>Instagram</li>
@@ -62,9 +73,7 @@ export const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<p className={style.footerBottomText}>
-				<span>© 2025 BeSigned.</span> All rights reserved.
-			</p>
+			<BottomAllRightsText />
 		</div>
 	);
 };
