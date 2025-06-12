@@ -4,7 +4,7 @@
 }
 
 .worksPageContainer {
-	margin: 0 auto;
+	margin-inline: auto;
 	width: 93.75vw;
 
 	&__imageTitle {
@@ -20,7 +20,7 @@
 	display: flex;
 	gap: 26px;
 
-	&__btn {
+	&__actionElement {
 		font-size: clamp(12px, 1.02vw, 26px);
 		padding: 28px 58px;
 
@@ -59,7 +59,7 @@
 	.worksFilterWrapper {
 		gap: 20px;
 
-		&__btn {
+		&__actionElement {
 			padding: 20px 43px;
 		}
 	}
@@ -87,7 +87,7 @@
 	.worksFilterWrapper {
 		gap: 15px;
 
-		&__btn {
+		&__actionElement {
 			padding: 15px 32px;
 		}
 	}
@@ -115,7 +115,7 @@
 	.worksFilterWrapper {
 		gap: 12px;
 
-		&__btn {
+		&__actionElement {
 			font-size: 14px;
 			padding: 12px 26px;
 
@@ -161,7 +161,7 @@
 	.worksFilterWrapper {
 		gap: 10px;
 
-		&__btn {
+		&__actionElement {
 			font-size: 14px;
 			padding: 10px 22px;
 
@@ -196,7 +196,7 @@
 	.worksFilterWrapper {
 		gap: 8px;
 
-		&__btn {
+		&__actionElement {
 			padding: 9px 18px;
 		}
 	}

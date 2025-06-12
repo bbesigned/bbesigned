@@ -7,12 +7,11 @@ import style from "./workCard.module.scss";
 
 export const WorkCard = ({ cardSize, classname }: IWorkCard) => {
 	const workWrapperClasses = cn({
-		[style.workWrapper]: true,
 		[style.workWrapper_large]: cardSize === "large",
 		[style.workWrapper_small]: cardSize === "small",
 	});
 	return (
-		<div className={cn(classname, workWrapperClasses)}>
+		<div className={cn(classname, style.workWrapper, workWrapperClasses)}>
 			<div className={style.imageContainer}>
 				<span className={style.imageContainer__chips}>Web Design</span>
 				<Image

@@ -27,27 +27,42 @@ export default function Page() {
 					alt="works"></Image>
 				<div className={style.worksFilterWrapper}>
 					<Button
-						className={cn(style.worksFilterWrapper__btn, style.worksFilterWrapper__btn_all)}
+						className={cn(
+							style.worksFilterWrapper__actionElement,
+							style.worksFilterWrapper__actionElement_all,
+						)}
 						variant="light">
 						All
 					</Button>
 					<Button
-						className={cn(style.worksFilterWrapper__btn, style.worksFilterWrapper__btn_ux)}
+						className={cn(
+							style.worksFilterWrapper__actionElement,
+							style.worksFilterWrapper__actionElement_ux,
+						)}
 						variant="transparent">
 						UX/UI
 					</Button>
 					<Button
-						className={cn(style.worksFilterWrapper__btn, style.worksFilterWrapper__btn_web)}
+						className={cn(
+							style.worksFilterWrapper__actionElement,
+							style.worksFilterWrapper__actionElement_web,
+						)}
 						variant="transparent">
 						Web Design
 					</Button>
 					<Button
-						className={cn(style.worksFilterWrapper__btn, style.worksFilterWrapper__btn_graphic)}
+						className={cn(
+							style.worksFilterWrapper__actionElement,
+							style.worksFilterWrapper__actionElement_graphic,
+						)}
 						variant="transparent">
 						Graphic design
 					</Button>
 					<Button
-						className={cn(style.worksFilterWrapper__btn, style.worksFilterWrapper__btn_mobile)}
+						className={cn(
+							style.worksFilterWrapper__actionElement,
+							style.worksFilterWrapper__actionElement_mobile,
+						)}
 						variant="transparent">
 						Mobile App
 					</Button>
