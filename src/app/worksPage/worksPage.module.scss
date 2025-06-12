@@ -40,31 +40,6 @@
 	}
 }
 
-.workWrapper {
-	color: var(--floral-white);
-	&__companyName {
-		line-height: 130%;
-		font-size: clamp(10px, 0.94vw, 24px);
-		text-transform: uppercase;
-	}
-	&__title {
-		line-height: 130%;
-		font-size: clamp(24px, 2.41vw, 62px);
-	}
-}
-.imageContainer {
-	position: relative;
-	margin-bottom: 26px;
-	&__chips {
-		position: absolute;
-		right: 61px;
-		top: 61px;
-		color: var(--eerie-black);
-		font-size: clamp(12px, 1.02vw, 26px);
-		padding: 27px 56px;
-		background-color: var(--floral-white);
-	}
-}
 @media (max-width: 1921px) {
 	.worksPageContainer {
 		width: 91.7vw;
@@ -85,23 +60,7 @@
 	}
 	.worksListWrapper {
 		gap: 40px;
-	}
-
-	.imageContainer {
-		margin-bottom: 20px;
-		&__chips {
-			padding: 20px 43px;
-			right: 46px;
-			top: 46px;
-		}
-		&__image {
-			&_large {
-				aspect-ratio: 1018 / 498;
-			}
-			&_small {
-				aspect-ratio: 722 / 498;
-			}
-		}
+		padding: 60px 0 125px;
 	}
 }
 
@@ -126,33 +85,7 @@
 
 	.worksListWrapper {
 		gap: 28px;
-	}
-
-	.workWrapper {
-		color: var(--floral-white);
-		&__companyName {
-			font-size: clamp(10px, 1.02vw, 14px);
-		}
-		&__title {
-			font-size: clamp(24px, 2.36vw, 34px);
-		}
-	}
-
-	.imageContainer {
-		margin-bottom: 15px;
-		&__chips {
-			padding: 15px 32px;
-			right: 35px;
-			top: 35px;
-		}
-		&__image {
-			&_large {
-				aspect-ratio: 738 / 373;
-			}
-			&_small {
-				aspect-ratio: 522 / 373;
-			}
-		}
+		padding: 45px 0 87px;
 	}
 }
 
@@ -178,24 +111,7 @@
 
 	.worksListWrapper {
 		gap: 22px;
-	}
-
-	.imageContainer {
-		margin-bottom: 12px;
-		&__chips {
-			font-size: clamp(12px, 1.2vw, 14px);
-			padding: 12px 26px;
-			right: 28px;
-			top: 28px;
-		}
-		&__image {
-			&_large {
-				aspect-ratio: 581 / 303;
-			}
-			&_small {
-				aspect-ratio: 409 / 303;
-			}
-		}
+		padding: 37px 0 73px;
 	}
 }
 
@@ -210,33 +126,13 @@
 	.backButton {
 		margin-top: 20px;
 	}
-
+	.worksListWrapper {
+		padding: 32px 0 65px;
+	}
 	.worksFilterWrapper {
 		gap: 10px;
 		button {
 			padding: 10px 22px;
-		}
-	}
-
-	.worksListWrapper {
-		// gap: 20px;
-	}
-
-	.imageContainer {
-		margin-bottom: 10px;
-		&__chips {
-			padding: 10px 22px;
-			right: 24px;
-			top: 24px;
-		}
-		&__image {
-			// max-height: 265px;
-			&_large {
-				aspect-ratio: 542 / 265.6;
-			}
-			&_small {
-				aspect-ratio: 382 / 265.6;
-			}
 		}
 	}
 }

@@ -39,3 +39,8 @@ export interface IBackButton {
 export interface IButton extends ComponentProps<"button"> {
 	variant: "transparent" | "dark" | "light";
 }
+
+export interface IWorkCard {
+	bigCard: boolean;
+	classname?: string;
+}
