@@ -26,17 +26,10 @@
 
 .worksListWrapper {
 	display: flex;
-	flex-direction: column;
-	gap: 48px;
+	flex-wrap: wrap;
+	column-gap: 20px;
+	row-gap: 48px;
 	padding: 80px 0 135px;
-}
-
-.worksListContainer {
-	display: flex;
-	gap: 20px;
-	&_reverse {
-		flex-direction: row-reverse;
-	}
 }
 
 @media (max-width: 1921px) {
@@ -58,7 +51,7 @@
 		}
 	}
 	.worksListWrapper {
-		gap: 40px;
+		row-gap: 40px;
 		padding: 60px 0 125px;
 	}
 }
@@ -83,7 +76,7 @@
 	}
 
 	.worksListWrapper {
-		gap: 28px;
+		row-gap: 28px;
 		padding: 45px 0 87px;
 	}
 }
@@ -109,7 +102,7 @@
 	}
 
 	.worksListWrapper {
-		gap: 22px;
+		row-gap: 22px;
 		padding: 37px 0 73px;
 	}
 }
@@ -132,6 +125,7 @@
 		}
 	}
 	.worksListWrapper {
+		row-gap: 20px;
 		padding: 32px 0 65px;
 	}
 }
@@ -152,6 +146,7 @@
 		}
 	}
 	.worksListWrapper {
+		row-gap: 22px;
 		padding: 30px 0 46px;
 	}
 }

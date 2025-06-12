@@ -41,6 +41,6 @@ export interface IButton extends ComponentProps<"button"> {
 }
 
 export interface IWorkCard {
-	bigCard: boolean;
+	cardSize: "large" | "small";
 	classname?: string;
 }

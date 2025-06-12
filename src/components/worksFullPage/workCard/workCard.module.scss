@@ -93,6 +93,11 @@
 }
 
 @media (max-width: 1025px) {
+	.workWrapper {
+		&__title {
+			font-size: clamp(20px, 2.34vw, 24px);
+		}
+	}
 	.imageContainer {
 		margin-bottom: 10px;
 		&__chips {
@@ -109,9 +114,6 @@
 
 @media (max-width: 769px) {
 	.workWrapper {
-		&__title {
-			font-size: 20px;
-		}
 		&__companyName {
 			font-size: 12px;
 		}

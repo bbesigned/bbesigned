@@ -32,23 +32,15 @@ export default function Page() {
 					<Button variant="transparent">Graphic design</Button>
 					<Button variant="transparent">Mobile App</Button>
 				</div>
-				<div className={style.worksListWrapper}>
-					<div className={cn(style.worksListContainer)}>
-						<WorkCard bigCard />
-						<WorkCard bigCard={false} />
-					</div>
-					<div className={cn(style.worksListContainer, style.worksListContainer_reverse)}>
-						<WorkCard bigCard />
-						<WorkCard bigCard={false} />
-					</div>
-					<div className={cn(style.worksListContainer)}>
-						<WorkCard bigCard />
-						<WorkCard bigCard={false} />
-					</div>
-					<div className={cn(style.worksListContainer, style.worksListContainer_reverse)}>
-						<WorkCard bigCard />
-						<WorkCard bigCard={false} />
-					</div>
+				<div className={cn(style.worksListWrapper)}>
+					<WorkCard cardSize="large" />
+					<WorkCard cardSize="small" />
+					<WorkCard cardSize="small" />
+					<WorkCard cardSize="large" />
+					<WorkCard cardSize="large" />
+					<WorkCard cardSize="small" />
+					<WorkCard cardSize="small" />
+					<WorkCard cardSize="large" />
 				</div>
 			</div>
 		</div>

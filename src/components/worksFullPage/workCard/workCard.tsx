@@ -5,11 +5,11 @@ import { IWorkCard } from "types/common/ComponentsProps";
 
 import style from "./workCard.module.scss";
 
-export const WorkCard = ({ bigCard, classname }: IWorkCard) => {
+export const WorkCard = ({ cardSize, classname }: IWorkCard) => {
 	const workWrapperClasses = cn({
 		[style.workWrapper]: true,
-		[style.workWrapper_large]: bigCard,
-		[style.workWrapper_small]: !bigCard,
+		[style.workWrapper_large]: cardSize === "large",
+		[style.workWrapper_small]: cardSize === "small",
 	});
 	return (
 		<div className={cn(classname, workWrapperClasses)}>
@@ -17,9 +17,9 @@ export const WorkCard = ({ bigCard, classname }: IWorkCard) => {
 				<span className={style.imageContainer__chips}>Web design</span>
 				<Image
 					className={style.imageContainer__image}
-					src={bigCard ? "/worksPreviewImageLarge.jpg" : "/worksPreviewImageSmall.jpg"}
+					src={cardSize === "large" ? "/worksPreviewImageLarge.jpg" : "/worksPreviewImageSmall.jpg"}
 					fill
-					sizes={bigCard ? "(max-width: 2561px) 1392px" : "(max-width: 2561px) 988px"}
+					sizes={cardSize === "large" ? "(max-width: 2561px) 1392px" : "(max-width: 2561px) 988px"}
 					priority
 					alt="work image"></Image>
 			</div>
