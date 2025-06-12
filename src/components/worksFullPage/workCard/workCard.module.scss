@@ -6,6 +6,7 @@
 		font-size: clamp(10px, 0.94vw, 24px);
 		text-transform: uppercase;
 	}
+
 	&__title {
 		line-height: 130%;
 		font-size: clamp(24px, 2.41vw, 62px);
@@ -14,6 +15,7 @@
 	&_large {
 		width: 58%;
 	}
+
 	&_small {
 		flex-grow: 1;
 	}
@@ -23,6 +25,7 @@
 	position: relative;
 	margin-bottom: 26px;
 	height: clamp(199px, 25.95vw, 664px);
+
 	&__chips {
 		position: absolute;
 		z-index: 1;
@@ -44,6 +47,7 @@
 
 	.imageContainer {
 		margin-bottom: 20px;
+
 		&__chips {
 			padding: 20px 43px;
 			right: 46px;
@@ -57,9 +61,11 @@
 		&__companyName {
 			font-size: clamp(10px, 1.02vw, 14px);
 		}
+
 		&__title {
 			font-size: clamp(24px, 2.36vw, 34px);
 		}
+
 		&_large {
 			width: 57.7%;
 		}
@@ -67,6 +73,7 @@
 
 	.imageContainer {
 		margin-bottom: 15px;
+
 		&__chips {
 			padding: 15px 32px;
 			right: 35px;
@@ -81,8 +88,10 @@
 			width: 57.5%;
 		}
 	}
+
 	.imageContainer {
 		margin-bottom: 12px;
+
 		&__chips {
 			font-size: clamp(12px, 1.2vw, 14px);
 			padding: 12px 26px;
@@ -98,13 +107,16 @@
 			font-size: clamp(20px, 2.34vw, 24px);
 		}
 	}
+
 	.imageContainer {
 		margin-bottom: 10px;
+
 		&__chips {
 			padding: 10px 22px;
 			right: 24px;
 			top: 24px;
 		}
+
 		&__image {
 			max-height: 265px;
 			height: 100%;
@@ -117,12 +129,15 @@
 		&__companyName {
 			font-size: 12px;
 		}
+
 		&_large {
 			width: 56.7%;
 		}
 	}
+
 	.imageContainer {
 		margin-bottom: 8px;
+
 		&__chips {
 			font-size: 14px;
 			padding: 9px 18px;
