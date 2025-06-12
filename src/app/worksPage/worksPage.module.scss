@@ -27,6 +27,7 @@
 		&_web {
 			padding: 28px 59px;
 		}
+
 		&_graphic,
 		&_mobile {
 			padding: 28px 60px;
@@ -117,16 +118,20 @@
 		&__btn {
 			font-size: 14px;
 			padding: 12px 26px;
+
 			&_all {
 				padding: 11px 25px;
 			}
+
 			&_ux {
 				padding: 11px 23px;
 			}
+
 			&_web,
 			&_mobile {
 				padding: 11px 21px;
 			}
+
 			&_graphic {
 				padding: 11px 20px;
 			}
@@ -163,6 +168,7 @@
 			&_ux {
 				padding: 10px 21px;
 			}
+
 			&_web,
 			&_mobile,
 			&_graphic {
