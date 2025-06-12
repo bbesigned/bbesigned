@@ -20,9 +20,17 @@
 	display: flex;
 	gap: 26px;
 
-	button {
+	&__btn {
 		font-size: clamp(12px, 1.02vw, 26px);
 		padding: 28px 58px;
+
+		&_web {
+			padding: 28px 59px;
+		}
+		&_graphic,
+		&_mobile {
+			padding: 28px 60px;
+		}
 	}
 }
 
@@ -50,7 +58,7 @@
 	.worksFilterWrapper {
 		gap: 20px;
 
-		button {
+		&__btn {
 			padding: 20px 43px;
 		}
 	}
@@ -78,7 +86,7 @@
 	.worksFilterWrapper {
 		gap: 15px;
 
-		button {
+		&__btn {
 			padding: 15px 32px;
 		}
 	}
@@ -106,9 +114,22 @@
 	.worksFilterWrapper {
 		gap: 12px;
 
-		button {
-			font-size: clamp(12px, 1.2vw, 14px);
+		&__btn {
+			font-size: 14px;
 			padding: 12px 26px;
+			&_all {
+				padding: 11px 25px;
+			}
+			&_ux {
+				padding: 11px 23px;
+			}
+			&_web,
+			&_mobile {
+				padding: 11px 21px;
+			}
+			&_graphic {
+				padding: 11px 20px;
+			}
 		}
 	}
 
@@ -135,8 +156,18 @@
 	.worksFilterWrapper {
 		gap: 10px;
 
-		button {
+		&__btn {
+			font-size: 14px;
 			padding: 10px 22px;
+
+			&_ux {
+				padding: 10px 21px;
+			}
+			&_web,
+			&_mobile,
+			&_graphic {
+				padding: 10px 19px;
+			}
 		}
 	}
 
@@ -159,8 +190,7 @@
 	.worksFilterWrapper {
 		gap: 8px;
 
-		button {
-			font-size: 14px;
+		&__btn {
 			padding: 9px 18px;
 		}
 	}

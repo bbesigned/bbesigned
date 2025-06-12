@@ -26,11 +26,31 @@ export default function Page() {
 					priority
 					alt="works"></Image>
 				<div className={style.worksFilterWrapper}>
-					<Button variant="light">All</Button>
-					<Button variant="transparent">UX/UI</Button>
-					<Button variant="transparent">Web Design</Button>
-					<Button variant="transparent">Graphic design</Button>
-					<Button variant="transparent">Mobile App</Button>
+					<Button
+						className={cn(style.worksFilterWrapper__btn, style.worksFilterWrapper__btn_all)}
+						variant="light">
+						All
+					</Button>
+					<Button
+						className={cn(style.worksFilterWrapper__btn, style.worksFilterWrapper__btn_ux)}
+						variant="transparent">
+						UX/UI
+					</Button>
+					<Button
+						className={cn(style.worksFilterWrapper__btn, style.worksFilterWrapper__btn_web)}
+						variant="transparent">
+						Web Design
+					</Button>
+					<Button
+						className={cn(style.worksFilterWrapper__btn, style.worksFilterWrapper__btn_graphic)}
+						variant="transparent">
+						Graphic design
+					</Button>
+					<Button
+						className={cn(style.worksFilterWrapper__btn, style.worksFilterWrapper__btn_mobile)}
+						variant="transparent">
+						Mobile App
+					</Button>
 				</div>
 				<div className={cn(style.worksListWrapper)}>
 					<WorkCard cardSize="large" />

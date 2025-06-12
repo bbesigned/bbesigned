@@ -14,7 +14,7 @@ export const WorkCard = ({ cardSize, classname }: IWorkCard) => {
 	return (
 		<div className={cn(classname, workWrapperClasses)}>
 			<div className={style.imageContainer}>
-				<span className={style.imageContainer__chips}>Web design</span>
+				<span className={style.imageContainer__chips}>Web Design</span>
 				<Image
 					className={style.imageContainer__image}
 					src={cardSize === "large" ? "/worksPreviewImageLarge.jpg" : "/worksPreviewImageSmall.jpg"}
