@@ -10,10 +10,60 @@
 		justify-content: center;
 		cursor: pointer;
 
+		@media (max-width: 1920px) {
+			width: 82px;
+			height: 82px;
+		}
+
+		@media (max-width: 1440px) {
+			width: 64px;
+			height: 64px;
+		}
+
+		@media (max-width: 1170px) {
+			width: 52px;
+			height: 52px;
+		}
+
+		@media (max-width: 1024px) {
+			width: 42px;
+			height: 42px;
+		}
+
+		@media (max-width: 768px) {
+			width: 64px;
+			height: 64px;
+		}
+
 		&__iconElement {
 			width: 2.5rem;
 			height: 2.333rem;
 			color: var(--primary-color);
+
+			@media (max-width: 1920px) {
+				width: 30px;
+				height: 28px;
+			}
+
+			@media (max-width: 1440px) {
+				width: 24px;
+				height: 22px;
+			}
+
+			@media (max-width: 1170px) {
+				width: 19px;
+				height: 18px;
+			}
+
+			@media (max-width: 1024px) {
+				width: 15px;
+				height: 14px;
+			}
+
+			@media (max-width: 768px) {
+				width: 24px;
+				height: 22px;
+			}
 		}
 	}
 }

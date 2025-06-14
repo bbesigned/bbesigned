@@ -33,6 +33,8 @@ const BannerContent = ({ leftText, rightText }: IBannerContent) => {
 		<div className={styles.bannerContentWrap}>
 			<div className={styles.leftBlockBannerWrapper}>{renderLeftText()}</div>
 			<div className={styles.rightBlockBannerWrap}>{renderRightText()}</div>
+			<div className={cn(styles.transparentLetter, styles.transparentLetterLeft)}>concept</div>
+			<div className={cn(styles.transparentLetter, styles.transparentLetterRight)}>PROTOTYPE</div>
 		</div>
 	);
 };
