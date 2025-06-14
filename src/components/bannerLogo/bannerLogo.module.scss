@@ -1,12 +1,8 @@
 .bannerLogo {
 	&__mediumLogoImage {
-		width: 44.688em;
-		height: 5.313em;
+		width: 800px;
+		height: 94px;
 
-		@media (max-width: 2560px) {
-			width: 800px;
-			height: 94px;
-		}
 		@media (max-width: 1920px) {
 			width: 570px;
 			height: 68px;
