@@ -6,8 +6,6 @@ import { ISelectActivityProps } from "types/common/ComponentsProps";
 
 import styles from "./selectActivity.module.scss";
 
-
-
 const SelectActivity = ({ selected, onChange, onClose }: ISelectActivityProps) => {
 	const [localSelected, setLocalSelected] = useState<string[]>(selected);
 
@@ -24,15 +22,15 @@ const SelectActivity = ({ selected, onChange, onClose }: ISelectActivityProps) =
 	const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const value = e.target.value;
 		setLocalSelected((prev) =>
-			e.target.checked ? [...prev, value] : prev.filter((item) => item !== value)
+			e.target.checked ? [...prev, value] : prev.filter((item) => item !== value),
 		);
 	};
 
 	// eslint-disable-next-line no-undef
 	const handleApply = (e: React.MouseEvent<HTMLButtonElement>) => {
-		e.preventDefault(); 
+		e.preventDefault();
 		onChange(localSelected);
-		onClose(); 
+		onClose();
 	};
 
 	const handleCancel = () => {
@@ -62,16 +60,14 @@ const SelectActivity = ({ selected, onChange, onClose }: ISelectActivityProps) =
 				<button
 					type="button"
 					className={`${styles.selectActivity__button} ${styles["selectActivity__button--cancel"]}`}
-					onClick={handleCancel}
-				>
+					onClick={handleCancel}>
 					Cancel
 				</button>
 
 				<button
 					type="button"
 					className={`${styles.selectActivity__button} ${styles["selectActivity__button--apply"]}`}
-					onClick={handleApply}
-				>
+					onClick={handleApply}>
 					Apply
 				</button>
 			</div>

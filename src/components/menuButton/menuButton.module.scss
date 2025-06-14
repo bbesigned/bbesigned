@@ -1,6 +1,7 @@
 .burgerMenuWrap {
 	display: flex;
 	align-items: center;
+
 	.burgerMenuActionElement {
 		background: transparent;
 		border: none;
@@ -8,7 +9,7 @@
 
 		&__burgerMenuContainer {
 			width: 94px;
-				height: 94px;
+			height: 94px;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-evenly;
@@ -23,10 +24,12 @@
 				width: 94px;
 				height: 94px;
 			}
+
 			@media (max-width: 1920px) {
 				width: 68px;
 				height: 68px;
 			}
+
 			@media (max-width: 1440px) {
 				width: 52px;
 				height: 52px;

@@ -5,8 +5,7 @@ import { ILetsTalkButtonProps } from "types/common/ComponentsProps";
 
 import styles from "./letsTalkButton.module.scss";
 
-const LetsTalkButton = ({dark}: ILetsTalkButtonProps) => {
-
+const LetsTalkButton = ({ dark }: ILetsTalkButtonProps) => {
 	return (
 		<>
 			<div

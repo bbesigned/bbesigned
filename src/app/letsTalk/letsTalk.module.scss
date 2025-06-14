@@ -4,17 +4,14 @@
 	max-width: 1920px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 64px 80px 0 80px;
+	padding: 64px 80px 0;
 	background-color: var(--pure-white);
 
-	
-
 	@media (max-width: 768px) {
-		padding: 50px 20px 26px 20px;
+		padding: 50px 20px 26px;
 	}
 
 	&__close {
-		font-family: Noto Sans;
 		align-self: flex-end;
 		text-align: center;
 		color: rgba(25, 25, 25, 1);
@@ -118,7 +115,6 @@
 	}
 
 	&__info {
-		font-family: Noto Sans;
 		font-weight: 700;
 		font-size: 85px;
 		line-height: 100%;
@@ -227,7 +223,6 @@
 	&__input {
 		flex: 1;
 		border-bottom: 1px solid rgba(132, 132, 132, 1);
-		font-family: Noto Sans;
 		font-weight: 700;
 		font-size: 36px;
 		min-width: 0;
@@ -349,7 +344,6 @@
 	&__links {
 		display: flex;
 		gap: 40px;
-		font-family: Noto Sans;
 		font-weight: 400;
 		font-size: 24px;
 		text-transform: uppercase;
