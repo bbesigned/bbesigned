@@ -3,9 +3,14 @@
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100vh;
-	max-width: 2560px;
 	width: 100vw;
 	padding: 0 5rem;
 	position: relative;
 	z-index: 1;
+}
+
+.page {
+	&__link {
+		font-size: 3em;
+	}
 }

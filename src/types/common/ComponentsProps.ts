@@ -1,3 +1,5 @@
+import { ComponentProps } from "react";
+
 export type ExampleType = {
 	type1: string;
 };
@@ -20,4 +22,25 @@ export interface IVectorLetter {
 
 export interface IBannerLogo {
 	smallLogo: boolean;
+}
+
+export interface IControlButtons {
+	classnames?: string;
+}
+
+export interface IBottomAllRightsText {
+	classnames?: string;
+}
+
+export interface IBackButton {
+	classname?: string;
+}
+
+export interface IButton extends ComponentProps<"button"> {
+	variant: "transparent" | "dark" | "light";
+}
+
+export interface IWorkCard {
+	cardSize: "large" | "small";
+	classname?: string;
 }

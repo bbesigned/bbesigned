@@ -1,17 +1,15 @@
 "use client";
 
-import React from "react";
-
 import styles from "./menuButton.module.scss";
 
 export const MenuButton = () => {
 	return (
-		<div className={styles.burger__container}>
-			<button className={styles.menuButton}>
-				<div className={styles.menuButton__hamburger}>
-					<span className={styles["menuButton__hamburger__hamburgerLine"]}></span>
-					<span className={styles["menuButton__hamburger__hamburgerLine"]}></span>
-					<span className={styles["menuButton__hamburger__hamburgerLine"]}></span>
+		<div className={styles.burgerMenuWrap}>
+			<button className={styles.burgerMenuActionElement}>
+				<div className={styles.burgerMenuActionElement__burgerMenuContainer}>
+					<span className={styles.burgerMenuContainer__line}></span>
+					<span className={styles.burgerMenuContainer__line}></span>
+					<span className={styles.burgerMenuContainer__line}></span>
 				</div>
 			</button>
 		</div>

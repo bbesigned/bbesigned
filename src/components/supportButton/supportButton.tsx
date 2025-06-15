@@ -1,14 +1,14 @@
-import React from "react";
+"use client";
 
-import { TbMessageCircle } from "react-icons/tb";
+import { FaComment } from "react-icons/fa";
 
 import styles from "./supportButton.module.scss";
 
 const SupportButton = () => {
 	return (
-		<div className={styles.supportButton__container}>
-			<button className={styles.supportButton}>
-				<TbMessageCircle className={styles.supportButton__iconElement} />
+		<div className={styles.supportButtonWrapper}>
+			<button className={styles.supportButtonContainer}>
+				<FaComment className={styles.supportButtonContainer__iconElement} />
 			</button>
 		</div>
 	);

@@ -1,6 +1,5 @@
-import React from "react";
-
 import Image from "next/image";
+import cn from "classnames";
 
 import { IBannerLogo } from "../../types/common/ComponentsProps";
 
@@ -15,7 +14,9 @@ const BannerLogo = ({ smallLogo }: IBannerLogo) => {
 				width={715}
 				height={85}
 				priority
-				className={`${smallLogo ? styles.bannerLogo__smallLogoImage : styles.bannerLogo__logoImage}`}
+				className={cn(styles.bannerLogo__mediumLogoImage, {
+					[styles.bannerLogo__smallLogoImage]: smallLogo,
+				})}
 			/>
 		</div>
 	);

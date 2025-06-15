@@ -1,14 +1,13 @@
-.letsTalk__container {
+.letsTalkWrapper {
 	background: transparent;
-	padding: 1.154em 4.203em 1.5em;
+	padding: 1.654em 4.203em 1.596em;
 	margin-right: 2.5em;
-	border: 1px solid #fff8f0;
 
-	.letsTalk {
+	.letsTalk__actionElement {
 		color: white;
 		font-weight: 400;
 		font-size: 2.206em;
-		font-family: "Noto Sans", sans-serif;
+		font-family: var(--text-font-family), serif;
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
 		border-bottom: 0.125em solid white;

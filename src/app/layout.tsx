@@ -1,20 +1,21 @@
 /* eslint-disable camelcase */
+
 import { ReactNode } from "react";
-import { Geist, Geist_Mono } from "next/font/google";
+
+import { Noto_Sans } from "next/font/google";
+
+import style from "./layout.module.scss";
 
 import type { Metadata } from "next";
 
 import "./reset.css";
 import "./globals.scss";
 
-const geistSans = Geist({
-	variable: "--font-geist-sans",
+const notoSans = Noto_Sans({
+	weight: ["300", "400", "500", "600", "700", "900"],
 	subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
-	subsets: ["latin"],
+	display: "swap",
+	variable: "--font-noto-sans",
 });
 
 export const metadata: Metadata = {
@@ -29,7 +30,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+			<body className={`${notoSans.className} ${notoSans.variable} ${style.layoutBackground}`}>
+				{children}
+			</body>
 		</html>
 	);
 }

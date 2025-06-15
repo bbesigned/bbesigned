@@ -6,9 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "prepare": "rimraf .husky/_/pre-commit",
-    "preCommit": "lint-staged",
-    "postinstall": "husky",
+    "preCommitEsLint": "next lint --quiet",
+    "preCommitStyleLint": "stylelint 'src/**/*.{css,scss}' --fix --quiet",
     "lint": "next lint",
     "lint:fix": "npm run lint -- --fix",
     "lint:styles": "stylelint 'src/**/*.{css,scss}'",
@@ -19,8 +18,10 @@
   "dependencies": {
     "classnames": "^2.5.1",
     "next": "15.2.4",
+    "pre-commit": "^1.2.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
     "sass": "^1.86.1"
   },
   "devDependencies": {
@@ -42,8 +43,6 @@
     "eslint-plugin-prettier": "^5.2.5",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-sonarjs": "^3.0.2",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.5.0",
     "prettier": "^3.5.3",
     "rimraf": "^6.0.1",
     "stylelint": "^16.17.0",
@@ -52,18 +51,8 @@
     "typescript": "^5",
     "typescript-eslint": "^8.29.0"
   },
-  "lint-staged": {
-    "**/src/**/*.{css,scss}": [
-      "stylelint --fix",
-      "git add"
-    ],
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "git add"
-    ],
-    "**/src/**/*.{js,jsx,ts,tsx,css,scss,md,json}": [
-      "prettier --write",
-      "git add"
-    ]
-  }
+  "pre-commit": [
+    "preCommitStyleLint",
+    "preCommitEsLint"
+  ]
 }
