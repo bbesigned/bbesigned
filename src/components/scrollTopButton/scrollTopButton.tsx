@@ -3,13 +3,6 @@ import React from "react";
 import styles from "./scrollTopButton.module.scss";
 
 const ScrollTopButton = () => {
-	const scrollToTop = () => {
-		window.scrollTo({
-			top: 0,
-			behavior: "smooth",
-		});
-	};
-
 	return (
 		<div className={styles.scrollTopButton__container}>
 			<button className={styles.scrollTopButton}>
