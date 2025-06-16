@@ -1,3 +1,5 @@
+import { ComponentProps } from "react";
+
 export type ExampleType = {
 	type1: string;
 };
@@ -40,4 +42,17 @@ export interface IModalLetsTalkProps {
 export interface ISubmitLetsTalkButtonProps {
 	submit: boolean;
 	agree: boolean;
+}
+
+export interface IBackButton {
+	classname?: string;
+}
+
+export interface IButton extends ComponentProps<"button"> {
+	variant: "transparent" | "dark" | "light";
+}
+
+export interface IWorkCard {
+	cardSize: "large" | "small";
+	classname?: string;
 }
