@@ -12,7 +12,6 @@
 	}
 
 	&__close {
-		font-family: "Noto Sans";
 		align-self: flex-end;
 		text-align: center;
 		color: rgba(25, 25, 25, 1);
@@ -116,7 +115,6 @@
 	}
 
 	&__info {
-		font-family: "Noto Sans";
 		font-weight: 700;
 		font-size: 85px;
 		line-height: 100%;
@@ -225,7 +223,6 @@
 	&__input {
 		flex: 1;
 		border-bottom: 1px solid rgba(132, 132, 132, 1);
-		font-family: "Noto Sans";
 		font-weight: 700;
 		font-size: 36px;
 		min-width: 0;
@@ -287,6 +284,12 @@
 		font-weight: 500;
 		font-size: 20px;
 
+		@media (max-width: 2560px) {
+			width: 133px;
+			height: 107px;
+			font-size: 26px;
+		}
+
 		@media (max-width: 1440px) {
 			width: 75px;
 			height: 60px;
@@ -347,7 +350,6 @@
 	&__links {
 		display: flex;
 		gap: 40px;
-		font-family: "Noto Sans";
 		font-weight: 400;
 		font-size: 24px;
 		text-transform: uppercase;

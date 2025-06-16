@@ -6,13 +6,18 @@
 	height: 80px;
 	border: 1px solid rgba(0, 0, 0, 1);
 	color: rgba(255, 248, 240, 1);
-	font-family: "Noto Sans";
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 100%;
 	letter-spacing: 0%;
 	text-align: center;
 	vertical-align: middle;
+
+	@media (max-width: 2560px) {
+		width: 480px;
+		height: 107px;
+		font-size: 26px;
+	}
 
 	@media (max-width: 1440px) {
 		width: 270px;
@@ -46,6 +51,7 @@
 		align-items: center;
 		justify-content: center;
 		transition: 2s;
+		font-size: 26px;
 
 		@media (max-width: 1440px) {
 			width: 135px;
@@ -65,7 +71,7 @@
 
 		&.active {
 			transform: translateX(calc(100% - 4px));
-			background-color: rgba(48, 186, 85, 1); // цвет при активном состоянии (замени под себя)
+			background-color: rgba(48, 186, 85, 1);
 			color: white;
 		}
 	}

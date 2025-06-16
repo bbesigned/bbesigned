@@ -23,12 +23,13 @@ const SubmitLetsTalkButton = ({ submit, agree }: ISubmitLetsTalkButtonProps) => 
 	};
 
 	return (
-		<button type="submit" className={styles.submitLetsTalkButton}>
-			<div
+		<div className={styles.submitLetsTalkButton}>
+			<button
+				type="submit"
 				className={`${styles.submitLetsTalkButton__slide} ${active && agree ? styles.active : ""}`}
 				onClick={handleClick}>
 				{active && agree ? "Successful send" : "Click to send"}
-			</div>
+			</button>
 			{!active && agree && (
 				<div className={styles.submitLetsTalkButton__arrows}>
 					<Image src={arrow} alt="Photo" width={24} height={24} />
@@ -36,7 +37,7 @@ const SubmitLetsTalkButton = ({ submit, agree }: ISubmitLetsTalkButtonProps) => 
 					<Image src={arrow} alt="Photo" width={24} height={24} />
 				</div>
 			)}
-		</button>
+		</div>
 	);
 };
 

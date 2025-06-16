@@ -41,7 +41,7 @@ const LetsTalk = () => {
 		return () => {
 			window.removeEventListener("beforeunload", handleBeforeUnload);
 		};
-	}, [name, email, activity, agree, isSubmit]);
+	}, [name, email, activity, agree, isSubmit, isFormDirty]);
 
 	const handleActivityChange = (selected: string[]) => {
 		setSelectedActivities(selected);
@@ -79,7 +79,7 @@ const LetsTalk = () => {
 					setIsModalOpen(true);
 				}, delay);
 			} catch (err) {
-				console.error("ERROR", err);
+				alert(err);
 			}
 		}
 	};
