@@ -13,10 +13,12 @@
 	margin: 0 auto;
 	overflow: auto;
 	height: 100%;
+
 	&__headerWrapper {
 		width: 93.75vw;
 		height: 190px;
 	}
+
 	&__titleImage {
 		width: 89.75vw;
 		margin: 316px 0 410px;
@@ -40,12 +42,14 @@
 			width: 91.7vw;
 			height: 142px;
 		}
+
 		&__titleImage {
 			width: 89.8vw;
 			margin: 238px 0 290px;
 			max-height: 341px;
 		}
 	}
+
 	.rectangle {
 		width: 91.2%;
 		border-radius: 50px 50px 0 0;
@@ -58,11 +62,13 @@
 			width: 88.8vw;
 			height: 108px;
 		}
+
 		&__titleImage {
 			width: 89.8vw;
 			margin: 177px 0 290px;
 		}
 	}
+
 	.rectangle {
 		width: 91.1vw;
 		height: 40px;
@@ -76,10 +82,12 @@
 			width: 86.3vw;
 			height: 82px;
 		}
+
 		&__titleImage {
 			margin: 150px 0 233px;
 		}
 	}
+
 	.rectangle {
 		width: 91.2vw;
 		height: 35px;
@@ -93,10 +101,12 @@
 			width: 92.2vw;
 			height: 76px;
 		}
+
 		&__titleImage {
 			margin: 126px 0 550px;
 		}
 	}
+
 	.rectangle {
 		width: 91.1vw;
 		height: 30px;
@@ -110,10 +120,12 @@
 			width: 94.8vw;
 			height: 78px;
 		}
+
 		&__titleImage {
 			margin: 217px 0 205px;
 		}
 	}
+
 	.rectangle {
 		width: 91.1vw;
 		height: 40px;
@@ -128,11 +140,13 @@
 			width: 90vw;
 			height: 78px;
 		}
+
 		&__titleImage {
 			width: 82.2%;
 			margin: 242px 0 170px;
 		}
 	}
+
 	.rectangle {
 		width: 90vw;
 		height: 26px;

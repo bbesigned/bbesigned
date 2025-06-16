@@ -18,6 +18,7 @@ const Works = () => {
 					src={"/worksLogoShortPage.png"}
 					width={2298}
 					height={454}
+					priority
 					alt="works"
 				/>
 				<div className={styles.rectangle} />

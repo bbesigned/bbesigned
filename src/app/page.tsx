@@ -8,10 +8,10 @@ import styles from "./page.module.scss";
 
 export default function Home() {
 	return (
-		<div>
-			{/* <Banner /> */}
+		<div className={styles.page}>
+			<Banner />
 			<Works />
-			{/* <Footer /> */}
+			<Footer />
 		</div>
 	);
 }
