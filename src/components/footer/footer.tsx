@@ -1,5 +1,6 @@
-import { Facebook } from "assets/script/facebook/facebook";
+import Link from "next/link";
 
+import { Facebook } from "assets/script/facebook/facebook";
 import { Instagram } from "assets/script/instagram/instagram";
 import { Linkedin } from "assets/script/linkedin/linkedin";
 
@@ -30,7 +31,6 @@ export const Footer = () => {
 							<li>Home</li>
 							<li>About us</li>
 
-		
 							<li>
 								<Link href={"/worksPage"}>Works</Link>
 							</li>
