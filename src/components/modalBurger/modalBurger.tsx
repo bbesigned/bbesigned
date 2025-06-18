@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import cn from "classnames";
 
 import { Instagram } from "assets/script/instagram/instagram";
 import { Linkedin } from "assets/script/linkedin/linkedin";
@@ -10,10 +11,8 @@ import { IModalLetsTalkProps } from "types/common/ComponentsProps";
 import styles from "./modalBurger.module.scss";
 
 const ModalBurger = ({ visible, onClose }: IModalLetsTalkProps) => {
-	if (!visible) return null;
-
 	return (
-		<div className={styles.modal}>
+		<div className={cn(styles.modal, { [styles.hidden]: !visible })}>
 			<div className={styles.modalBurger}>
 				<button className={styles.modalBurger__close} onClick={onClose}>
 					<span className={styles.modalBurger__span}>close</span> &#10005;

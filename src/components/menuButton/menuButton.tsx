@@ -15,13 +15,13 @@ export const MenuButton = () => {
 	return (
 		<>
 			<button className={styles.burgerMenuWrap} onClick={handleOpen}>
-				<button className={styles.burgerMenuActionElement}>
+				<div className={styles.burgerMenuActionElement}>
 					<div className={styles.burgerMenuActionElement__burgerMenuContainer}>
 						<span className={styles.burgerMenuContainer__line}></span>
 						<span className={styles.burgerMenuContainer__line}></span>
 						<span className={styles.burgerMenuContainer__line}></span>
 					</div>
-				</button>
+				</div>
 			</button>
 			<ModalBurger visible={isOpen} onClose={handleClose} />
 		</>

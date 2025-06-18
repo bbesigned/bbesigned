@@ -44,6 +44,10 @@ export interface ISubmitLetsTalkButtonProps {
 	agree: boolean;
 }
 
+export interface IBottomAllRightsText {
+	classnames?: string;
+}
+
 export interface IBackButton {
 	classname?: string;
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { FormEvent, useEffect, useState, useTransition } from "react";
 
 import SubmitLetsTalkButton from "components/submitLetsTalkButton/submitLetsTalkButton";
 import ModalLetsTalk from "components/modalLetsTalk/modalLetsTalk";
@@ -22,6 +22,7 @@ const LetsTalk = () => {
 	const [isSubmit, setIsSubmit] = useState(false);
 	const [isSelect, setIsSelect] = useState(false);
 	const [selectedActivities, setSelectedActivities] = useState<string[]>([]);
+	const [, startTransition] = useTransition();
 
 	const delay = 2000;
 	const isFormDirty = name || email || activity || agree;
@@ -31,7 +32,6 @@ const LetsTalk = () => {
 		const handleBeforeUnload = (e: BeforeUnloadEvent) => {
 			if (isFormDirty && !isSubmit) {
 				e.preventDefault();
-				e.returnValue = "";
 				return "";
 			}
 		};
@@ -44,9 +44,12 @@ const LetsTalk = () => {
 	}, [name, email, activity, agree, isSubmit, isFormDirty]);
 
 	const handleActivityChange = (selected: string[]) => {
-		setSelectedActivities(selected);
-		setActivity(selected.join(", "));
 		setIsSelect(false);
+
+		startTransition(() => {
+			setSelectedActivities(selected);
+			setActivity(selected.join(", "));
+		});
 	};
 
 	const closeModal = () => {
@@ -67,8 +70,7 @@ const LetsTalk = () => {
 		setIsSubmit(false);
 	};
 
-	// eslint-disable-next-line no-undef
-	const handleSubmit = (e: React.FormEvent) => {
+	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
 		if (agree && data) {
 			setIsSubmit(true);

@@ -1,0 +1,20 @@
+.bottomAllRights {
+	font-size: clamp(10px, 0.7vw, 18px);
+	color: var(--dark-silver);
+
+	span {
+		color: var(--mexican-pink);
+	}
+}
+
+@media (max-width: 1025px) {
+	.bottomAllRights {
+		font-size: 8px;
+	}
+}
+
+@media (max-width: 769px) {
+	.bottomAllRights {
+		font-size: 12px;
+	}
+}
