@@ -1,10 +1,14 @@
-import React from "react";
+import cn from "classnames";
+
+import { colorPalette } from "helpers/colorPalette";
+
+import { IIconsProps } from "types/common/PageProps";
 
 import styles from "./scrollTopButton.module.scss";
 
-const ScrollTopButton = () => {
+const ScrollTopButton = ({ classNames, color = colorPalette.floralWhite }: IIconsProps) => {
 	return (
-		<div className={styles.scrollTopButton__container}>
+		<div className={cn(styles.scrollTopButton__container, classNames)}>
 			<button className={styles.scrollTopButton}>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -12,7 +16,7 @@ const ScrollTopButton = () => {
 					height="4em"
 					viewBox="0 0 20 24"
 					fill="none"
-					stroke="#fff8f0"
+					stroke={color}
 					strokeWidth="0.75"
 					strokeLinecap="round"
 					strokeLinejoin="round">

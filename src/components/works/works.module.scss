@@ -9,7 +9,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 0 auto;
+	margin-inline: auto;
 
 	&__headerWrapper {
 		width: 93.75vw;
@@ -24,7 +24,6 @@
 }
 
 .rectangle {
-	margin-top: auto;
 	width: 84.85%;
 	height: 70px;
 	background-color: var(--floral-white);
@@ -34,6 +33,8 @@
 
 @media (max-width: 1921px) {
 	.worksContainer {
+		display: flex;
+
 		&__headerWrapper {
 			font-size: 5px;
 			width: 91.7vw;
@@ -55,6 +56,8 @@
 
 @media (max-width: 1441px) {
 	.worksContainer {
+		display: flex;
+
 		&__headerWrapper {
 			width: 88.8vw;
 			height: 108px;
@@ -75,6 +78,8 @@
 
 @media (max-width: 1171px) {
 	.worksContainer {
+		display: flex;
+
 		&__headerWrapper {
 			width: 86.3vw;
 			height: 82px;
@@ -94,6 +99,8 @@
 
 @media (max-width: 1025px) {
 	.worksContainer {
+		display: flex;
+
 		&__headerWrapper {
 			width: 92.2vw;
 			height: 76px;
@@ -113,6 +120,8 @@
 
 @media (max-width: 769px) {
 	.worksContainer {
+		display: flex;
+
 		&__headerWrapper {
 			width: 94.8vw;
 			height: 78px;
@@ -132,6 +141,8 @@
 
 @media (max-width: 321px) {
 	.worksContainer {
+		display: flex;
+
 		&__headerWrapper {
 			font-size: 5px;
 			width: 90vw;
