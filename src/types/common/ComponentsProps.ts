@@ -60,3 +60,7 @@ export interface IWorkCard {
 	cardSize: "large" | "small";
 	classname?: string;
 }
+
+export interface IScrollTopButton {
+	classnames?: string;
+}
