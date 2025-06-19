@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import cn from "classnames";
 
 import { useEffect, useState } from "react";
 
@@ -26,7 +27,9 @@ const SubmitLetsTalkButton = ({ submit, agree }: ISubmitLetsTalkButtonProps) => 
 		<div className={styles.submitLetsTalkButton}>
 			<button
 				type="submit"
-				className={`${styles.submitLetsTalkButton__slide} ${active && agree ? styles.active : ""}`}
+				className={cn(styles.submitLetsTalkButton__slide, {
+					[styles.active]: active && agree,
+				})}
 				onClick={handleClick}>
 				{active && agree ? "Successful send" : "Click to send"}
 			</button>

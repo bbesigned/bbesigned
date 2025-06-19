@@ -41,7 +41,7 @@
 		appearance: none;
 		width: 23px;
 		height: 23px;
-		border: 1px solid rgba(25, 25, 25, 1);
+		border: 1px solid var(--eerie-black);
 		position: relative;
 		cursor: pointer;
 
@@ -80,7 +80,7 @@
 
 		&--apply {
 			padding: 15px 48px;
-			border: 1px solid #191919;
+			border: 1px solid var(--eerie-black);
 		}
 	}
 }
