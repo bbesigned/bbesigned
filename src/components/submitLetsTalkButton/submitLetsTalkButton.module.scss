@@ -4,8 +4,8 @@
 	justify-content: space-between;
 	width: 360px;
 	height: 80px;
-	border: 1px solid rgba(0, 0, 0, 1);
-	color: rgba(255, 248, 240, 1);
+	border: 1px solid var(--eerie-black);
+	color: var(--primary-color);
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 100%;
@@ -47,7 +47,7 @@
 		display: flex;
 		width: 181px;
 		height: 100%;
-		background-color: rgba(195, 195, 195, 1);
+		background-color: var(--submit-background);
 		align-items: center;
 		justify-content: center;
 		transition: 2s;
@@ -71,7 +71,7 @@
 
 		&.active {
 			transform: translateX(calc(100% - 4px));
-			background-color: rgba(48, 186, 85, 1);
+			background-color: var(--submit-active);
 			color: white;
 		}
 	}

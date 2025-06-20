@@ -1,11 +1,11 @@
 .modal {
 	position: fixed;
-	z-index: 9999;
+	z-index: 100;
 	inset: 0;
 	align-items: center;
 	display: flex;
 	justify-content: center;
-	background: rgba(0, 0, 0, 0.5);
+	background: var(--modal-black);
 }
 
 .hidden {
@@ -30,7 +30,7 @@
 	&__close {
 		align-self: flex-end;
 		text-align: center;
-		color: rgba(25, 25, 25, 1);
+		color: var(--eerie-black);
 		width: 128px;
 		margin-bottom: 84px;
 		font-size: 24px;
@@ -45,7 +45,7 @@
 			height: 1px;
 			bottom: 0;
 			left: 0;
-			background-color: rgba(25, 25, 25, 1);
+			background-color: var(--eerie-black);
 
 			@media (max-width: 768px) {
 				display: none;
@@ -127,7 +127,7 @@
 		}
 
 		& span {
-			color: rgba(180, 1, 94, 1);
+			color: var(--pink-dark);
 		}
 	}
 

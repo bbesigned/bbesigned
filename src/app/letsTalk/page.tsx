@@ -53,8 +53,10 @@ const LetsTalk = () => {
 	};
 
 	const closeModal = () => {
-		setIsModalOpen(false);
-		setIsSubmit(false);
+		startTransition(() => {
+			setIsModalOpen(false);
+			setIsSubmit(false);
+		});
 	};
 
 	const handleClickSelect = () => {
@@ -62,12 +64,14 @@ const LetsTalk = () => {
 	};
 
 	const handleClickReset = () => {
-		setName("");
-		setEmail("");
-		setActivity("");
-		setSelectedActivities([]);
-		setAgree(false);
-		setIsSubmit(false);
+		startTransition(() => {
+			setName("");
+			setEmail("");
+			setActivity("");
+			setSelectedActivities([]);
+			setAgree(false);
+			setIsSubmit(false);
+		});
 	};
 
 	const handleSubmit = (e: FormEvent) => {
