@@ -22,7 +22,9 @@ const LetsTalk = () => {
 	const [isSubmit, setIsSubmit] = useState(false);
 	const [isSelect, setIsSelect] = useState(false);
 	const [selectedActivities, setSelectedActivities] = useState<string[]>([]);
-	const [, startTransition] = useTransition();
+	const [, startActivityTransition] = useTransition();
+	const [, startModalTransition] = useTransition();
+	const [, startResetTransition] = useTransition();
 
 	const delay = 2000;
 	const isFormDirty = name || email || activity || agree;
@@ -46,14 +48,14 @@ const LetsTalk = () => {
 	const handleActivityChange = (selected: string[]) => {
 		setIsSelect(false);
 
-		startTransition(() => {
+		startActivityTransition(() => {
 			setSelectedActivities(selected);
 			setActivity(selected.join(", "));
 		});
 	};
 
 	const closeModal = () => {
-		startTransition(() => {
+		startModalTransition(() => {
 			setIsModalOpen(false);
 			setIsSubmit(false);
 		});
@@ -64,7 +66,7 @@ const LetsTalk = () => {
 	};
 
 	const handleClickReset = () => {
-		startTransition(() => {
+		startResetTransition(() => {
 			setName("");
 			setEmail("");
 			setActivity("");
