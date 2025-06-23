@@ -17,8 +17,8 @@ export const MenuButton = ({ dark }: IBurgerButtonProps) => {
 
 	return (
 		<>
-			<div className={styles.burgerMenuWrap} onClick={handleOpen}>
-				<button className={styles.burgerMenuActionElement}>
+			<button className={styles.burgerMenuWrap} onClick={handleOpen}>
+				<div className={styles.burgerMenuActionElement}>
 					<div
 						className={cn(styles.burgerMenuActionElement__burgerMenuContainer, {
 							[styles.burgerMenuActionElement__burgerMenuContainer_dark]: dark,
@@ -36,8 +36,8 @@ export const MenuButton = ({ dark }: IBurgerButtonProps) => {
 								[styles.burgerMenuContainer__line_dark]: dark,
 							})}></span>
 					</div>
-				</button>
-			</div>
+				</div>
+			</button>
 			<ModalBurger visible={isOpen} onClose={handleClose} />
 		</>
 	);
