@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { FormEvent, useEffect, useState, useTransition } from "react";
 
 import SubmitLetsTalkButton from "components/submitLetsTalkButton/submitLetsTalkButton";
 import ModalLetsTalk from "components/modalLetsTalk/modalLetsTalk";
@@ -13,8 +13,6 @@ import { Facebook } from "assets/script/facebook/facebook";
 
 import styles from "./letsTalk.module.scss";
 
-// Разрешение 2560 в разработке
-
 const LetsTalk = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
@@ -24,7 +22,11 @@ const LetsTalk = () => {
 	const [isSubmit, setIsSubmit] = useState(false);
 	const [isSelect, setIsSelect] = useState(false);
 	const [selectedActivities, setSelectedActivities] = useState<string[]>([]);
+	const [, startActivityTransition] = useTransition();
+	const [, startModalTransition] = useTransition();
+	const [, startResetTransition] = useTransition();
 
+	const delay = 2000;
 	const isFormDirty = name || email || activity || agree;
 	const data = name && email && activity && agree;
 
@@ -32,7 +34,6 @@ const LetsTalk = () => {
 		const handleBeforeUnload = (e: BeforeUnloadEvent) => {
 			if (isFormDirty && !isSubmit) {
 				e.preventDefault();
-				e.returnValue = "";
 				return "";
 			}
 		};
@@ -42,17 +43,22 @@ const LetsTalk = () => {
 		return () => {
 			window.removeEventListener("beforeunload", handleBeforeUnload);
 		};
-	}, [name, email, activity, agree, isSubmit]);
+	}, [name, email, activity, agree, isSubmit, isFormDirty]);
 
 	const handleActivityChange = (selected: string[]) => {
-		setSelectedActivities(selected);
-		setActivity(selected.join(", "));
 		setIsSelect(false);
+
+		startActivityTransition(() => {
+			setSelectedActivities(selected);
+			setActivity(selected.join(", "));
+		});
 	};
 
 	const closeModal = () => {
-		setIsModalOpen(false);
-		setIsSubmit(false);
+		startModalTransition(() => {
+			setIsModalOpen(false);
+			setIsSubmit(false);
+		});
 	};
 
 	const handleClickSelect = () => {
@@ -60,16 +66,17 @@ const LetsTalk = () => {
 	};
 
 	const handleClickReset = () => {
-		setName("");
-		setEmail("");
-		setActivity("");
-		setSelectedActivities([]);
-		setAgree(false);
-		setIsSubmit(false);
+		startResetTransition(() => {
+			setName("");
+			setEmail("");
+			setActivity("");
+			setSelectedActivities([]);
+			setAgree(false);
+			setIsSubmit(false);
+		});
 	};
 
-	// eslint-disable-next-line no-undef
-	const handleSubmit = (e: React.FormEvent) => {
+	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
 		if (agree && data) {
 			setIsSubmit(true);
@@ -78,11 +85,9 @@ const LetsTalk = () => {
 			try {
 				setTimeout(() => {
 					setIsModalOpen(true);
-				}, 2000);
-
-				console.log(data);
+				}, delay);
 			} catch (err) {
-				console.error("ERROR", err);
+				alert(err);
 			}
 		}
 	};

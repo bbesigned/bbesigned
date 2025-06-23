@@ -36,8 +36,8 @@ export const MenuButton = ({ dark }: IBurgerButtonProps) => {
 								[styles.burgerMenuContainer__line_dark]: dark,
 							})}></span>
 					</div>
-				</button>
-			</div>
+				</div>
+			</button>
 			<ModalBurger visible={isOpen} onClose={handleClose} />
 		</>
 	);

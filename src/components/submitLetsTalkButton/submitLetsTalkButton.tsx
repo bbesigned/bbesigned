@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import cn from "classnames";
 
 import { useEffect, useState } from "react";
 
@@ -23,12 +24,15 @@ const SubmitLetsTalkButton = ({ submit, agree }: ISubmitLetsTalkButtonProps) => 
 	};
 
 	return (
-		<button type="submit" className={styles.submitLetsTalkButton}>
-			<div
-				className={`${styles.submitLetsTalkButton__slide} ${active && agree ? styles.active : ""}`}
+		<div className={styles.submitLetsTalkButton}>
+			<button
+				type="submit"
+				className={cn(styles.submitLetsTalkButton__slide, {
+					[styles.active]: active && agree,
+				})}
 				onClick={handleClick}>
 				{active && agree ? "Successful send" : "Click to send"}
-			</div>
+			</button>
 			{!active && agree && (
 				<div className={styles.submitLetsTalkButton__arrows}>
 					<Image src={arrow} alt="Photo" width={24} height={24} />
@@ -36,7 +40,7 @@ const SubmitLetsTalkButton = ({ submit, agree }: ISubmitLetsTalkButtonProps) => 
 					<Image src={arrow} alt="Photo" width={24} height={24} />
 				</div>
 			)}
-		</button>
+		</div>
 	);
 };
 

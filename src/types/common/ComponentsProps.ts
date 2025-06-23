@@ -1,3 +1,5 @@
+import { ComponentProps } from "react";
+
 export type ExampleType = {
 	type1: string;
 };
@@ -43,6 +45,7 @@ export interface ISubmitLetsTalkButtonProps {
 	agree: boolean;
 }
 
+
 export interface ILetsTalkButtonProps {
 	dark?: boolean;
 }
@@ -54,4 +57,24 @@ export interface IBurgerButtonProps {
 export interface IBannerHeaderProps {
 	dark?: boolean;
 	smallLogo?: boolean;
+
+export interface IBottomAllRightsText {
+	classnames?: string;
+}
+
+export interface IBackButton {
+	classname?: string;
+}
+
+export interface IButton extends ComponentProps<"button"> {
+	variant: "transparent" | "dark" | "light";
+}
+
+export interface IWorkCard {
+	cardSize: "large" | "small";
+	classname?: string;
+}
+
+export interface IScrollTopButton {
+	classnames?: string;
 }

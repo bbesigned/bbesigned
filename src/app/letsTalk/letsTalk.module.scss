@@ -14,7 +14,7 @@
 	&__close {
 		align-self: flex-end;
 		text-align: center;
-		color: rgba(25, 25, 25, 1);
+		color: var(--eerie-black);
 		width: 128px;
 		margin-bottom: 84px;
 		font-size: 24px;
@@ -29,7 +29,7 @@
 			height: 1px;
 			bottom: 0;
 			left: 0;
-			background-color: rgba(25, 25, 25, 1);
+			background-color: var(--eerie-black);
 
 			@media (max-width: 768px) {
 				display: none;
@@ -145,7 +145,7 @@
 	}
 
 	&__text {
-		color: rgba(182, 182, 182, 1);
+		color: var(--gray-medium);
 		font-size: 24px;
 		letter-spacing: 0%;
 		line-height: 37px;
@@ -222,7 +222,7 @@
 
 	&__input {
 		flex: 1;
-		border-bottom: 1px solid rgba(132, 132, 132, 1);
+		border-bottom: 1px solid var(--gray-dark);
 		font-weight: 700;
 		font-size: 36px;
 		min-width: 0;
@@ -277,12 +277,18 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border: 1px solid rgba(0, 0, 0, 1);
+		border: 1px solid var(--eerie-black);
 		background-color: var(--pure-white);
 		width: 100px;
 		height: 80px;
 		font-weight: 500;
 		font-size: 20px;
+
+		@media (max-width: 2560px) {
+			width: 133px;
+			height: 107px;
+			font-size: 26px;
+		}
 
 		@media (max-width: 1440px) {
 			width: 75px;
@@ -337,7 +343,7 @@
 		}
 
 		& span {
-			color: rgba(180, 1, 94, 1);
+			color: var(--pink-dark);
 		}
 	}
 

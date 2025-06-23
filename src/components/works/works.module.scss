@@ -1,0 +1,163 @@
+.worksWrappper {
+	background-image: url("/backgroundWorks.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.worksContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-inline: auto;
+
+	&__headerWrapper {
+		width: 93.75vw;
+		height: 190px;
+	}
+
+	&__titleImage {
+		width: 89.75vw;
+		margin: 316px 0 410px;
+		max-height: 454px;
+	}
+}
+
+.rectangle {
+	width: 84.85%;
+	height: 70px;
+	background-color: var(--floral-white);
+	border-radius: 62px 62px 0 0;
+	flex-shrink: 0;
+}
+
+@media (max-width: 1921px) {
+	.worksContainer {
+		display: flex;
+
+		&__headerWrapper {
+			font-size: 5px;
+			width: 91.7vw;
+			height: 142px;
+		}
+
+		&__titleImage {
+			width: 89.8vw;
+			margin: 238px 0 290px;
+			max-height: 341px;
+		}
+	}
+
+	.rectangle {
+		width: 91.2%;
+		border-radius: 50px 50px 0 0;
+	}
+}
+
+@media (max-width: 1441px) {
+	.worksContainer {
+		display: flex;
+
+		&__headerWrapper {
+			width: 88.8vw;
+			height: 108px;
+		}
+
+		&__titleImage {
+			width: 89.8vw;
+			margin: 177px 0 290px;
+		}
+	}
+
+	.rectangle {
+		width: 91.1vw;
+		height: 40px;
+		border-radius: 37px 37px 0 0;
+	}
+}
+
+@media (max-width: 1171px) {
+	.worksContainer {
+		display: flex;
+
+		&__headerWrapper {
+			width: 86.3vw;
+			height: 82px;
+		}
+
+		&__titleImage {
+			margin: 150px 0 233px;
+		}
+	}
+
+	.rectangle {
+		width: 91.2vw;
+		height: 35px;
+		border-radius: 30px 30px 0 0;
+	}
+}
+
+@media (max-width: 1025px) {
+	.worksContainer {
+		display: flex;
+
+		&__headerWrapper {
+			width: 92.2vw;
+			height: 76px;
+		}
+
+		&__titleImage {
+			margin: 126px 0 205px;
+		}
+	}
+
+	.rectangle {
+		width: 91.1vw;
+		height: 30px;
+		border-radius: 27px 27px 0 0;
+	}
+}
+
+@media (max-width: 769px) {
+	.worksContainer {
+		display: flex;
+
+		&__headerWrapper {
+			width: 94.8vw;
+			height: 78px;
+		}
+
+		&__titleImage {
+			margin: 217px 0 550px;
+		}
+	}
+
+	.rectangle {
+		width: 91.1vw;
+		height: 40px;
+		border-radius: 20px 20px 0 0;
+	}
+}
+
+@media (max-width: 321px) {
+	.worksContainer {
+		display: flex;
+
+		&__headerWrapper {
+			font-size: 5px;
+			width: 90vw;
+			height: 78px;
+		}
+
+		&__titleImage {
+			width: 82.2%;
+			margin: 242px 0 170px;
+		}
+	}
+
+	.rectangle {
+		width: 90vw;
+		height: 26px;
+		border-radius: 20px 20px 0 0;
+	}
+}
