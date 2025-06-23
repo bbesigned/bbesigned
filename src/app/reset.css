@@ -31,7 +31,6 @@ html,
 body {
 	height: 100%;
 	width: 100%;
-	line-height: 1;
 	font-size: 14px;
 	text-size-adjust: 100%;
 }
@@ -58,6 +57,7 @@ button::-moz-focus-inner {
 a,
 a:visited {
 	text-decoration: none;
+	cursor: pointer;
 }
 a:hover {
 	text-decoration: none;
@@ -70,7 +70,6 @@ ul li {
 img {
 	vertical-align: top;
 	max-width: 100%;
-	height: auto;
 }
 
 h1,

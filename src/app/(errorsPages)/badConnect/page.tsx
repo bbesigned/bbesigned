@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import { BottomAllRightsText } from "components/bottomAllRightsText/bottomAllRightsText";
 import { RestartIcon } from "assets/script/restartIcon/restartIcon";
+import { BottomAllRightsText } from "components/bottomAllRightsText/bottomAllRightsText";
 
 import style from "./badConnect.module.scss";
 

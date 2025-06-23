@@ -28,6 +28,22 @@ export interface IControlButtons {
 	classnames?: string;
 }
 
+export interface ISelectActivityProps {
+	selected: string[];
+	onChange: (selected: string[]) => void;
+	onClose: () => void;
+}
+
+export interface IModalLetsTalkProps {
+	visible: boolean;
+	onClose: () => void;
+}
+
+export interface ISubmitLetsTalkButtonProps {
+	submit: boolean;
+	agree: boolean;
+}
+
 export interface IBottomAllRightsText {
 	classnames?: string;
 }

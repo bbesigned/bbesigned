@@ -1,0 +1,86 @@
+.selectActivity {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1000;
+	display: flex;
+	flex-direction: column;
+	width: 424px;
+	padding: 30px;
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 100%;
+	background-color: var(--pure-white);
+
+	@media (max-width: 1024px) {
+		width: 324px;
+		padding: 20px;
+		font-size: 30px;
+	}
+
+	@media (max-width: 768px) {
+		width: 300px;
+		padding: 20px;
+		font-size: 25px;
+	}
+
+	&__options {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		margin-bottom: 30px;
+	}
+
+	&__label {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+	}
+
+	&__check {
+		appearance: none;
+		width: 23px;
+		height: 23px;
+		border: 1px solid var(--eerie-black);
+		position: relative;
+		cursor: pointer;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 11.5px;
+			height: 10px;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		&:checked::after {
+			background-image: url("../../../public/check.svg");
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		gap: 20px;
+	}
+
+	&__button {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 100%;
+		letter-spacing: 0%;
+		background-color: var(--pure-white);
+
+		&--cancel {
+			padding: 15px 24px;
+		}
+
+		&--apply {
+			padding: 15px 48px;
+			border: 1px solid var(--eerie-black);
+		}
+	}
+}

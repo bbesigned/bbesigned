@@ -3,23 +3,21 @@
 	margin: 0 auto;
 	font-size: clamp(14px, 1.25vw, 32px);
 	line-height: 130%;
-	width: 93.7vw;
-	color: var(--eerie-black);
+	width: 93.75%;
 }
 
 .footerContainer {
 	display: flex;
-	justify-content: space-between;
+	gap: 9.21%;
 	margin-bottom: 158px;
 }
 
 .subscribeWrapper {
 	flex-grow: 1;
-	max-width: 32.8%;
 
 	&__head {
 		line-height: 130%;
-		font-size: clamp(20px, 1.87vw, 48px);
+		font-size: clamp(20px, 1.875vw, 48px);
 		margin-bottom: 32px;
 		font-weight: 500;
 	}
@@ -32,7 +30,7 @@
 		min-width: 74.8%;
 		font-weight: 700;
 		line-height: 130%;
-		font-size: clamp(12px, 0.94vw, 24px);
+		font-size: clamp(12px, 0.9375vw, 24px);
 		padding: 30px 40px 30px 32px;
 		border: 1px solid var(--eerie-black);
 		background-color: transparent;
@@ -67,12 +65,12 @@
 
 .footerNavigationWrapper {
 	display: flex;
-	flex-grow: 1;
-	max-width: 58%;
+	margin-right: 2.7%;
+	min-width: 55.3%;
 }
 
 .footerNavigationContainer {
-	width: 100%;
+	flex-shrink: 0;
 
 	h3 {
 		font-weight: 600;
@@ -89,26 +87,29 @@
 
 		li {
 			padding: 13px 13px 13px 0;
-
-			a {
-				color: var(--eerie-black);
-				list-style: none;
-			}
-
-			a:hover {
-				text-decoration: underline;
-			}
 		}
 	}
 
-	&_socialMediaWrap {
+	&__socialMediaWrap {
 		display: none;
 	}
 }
 
-.footerNavigationContainer:nth-child(1),
+.footerNavigationContainer:nth-child(1) {
+	margin-right: 15%;
+}
+
 .footerNavigationContainer:nth-child(2) {
-	max-width: 29%;
+	margin-right: 10%;
+}
+
+.footerBottomText {
+	font-size: clamp(10px, 0.7vw, 18px);
+	color: var(--dark-silver);
+
+	span {
+		color: var(--jazzberry-jam);
+	}
 }
 
 @media (max-width: 1921px) {
@@ -142,8 +143,6 @@
 	}
 
 	.formWrapper {
-		display: flex;
-
 		&__input {
 			min-width: 73.8%;
 			padding: 22px 30px 22px 16px;
@@ -169,11 +168,10 @@
 
 	.footerContainer {
 		margin-bottom: 80px;
+		gap: 8%;
 	}
 
 	.subscribeWrapper {
-		max-width: 34%;
-
 		&__head {
 			margin-bottom: 18px;
 		}
@@ -193,9 +191,11 @@
 		}
 	}
 
-	.formWrapper {
-		display: flex;
+	.footerNavigationWrapper {
+		min-width: 55%;
+	}
 
+	.formWrapper {
 		&__input {
 			padding: 16px 22px 16px 12px;
 			min-width: 72.8%;
@@ -244,9 +244,11 @@
 		}
 	}
 
-	.formWrapper {
-		display: flex;
+	.footerNavigationContainer:nth-child(1) {
+		margin-right: 14%;
+	}
 
+	.formWrapper {
 		&__input {
 			padding: 13px 18px 13px 10px;
 			font-size: 12px;
@@ -269,19 +271,16 @@
 	.footerWrapper {
 		padding: 53px 0 20px;
 		width: 92.2%;
-		font-size: clamp(12px, 1.37vw, 14px);
 	}
 
 	.footerContainer {
 		margin-bottom: 54px;
+		gap: 10%;
 	}
 
 	.subscribeWrapper {
-		max-width: 32.3%;
-
 		&__head {
 			margin-bottom: 14px;
-			font-size: clamp(17px, 1.96vw, 20px);
 		}
 	}
 
@@ -299,9 +298,15 @@
 		}
 	}
 
-	.formWrapper {
-		display: flex;
+	.footerNavigationContainer:nth-child(1) {
+		margin-right: 14%;
+	}
 
+	.footerNavigationContainer:nth-child(2) {
+		margin-right: 9%;
+	}
+
+	.formWrapper {
 		&__input {
 			padding: 12px 16px 12px 8px;
 			font-size: 10px;
@@ -317,11 +322,15 @@
 			height: 22px;
 		}
 	}
+
+	.footerBottomText {
+		font-size: 8px;
+	}
 }
 
 @media (max-width: 769px) {
 	.footerWrapper {
-		width: 94.7vw;
+		width: 94.75vw;
 		padding: 53px 0 20px;
 		font-size: 22px;
 	}
@@ -333,8 +342,6 @@
 	}
 
 	.subscribeWrapper {
-		max-width: 100%;
-
 		&__head {
 			margin-bottom: 28px;
 			font-size: 38px;
@@ -342,36 +349,40 @@
 	}
 
 	.footerNavigationWrapper {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 60px 15px;
-		max-width: none;
+		flex-wrap: wrap;
+		margin-right: 0;
+		row-gap: 56px;
 	}
 
 	.footerNavigationContainer {
-		display: block;
-
 		h3 {
 			margin-bottom: 12px;
 		}
 
 		ul {
-			width: fit-content;
-
 			li {
-				padding: 4px 4px 4px 0;
+				padding: 4px 0;
 			}
+		}
+
+		&__socialMediaWrap {
+			display: block;
 		}
 	}
 
-	.footerNavigationContainer:nth-child(1),
+	.footerNavigationContainer:nth-child(1) {
+		margin-right: 33%;
+	}
+
 	.footerNavigationContainer:nth-child(2) {
-		max-width: none;
+		margin-right: 0;
+	}
+
+	.footerNavigationContainer:nth-child(3) {
+		margin-right: 30%;
 	}
 
 	.formWrapper {
-		display: flex;
-
 		&__input {
 			padding: 17px 25px;
 			font-size: 22px;
@@ -380,5 +391,9 @@
 
 	.socialIconsWrapper {
 		display: none;
+	}
+
+	.footerBottomText {
+		font-size: 12px;
 	}
 }

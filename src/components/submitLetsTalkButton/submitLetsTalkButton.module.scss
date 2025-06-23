@@ -1,0 +1,94 @@
+.submitLetsTalkButton {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 360px;
+	height: 80px;
+	border: 1px solid var(--eerie-black);
+	color: var(--primary-color);
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 100%;
+	letter-spacing: 0%;
+	text-align: center;
+	vertical-align: middle;
+
+	@media (max-width: 2560px) {
+		width: 480px;
+		height: 107px;
+		font-size: 26px;
+	}
+
+	@media (max-width: 1440px) {
+		width: 270px;
+		height: 60px;
+		font-size: 16px;
+	}
+
+	@media (max-width: 1170px) {
+		width: 219px;
+		height: 49px;
+		font-size: 14px;
+	}
+
+	@media (max-width: 1024px) {
+		width: 192px;
+		height: 43px;
+		font-size: 12px;
+	}
+
+	@media (max-width: 768px) {
+		width: 270px;
+		height: 60px;
+		font-size: 16px;
+	}
+
+	&__slide {
+		display: flex;
+		width: 181px;
+		height: 100%;
+		background-color: var(--submit-background);
+		align-items: center;
+		justify-content: center;
+		transition: 2s;
+		font-size: 26px;
+
+		@media (max-width: 1440px) {
+			width: 135px;
+		}
+
+		@media (max-width: 1170px) {
+			width: 110px;
+		}
+
+		@media (max-width: 1024px) {
+			width: 96px;
+		}
+
+		@media (max-width: 768px) {
+			width: 135px;
+		}
+
+		&.active {
+			transform: translateX(calc(100% - 4px));
+			background-color: var(--submit-active);
+			color: white;
+		}
+	}
+
+	&__arrows {
+		padding-right: 21px;
+
+		& > :nth-child(1) {
+			opacity: 0.3;
+		}
+
+		& > :nth-child(2) {
+			opacity: 0.6;
+		}
+
+		& > :nth-child(3) {
+			opacity: 1;
+		}
+	}
+}
