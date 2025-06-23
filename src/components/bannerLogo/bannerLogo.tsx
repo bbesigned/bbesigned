@@ -5,11 +5,19 @@ import { IBannerLogo } from "../../types/common/ComponentsProps";
 
 import styles from "./bannerLogo.module.scss";
 
-const BannerLogo = ({ smallLogo }: IBannerLogo) => {
+const BannerLogo = ({ smallLogo, dark }: IBannerLogo) => {
+	const imageSrc = smallLogo
+		? dark
+			? "/logo_small(dark).svg"
+			: "/logo_small(light).webp"
+		: dark
+			? "/logo_dark.svg"
+			: "/logo.webp";
+
 	return (
 		<div className={styles.bannerLogo}>
 			<Image
-				src={smallLogo ? "/logo_small(light).webp" : "/logo.webp"}
+				src={imageSrc}
 				alt="Logo"
 				width={715}
 				height={85}

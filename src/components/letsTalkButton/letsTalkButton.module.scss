@@ -1,16 +1,86 @@
 .letsTalkWrapper {
-	background: transparent;
-	padding: 1.654em 4.203em 1.596em;
-	margin-right: 2.5em;
+	width: 289px;
+	height: 94px;
+	background: var(--pure-white);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@media (max-width: 2560px) {
+		width: 289px;
+		height: 94px;
+	}
+
+	@media (max-width: 1920px) {
+		width: 209px;
+		height: 68px;
+	}
+
+	@media (max-width: 1440px) {
+		width: 160px;
+		height: 52px;
+	}
+
+	@media (max-width: 1170px) {
+		width: 129px;
+		height: 42px;
+	}
+
+	@media (max-width: 1024px) {
+		height: 36px;
+	}
+
+	@media (max-width: 768px) {
+		width: 154px;
+		height: 50px;
+	}
+
+	@media (max-width: 320px) {
+		display: none;
+	}
 
 	.letsTalk__actionElement {
-		color: white;
+		color: var(--pure-black);
 		font-weight: 400;
-		font-size: 2.206em;
+		font-size: 32px;
 		font-family: var(--text-font-family), serif;
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
-		border-bottom: 0.125em solid white;
+		border-bottom: 0.125em solid var(--pure-black);
 		background: transparent;
+		text-align: center;
+
+		@media (max-width: 2560px) {
+			font-size: 32px;
+		}
+
+		@media (max-width: 1920px) {
+			font-size: 24px;
+		}
+
+		@media (max-width: 1440px) {
+			font-size: 18px;
+		}
+
+		@media (max-width: 1170px) {
+			font-size: 14px;
+		}
+
+		@media (max-width: 1024px) {
+			font-size: 12px;
+		}
+
+		@media (max-width: 768px) {
+			font-size: 16px;
+		}
 	}
+}
+
+.letsTalk__actionElement.darkElement {
+	color: var(--pure-white);
+	border-bottom: 0.125em solid var(--pure-white);
+}
+
+.darkWrapper {
+	background: var(--pure-black);
 }
