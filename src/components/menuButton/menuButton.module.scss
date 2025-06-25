@@ -16,10 +16,6 @@
 			align-items: center;
 			border: 2px solid var(--primary-color);
 
-			&_dark {
-				border: 2px solid var(--pure-black);
-			}
-
 			@media (max-width: 2560px) {
 				width: 94px;
 				height: 94px;
@@ -53,6 +49,10 @@
 			@media (max-width: 320px) {
 				width: 38px;
 				height: 38px;
+			}
+
+			&_dark {
+				border: 2px solid var(--pure-black);
 			}
 
 			.burgerMenuContainer__line {
