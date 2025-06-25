@@ -5,12 +5,12 @@ import { IBannerLogo } from "../../types/common/ComponentsProps";
 
 import styles from "./bannerLogo.module.scss";
 
-const BannerLogo = ({ smallLogo, dark }: IBannerLogo) => {
+const BannerLogo = ({ smallLogo, isDark }: IBannerLogo) => {
 	const imageSrc = smallLogo
-		? dark
+		? isDark
 			? "/logo_small(dark).svg"
 			: "/logo_small(light).webp"
-		: dark
+		: isDark
 			? "/logo_dark.svg"
 			: "/logo.webp";
 

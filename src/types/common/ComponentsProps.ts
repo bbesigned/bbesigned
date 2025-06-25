@@ -22,7 +22,7 @@ export interface IVectorLetter {
 
 export interface IBannerLogo {
 	smallLogo?: boolean;
-	dark?: boolean;
+	isDark?: boolean;
 }
 
 export interface IControlButtons {
@@ -66,15 +66,15 @@ export interface IScrollTopButton {
 	classnames?: string;
 }
 
-export interface ILetsTalkButtonProps {
-	dark?: boolean;
+export interface ILetsTalkButton {
+	isDark?: boolean;
 }
 
-export interface IBurgerButtonProps {
-	dark?: boolean;
+export interface IBurgerButton {
+	isDark?: boolean;
 }
 
-export interface IBannerHeaderProps {
-	dark?: boolean;
+export interface IBannerHeader {
+	isDark?: boolean;
 	smallLogo?: boolean;
 }

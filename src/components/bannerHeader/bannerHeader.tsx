@@ -1,4 +1,4 @@
-import { IBannerHeaderProps } from "types/common/ComponentsProps";
+import { IBannerHeader } from "types/common/ComponentsProps";
 
 import BannerLogo from "../bannerLogo/bannerLogo";
 
@@ -8,16 +8,15 @@ import MenuButton from "../menuButton/menuButton";
 
 import styles from "./bannerHeader.module.scss";
 
-const BannerHeader = ({ dark, smallLogo }: IBannerHeaderProps) => {
-	// НАЧАТЬ С ПРОПСА
+const BannerHeader = ({ isDark, smallLogo }: IBannerHeader) => {
 	return (
 		<>
 			<header className={styles.headerWrap}>
 				<div className={styles.headerContainer}>
-					<BannerLogo dark={dark} smallLogo={smallLogo} />
+					<BannerLogo isDark={isDark} smallLogo={smallLogo} />
 					<div className={styles.navigationWrap}>
-						<LetsTalkButton dark={dark} />
-						<MenuButton dark={dark} />
+						<LetsTalkButton isDark={isDark} />
+						<MenuButton isDark={isDark} />
 					</div>
 				</div>
 			</header>

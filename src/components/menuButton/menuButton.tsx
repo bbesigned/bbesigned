@@ -5,11 +5,11 @@ import cn from "classnames";
 
 import ModalBurger from "components/modalBurger/modalBurger";
 
-import { IBurgerButtonProps } from "types/common/ComponentsProps";
+import { IBurgerButton } from "types/common/ComponentsProps";
 
 import styles from "./menuButton.module.scss";
 
-export const MenuButton = ({ dark }: IBurgerButtonProps) => {
+export const MenuButton = ({ isDark }: IBurgerButton) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const handleOpen = () => setIsOpen(true);
@@ -21,19 +21,19 @@ export const MenuButton = ({ dark }: IBurgerButtonProps) => {
 				<div className={styles.burgerMenuActionElement}>
 					<div
 						className={cn(styles.burgerMenuActionElement__burgerMenuContainer, {
-							[styles.burgerMenuActionElement__burgerMenuContainer_dark]: dark,
+							[styles.burgerMenuActionElement__burgerMenuContainer_dark]: isDark,
 						})}>
 						<span
 							className={cn(styles.burgerMenuContainer__line, {
-								[styles.burgerMenuContainer__line_dark]: dark,
+								[styles.burgerMenuContainer__line_dark]: isDark,
 							})}></span>
 						<span
 							className={cn(styles.burgerMenuContainer__line, {
-								[styles.burgerMenuContainer__line_dark]: dark,
+								[styles.burgerMenuContainer__line_dark]: isDark,
 							})}></span>
 						<span
 							className={cn(styles.burgerMenuContainer__line, {
-								[styles.burgerMenuContainer__line_dark]: dark,
+								[styles.burgerMenuContainer__line_dark]: isDark,
 							})}></span>
 					</div>
 				</div>
