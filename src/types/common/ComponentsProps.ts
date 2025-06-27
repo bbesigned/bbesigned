@@ -21,7 +21,8 @@ export interface IVectorLetter {
 }
 
 export interface IBannerLogo {
-	smallLogo: boolean;
+	smallLogo?: boolean;
+	isDark?: boolean;
 }
 
 export interface IControlButtons {
@@ -63,4 +64,17 @@ export interface IWorkCard {
 
 export interface IScrollTopButton {
 	classnames?: string;
+}
+
+export interface ILetsTalkButton {
+	isDark?: boolean;
+}
+
+export interface IBurgerButton {
+	isDark?: boolean;
+}
+
+export interface IBannerHeader {
+	isDark?: boolean;
+	smallLogo?: boolean;
 }
