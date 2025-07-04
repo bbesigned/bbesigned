@@ -86,7 +86,7 @@ const BannerContent = ({ leftText, rightText }: IBannerContent) => {
 				</div>
 			</div>
 
-			<div className={styles.leftBlockBannerWrapperSmallMonitor}>{renderLeftText()}</div>
+			<div className={styles.leftBlockBannerWrapper_smallMonitor}>{renderLeftText()}</div>
 		</div>
 	);
 };

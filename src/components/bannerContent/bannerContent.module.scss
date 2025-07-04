@@ -1,7 +1,6 @@
 .bannerContentWrap {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	position: relative;
 	max-width: 2560px;
 
@@ -47,7 +46,7 @@
 			max-width: 288px;
 		}
 
-		&SmallMonitor {
+		&_smallMonitor {
 			display: none;
 
 			@media (max-width: 768px) {
@@ -64,9 +63,9 @@
 		}
 
 		&__title {
-			font-family: var(--text-font-family), serif;
+			font-family: var(--text-font-family);
 			font-weight: 600;
-			font-size: 2.688em;
+			font-size: 2.69em;
 			color: var(--primary-color);
 			line-height: 1;
 			text-transform: uppercase;
@@ -120,7 +119,7 @@
 			vertical-align: middle;
 
 			&:not(:last-child) {
-				margin-bottom: 0.938em;
+				margin-bottom: 0.94em;
 			}
 
 			&:last-child {
@@ -130,9 +129,9 @@
 	}
 
 	.rightBlockBannerContainer__letter {
-		font-family: var(--font-family), serif;
+		font-family: var(--font-family);
 		font-weight: 900;
-		font-size: 10.375em;
+		font-size: 10.38em;
 		color: var(--primary-color);
 		white-space: pre;
 
@@ -166,7 +165,7 @@
 	}
 
 	.desktopOnly {
-		margin: 0 auto;
+		margin-inline: auto;
 
 		@media (max-width: 768px) {
 			margin: 0;
@@ -186,9 +185,9 @@
 	}
 
 	.transparentLetter {
-		font-family: var(--font-family), serif;
+		font-family: var(--font-family);
 		font-weight: 600;
-		font-size: 10.375em;
+		font-size: 10.38em;
 		color: var(--primary-color);
 		opacity: 0.5;
 		text-transform: uppercase;

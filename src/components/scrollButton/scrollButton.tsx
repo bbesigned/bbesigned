@@ -6,7 +6,7 @@ import styles from "./scrollButton.module.scss";
 
 const ScrollButton = () => {
 	return (
-		<div className={styles.scrollButtonWrapper}>
+		<div>
 			<button className={styles.scrollButtonContainer}>
 				<Image
 					className={styles.scrollButtonContainer__iconElement}
