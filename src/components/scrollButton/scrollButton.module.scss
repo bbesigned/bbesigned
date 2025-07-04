@@ -1,15 +1,14 @@
-.supportButtonWrapper {
-	.supportButtonContainer {
-		background-color: #1ed760;
+.scrollButtonWrapper {
+	.scrollButtonContainer {
 		width: 100px;
 		height: 100px;
 		border-radius: 50%;
-		border: none;
+		border: 0.75px solid var(--primary-color);
+		background-color: transparent;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		cursor: pointer;
-		animation: pulse 4s infinite ease-in-out;
 
 		@media (max-width: 1920px) {
 			width: 82px;
@@ -37,46 +36,39 @@
 		}
 
 		&__iconElement {
-			width: 2.5rem;
-			height: 2.333rem;
+			width: 18px;
+			height: 32px;
 			color: var(--primary-color);
 
 			@media (max-width: 1920px) {
-				width: 30px;
-				height: 28px;
+				width: 15px;
+				height: 27px;
 			}
 
 			@media (max-width: 1440px) {
-				width: 24px;
-				height: 22px;
+				width: 11px;
+				height: 20px;
 			}
 
 			@media (max-width: 1170px) {
-				width: 19px;
-				height: 18px;
+				width: 10px;
+				height: 17px;
 			}
 
 			@media (max-width: 1024px) {
-				width: 15px;
+				width: 8px;
 				height: 14px;
 			}
 
 			@media (max-width: 768px) {
-				width: 24px;
-				height: 22px;
+				width: 11px;
+				height: 20px;
+			}
+
+			@media (max-width: 320px) {
+				width: 11px;
+				height: 20px;
 			}
 		}
-	}
-}
-
-@keyframes pulse {
-	0% {
-		transform: scale(1);
-	}
-	50% {
-		transform: scale(1.15);
-	}
-	100% {
-		transform: scale(1);
 	}
 }

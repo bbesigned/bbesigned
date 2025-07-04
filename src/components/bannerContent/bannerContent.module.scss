@@ -1,12 +1,17 @@
 .bannerContentWrap {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	position: relative;
+	max-width: 2560px;
 
 	@media (max-width: 768px) {
 		flex-direction: column;
 		gap: 40px;
+	}
+
+	.info {
+		display: flex;
 	}
 
 	.leftBlockBannerWrapper {
@@ -14,9 +19,6 @@
 		flex-direction: column;
 		gap: 1em;
 		max-width: 585px;
-		margin-right: 10%;
-		position: absolute;
-		left: 0;
 
 		@media (max-width: 1920px) {
 			max-width: 425px;
@@ -35,9 +37,30 @@
 		}
 
 		@media (max-width: 768px) {
+			display: none;
 			max-width: 253px;
 			position: inherit;
 			order: 1;
+		}
+
+		@media (max-width: 328px) {
+			max-width: 288px;
+		}
+
+		&SmallMonitor {
+			display: none;
+
+			@media (max-width: 768px) {
+				display: flex;
+				flex-direction: column;
+				max-width: 253px;
+				position: inherit;
+				order: 1;
+			}
+
+			@media (max-width: 328px) {
+				max-width: 288px;
+			}
 		}
 
 		&__title {
@@ -68,7 +91,6 @@
 	}
 
 	.rightBlockBannerWrap {
-		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
 		max-width: 955px;
@@ -89,41 +111,13 @@
 			max-width: 382px;
 		}
 
+		@media (max-width: 768px) {
+			width: 100%;
+		}
+
 		.rightBlockBannerContainer {
 			display: inline-block;
 			vertical-align: middle;
-
-			&__letter {
-				font-family: var(--font-family), serif;
-				font-weight: 900;
-				font-size: 10.375em;
-				color: var(--primary-color);
-				white-space: pre;
-
-				@media (max-width: 1920px) {
-					font-size: 90px;
-				}
-
-				@media (max-width: 1440px) {
-					font-size: 66px;
-				}
-
-				@media (max-width: 1170px) {
-					font-size: 55px;
-				}
-
-				@media (max-width: 1024px) {
-					font-size: 48px;
-				}
-
-				@media (max-width: 768px) {
-					font-size: 72px;
-				}
-			}
-
-			&__letter_shadow {
-				text-shadow: 0.05em 0.05em 0 var(--shadow-pink);
-			}
 
 			&:not(:last-child) {
 				margin-bottom: 0.938em;
@@ -135,13 +129,68 @@
 		}
 	}
 
+	.rightBlockBannerContainer__letter {
+		font-family: var(--font-family), serif;
+		font-weight: 900;
+		font-size: 10.375em;
+		color: var(--primary-color);
+		white-space: pre;
+
+		@media (max-width: 1920px) {
+			font-size: 90px;
+		}
+
+		@media (max-width: 1440px) {
+			font-size: 66px;
+		}
+
+		@media (max-width: 1170px) {
+			font-size: 55px;
+		}
+
+		@media (max-width: 1024px) {
+			font-size: 48px;
+		}
+
+		@media (max-width: 768px) {
+			font-size: 72px;
+		}
+
+		@media (max-width: 320px) {
+			font-size: 35px;
+		}
+	}
+
+	.rightBlockBannerContainer__letter_shadow {
+		text-shadow: 0.05em 0.05em 0 var(--shadow-pink);
+	}
+
+	.desktopOnly {
+		margin: 0 auto;
+
+		@media (max-width: 768px) {
+			margin: 0;
+		}
+
+		@media (max-width: 320px) {
+			display: none;
+		}
+	}
+
+	.mobileOnly {
+		display: none;
+
+		@media (max-width: 320px) {
+			display: block;
+		}
+	}
+
 	.transparentLetter {
 		font-family: var(--font-family), serif;
 		font-weight: 600;
 		font-size: 10.375em;
 		color: var(--primary-color);
 		opacity: 0.5;
-		position: absolute;
 		text-transform: uppercase;
 
 		@media (max-width: 1920px) {
@@ -161,25 +210,35 @@
 		}
 
 		@media (max-width: 768px) {
-			font-size: 26px;
+			font-size: 72px;
 		}
+	}
 
-		&Left {
-			left: 0;
-			bottom: 0;
+	.marqueeWrapper {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+	}
 
-			@media (max-width: 768px) {
-				display: none;
-			}
+	.marquee {
+		display: flex;
+		width: max-content;
+		animation: scrollRight 10s linear infinite;
+	}
+
+	.marqueeGroup {
+		display: flex;
+		gap: 50px;
+		white-space: nowrap;
+		margin-right: 100px;
+	}
+
+	@keyframes scrollRight {
+		0% {
+			transform: translateX(-50%);
 		}
-
-		&Right {
-			right: 215px;
-			bottom: 0;
-
-			@media (max-width: 1170px) {
-				right: 115px;
-			}
+		100% {
+			transform: translateX(0%);
 		}
 	}
 }
