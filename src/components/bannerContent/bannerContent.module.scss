@@ -1,8 +1,8 @@
 .bannerContentWrap {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	position: relative;
-	max-width: 2560px;
 
 	@media (max-width: 768px) {
 		flex-direction: column;
