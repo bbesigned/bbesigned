@@ -1,55 +1,243 @@
 .bannerContentWrap {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	.info {
+		display: flex;
+	}
 
 	.leftBlockBannerWrapper {
 		display: flex;
 		flex-direction: column;
 		gap: 1em;
 		max-width: 585px;
-		margin-right: 10%;
+
+		@media (max-width: 1920px) {
+			max-width: 425px;
+		}
+
+		@media (max-width: 1440px) {
+			max-width: 319px;
+		}
+
+		@media (max-width: 1170px) {
+			max-width: 238px;
+		}
+
+		@media (max-width: 1024px) {
+			max-width: 227px;
+		}
+
+		@media (max-width: 768px) {
+			display: none;
+			max-width: 253px;
+			position: inherit;
+			order: 1;
+		}
+
+		@media (max-width: 328px) {
+			max-width: 288px;
+		}
+
+		&_smallMonitor {
+			display: none;
+
+			@media (max-width: 768px) {
+				display: flex;
+				flex-direction: column;
+				max-width: 253px;
+				position: inherit;
+				order: 1;
+			}
+
+			@media (max-width: 328px) {
+				max-width: 288px;
+			}
+		}
 
 		&__title {
-			font-family: var(--text-font-family), serif;
-			font-weight: 500;
-			font-size: 2.688em;
+			font-family: var(--text-font-family);
+			font-weight: 600;
+			font-size: 2.69em;
 			color: var(--primary-color);
 			line-height: 1;
 			text-transform: uppercase;
+
+			@media (max-width: 1920px) {
+				font-weight: 600;
+				font-size: 32px;
+			}
+
+			@media (max-width: 1440px) {
+				font-size: 24px;
+			}
+
+			@media (max-width: 1170px) {
+				font-size: 20px;
+			}
+
+			@media (max-width: 768px) {
+				font-size: 26px;
+			}
 		}
 	}
 
 	.rightBlockBannerWrap {
-		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
 		max-width: 955px;
 
+		@media (max-width: 1920px) {
+			max-width: 716px;
+		}
+
+		@media (max-width: 1440px) {
+			max-width: 533px;
+		}
+
+		@media (max-width: 1170px) {
+			max-width: 432px;
+		}
+
+		@media (max-width: 1024px) {
+			max-width: 382px;
+		}
+
+		@media (max-width: 768px) {
+			width: 100%;
+		}
+
 		.rightBlockBannerContainer {
 			display: inline-block;
 			vertical-align: middle;
-			height: 10.375em;
-			line-height: 7.5em;
-
-			&__letter {
-				font-family: var(--font-family), serif;
-				font-weight: 900;
-				font-size: 10.375em;
-				color: var(--primary-color);
-				white-space: pre;
-			}
-
-			&__letter_shadow {
-				text-shadow: 0.05em 0.05em 0 var(--shadow-pink);
-			}
 
 			&:not(:last-child) {
-				margin-bottom: 0.938em;
+				margin-bottom: 0.94em;
 			}
 
 			&:last-child {
 				margin-bottom: 0;
 			}
+		}
+	}
+
+	.rightBlockBannerContainer__letter {
+		font-family: var(--font-family);
+		font-weight: 900;
+		font-size: 10.38em;
+		color: var(--primary-color);
+		white-space: pre;
+
+		@media (max-width: 1920px) {
+			font-size: 90px;
+		}
+
+		@media (max-width: 1440px) {
+			font-size: 66px;
+		}
+
+		@media (max-width: 1170px) {
+			font-size: 55px;
+		}
+
+		@media (max-width: 1024px) {
+			font-size: 48px;
+		}
+
+		@media (max-width: 768px) {
+			font-size: 72px;
+		}
+
+		@media (max-width: 320px) {
+			font-size: 35px;
+		}
+	}
+
+	.rightBlockBannerContainer__letter_shadow {
+		text-shadow: 0.05em 0.05em 0 var(--shadow-pink);
+	}
+
+	.desktopOnly {
+		margin-inline: auto;
+
+		@media (max-width: 768px) {
+			margin: 0;
+		}
+
+		@media (max-width: 320px) {
+			display: none;
+		}
+	}
+
+	.mobileOnly {
+		display: none;
+
+		@media (max-width: 320px) {
+			display: block;
+		}
+	}
+
+	.transparentLetter {
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: 10.38em;
+		color: var(--primary-color);
+		opacity: 0.5;
+		text-transform: uppercase;
+
+		@media (max-width: 1920px) {
+			font-size: 90px;
+		}
+
+		@media (max-width: 1440px) {
+			font-size: 66px;
+		}
+
+		@media (max-width: 1170px) {
+			font-size: 55px;
+		}
+
+		@media (max-width: 1024px) {
+			font-size: 48px;
+		}
+
+		@media (max-width: 768px) {
+			font-size: 72px;
+		}
+	}
+
+	.marqueeWrapper {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.marquee {
+		display: flex;
+		width: max-content;
+		animation: scrollRight 10s linear infinite;
+	}
+
+	.marqueeGroup {
+		display: flex;
+		gap: 50px;
+		white-space: nowrap;
+		margin-right: 100px;
+	}
+
+	@keyframes scrollRight {
+		0% {
+			transform: translateX(-50%);
+		}
+		100% {
+			transform: translateX(0%);
 		}
 	}
 }

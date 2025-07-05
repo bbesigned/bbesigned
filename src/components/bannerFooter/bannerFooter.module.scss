@@ -2,10 +2,41 @@
 	width: 100%;
 	background: transparent;
 
+	@media (max-width: 320px) {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+
 	.footerContainer {
 		display: flex;
-		justify-content: flex-end;
-		align-items: center;
+		flex-direction: column;
+		gap: 32px;
+		align-items: flex-end;
 		padding: 0.625em 0 3em;
+
+		@media (max-width: 1920px) {
+			gap: 26px;
+		}
+
+		@media (max-width: 1440px) {
+			gap: 20px;
+		}
+
+		@media (max-width: 1170px) {
+			gap: 16px;
+		}
+
+		@media (max-width: 1024px) {
+			gap: 12px;
+		}
+
+		@media (max-width: 768px) {
+			gap: 20px;
+		}
+
+		@media (max-width: 320px) {
+			gap: 12px;
+		}
 	}
 }
