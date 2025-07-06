@@ -6,6 +6,7 @@
 	margin: 0 auto;
 	padding: 0 80px 75px 80px;
 	position: relative;
+	overflow: hidden;
 
 	&__rectangle {
 		position: absolute;
@@ -59,12 +60,22 @@
 	}
 
 	&__scrollbar {
-		width: 5px;
-		height: 907px;
+		width: 1px;
+		height: 100%;
 		background-color: var(--pure-black);
 		margin-right: 197px;
 		border-radius: 10px;
 		box-shadow: inset 0 0 0 1.5px var(--pure-black);
+	}
+
+	&__thumb {
+		position: absolute;
+		width: 5px;
+		top: 0;
+		left: 0;
+		background-color: var(--pure-black); // или accent цвет
+		border-radius: 10px;
+		transition: height 0.1s linear;
 	}
 
 	&__info {

@@ -6,24 +6,17 @@ import BannerHeader from "components/bannerHeader/bannerHeader";
 
 import BannerFooter from "components/bannerFooter/bannerFooter";
 
+import useScrollProgress from "hooks/useScrollProgress";
+
 import aboutUs from "../../../public/aboutUs.png";
 
 import styles from "./aboutUs.module.scss";
 
+import { useMemo } from "react";
+
 const AboutUs = () => {
-	return (
-		<div className={styles.aboutUs}>
-			<div className={styles.aboutUs__rectangle}></div>
-			<div className={styles.aboutUs__header}>
-				<BannerHeader isDark={true} smallLogo={true}></BannerHeader>
-			</div>
-			<div className={styles.aboutUs__content}>
-				<div className={styles.aboutUs__scrollContainer}>
-					<div className={styles.aboutUs__scrollbar}></div>
-					<div className={styles.aboutUs__block}>
-						<div className={styles.aboutUs__title}>about us</div>
-						<div className={styles.aboutUs__info}>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eligendi ullam
+	const { scrollRef, progress } = useScrollProgress();
+	const text = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eligendi ullam
 							consectetur maiores delectus dolores molestiae, velit, nesciunt quasi ea doloremque ut
 							nostrum amet soluta praesentium. Alias, minus! Ducimus, tempore! Voluptatum minus
 							eveniet inventore repellendus in iusto, accusamus dicta quidem soluta nam perspiciatis
@@ -78,7 +71,37 @@ const AboutUs = () => {
 							ullam dicta temporibus suscipit. Quae aliquam, culpa laboriosam architecto excepturi
 							distinctio magnam mollitia vitae ipsum ratione sapiente molestias dicta! Quis,
 							molestiae eligendi. Totam vero quo facilis impedit delectus deleniti praesentium quia.
-							Dolorem, dicta et!
+							Dolorem, dicta et!`;
+
+	function splitByPercent(str: string, percent: number): [string, string] {
+		const index = Math.floor(str.length * (percent / 100));
+		return [str.slice(0, index), str.slice(index)];
+	}
+
+	const [a, b] = useMemo(() => {
+		return splitByPercent(text, progress)
+	}, [progress]);
+
+	
+
+	return (
+		<div className={styles.aboutUs}>
+			<div className={styles.aboutUs__rectangle}></div>
+			<div className={styles.aboutUs__header}>
+				<BannerHeader isDark={true} smallLogo={true}></BannerHeader>
+			</div>
+			<div className={styles.aboutUs__content}>
+				<div className={styles.aboutUs__scrollContainer}>
+					<div className={styles.aboutUs__scrollbar}>
+						<div
+							className={styles.aboutUs__thumb}
+							style={{ height: `${(progress || 0).toFixed(1)}%` }}></div>
+					</div>
+					<div className={styles.aboutUs__block}>
+						<div className={styles.aboutUs__title}>about us</div>
+						<div ref={scrollRef} className={styles.aboutUs__info}>
+							<span style={{color: 'red'}}>{a}</span>
+							<span>{b}</span>
 						</div>
 					</div>
 				</div>
