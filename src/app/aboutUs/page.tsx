@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 
+import { useMemo } from "react";
+
 import BannerHeader from "components/bannerHeader/bannerHeader";
 
 import BannerFooter from "components/bannerFooter/bannerFooter";
@@ -11,8 +13,6 @@ import useScrollProgress from "hooks/useScrollProgress";
 import aboutUs from "../../../public/aboutUs.png";
 
 import styles from "./aboutUs.module.scss";
-
-import { useMemo } from "react";
 
 const AboutUs = () => {
 	const { scrollRef, progress } = useScrollProgress();
@@ -79,10 +79,8 @@ const AboutUs = () => {
 	}
 
 	const [a, b] = useMemo(() => {
-		return splitByPercent(text, progress)
+		return splitByPercent(text, progress);
 	}, [progress]);
-
-	
 
 	return (
 		<div className={styles.aboutUs}>
@@ -91,28 +89,33 @@ const AboutUs = () => {
 				<BannerHeader isDark={true} smallLogo={true}></BannerHeader>
 			</div>
 			<div className={styles.aboutUs__content}>
-				<div className={styles.aboutUs__scrollContainer}>
-					<div className={styles.aboutUs__scrollbar}>
-						<div
-							className={styles.aboutUs__thumb}
-							style={{ height: `${(progress || 0).toFixed(1)}%` }}></div>
-					</div>
-					<div className={styles.aboutUs__block}>
-						<div className={styles.aboutUs__title}>about us</div>
+				<div className={styles.aboutUs__block}>
+					<div className={styles.aboutUs__title}>about us</div>
+					<div className={styles.aboutUs__scrollContainer}>
+						<div className={styles.aboutUs__scrollbar}>
+							<div
+								className={styles.aboutUs__thumb}
+								style={{ height: `${(progress || 0).toFixed(1)}%` }}></div>
+						</div>
+
 						<div ref={scrollRef} className={styles.aboutUs__info}>
-							<span style={{color: 'red'}}>{a}</span>
-							<span>{b}</span>
+							<span className={styles["aboutUs__info-active"]}>{a}</span>
+							<span className={styles["aboutUs__info-not"]}>{b}</span>
 						</div>
 					</div>
 				</div>
 
-				<Image
-					// className={styles.badConnectContainer__image}
-					src={aboutUs}
-					width={768}
-					height={1127}
-					alt="besigned"
-				/>
+				{/* //TODO: Анимация */}
+				<div className={styles.aboutUs__wrapper}>
+					<Image className={styles.aboutUs__image} src={aboutUs} alt="besigned" />
+					<div className={styles.aboutUs__loop}>
+						{"BESIGNED   BESIGNED   BESIGNED".split("").map((char, i, arr) => (
+							<span key={i} style={{ "--i": i, "--n": arr.length }}>
+								<b>{char === " " ? "\u00A0" : char}</b>
+							</span>
+						))}
+					</div>
+				</div>
 			</div>
 			<BannerFooter />
 		</div>
