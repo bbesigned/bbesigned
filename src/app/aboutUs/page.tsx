@@ -1,5 +1,11 @@
 "use client";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 import Image from "next/image";
 
 import { useMemo } from "react";
@@ -11,6 +17,8 @@ import BannerFooter from "components/bannerFooter/bannerFooter";
 import useScrollProgress from "hooks/useScrollProgress";
 
 import aboutUs from "../../../public/aboutUs.png";
+
+import plug from "../../../public/plug.png";
 
 import styles from "./aboutUs.module.scss";
 
@@ -89,9 +97,8 @@ const AboutUs = () => {
 				<BannerHeader isDark={true} smallLogo={true}></BannerHeader>
 			</div>
 			<div className={styles.aboutUs__content}>
-
 				<div className={styles.aboutUs__title}>about us</div>
-				
+
 				<div className={styles.aboutUs__scrollContainer}>
 					<div className={styles.aboutUs__scrollbar}>
 						<div
@@ -117,6 +124,26 @@ const AboutUs = () => {
 					</div>
 				</div>
 			</div>
+			<div className="aboutUs__swiper">
+				<Swiper
+					modules={[Navigation, Pagination, Autoplay]}
+					autoplay={{
+						delay: 2500,
+						disableOnInteraction: false,
+					}}
+					loop={true}
+					spaceBetween={130}
+					slidesPerView="auto">
+					{Array.from({ length: 12 }).map((_, index) => (
+						<SwiperSlide key={index} className={styles.aboutUs__slide}>
+							<div className={styles.aboutUs__imgWrapper}>
+								<Image fill src={plug} alt="besigned" />
+							</div>
+						</SwiperSlide>
+					))}
+				</Swiper>
+			</div>
+
 			<BannerFooter />
 		</div>
 	);

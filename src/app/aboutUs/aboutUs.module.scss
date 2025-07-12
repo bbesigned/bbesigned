@@ -68,6 +68,7 @@
 		display: grid;
 		grid-template-columns: auto auto auto;
 		grid-template-rows: auto 907px;
+		margin-bottom: 100px;
 
 		@media (max-width: 1920px) {
 			grid-template-rows: auto 680px;
@@ -301,6 +302,38 @@
 		@media (max-width: 768px) {
 			width: 542px;
 			height: 777px;
+		}
+	}
+
+	//Swiper
+
+	&__slide {
+		width: 267px;
+		height: 267px;
+
+		@media (max-width: 1920px) {
+			width: 200px;
+			height: 200px;
+		}
+
+		@media (max-width: 1440px) {
+			width: 150px;
+			height: 150px;
+		}
+
+		@media (max-width: 1170px) {
+			width: 122px;
+			height: 122px;
+		}
+
+		@media (max-width: 1024px) {
+			width: 107px;
+			height: 107px;
+		}
+
+		@media (max-width: 768px) {
+			width: 120px;
+			height: 120px;
 		}
 	}
 
