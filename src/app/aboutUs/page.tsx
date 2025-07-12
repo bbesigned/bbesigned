@@ -89,19 +89,19 @@ const AboutUs = () => {
 				<BannerHeader isDark={true} smallLogo={true}></BannerHeader>
 			</div>
 			<div className={styles.aboutUs__content}>
-				<div className={styles.aboutUs__block}>
-					<div className={styles.aboutUs__title}>about us</div>
-					<div className={styles.aboutUs__scrollContainer}>
-						<div className={styles.aboutUs__scrollbar}>
-							<div
-								className={styles.aboutUs__thumb}
-								style={{ height: `${(progress || 0).toFixed(1)}%` }}></div>
-						</div>
 
-						<div ref={scrollRef} className={styles.aboutUs__info}>
-							<span className={styles["aboutUs__info-active"]}>{a}</span>
-							<span className={styles["aboutUs__info-not"]}>{b}</span>
-						</div>
+				<div className={styles.aboutUs__title}>about us</div>
+				
+				<div className={styles.aboutUs__scrollContainer}>
+					<div className={styles.aboutUs__scrollbar}>
+						<div
+							className={styles.aboutUs__thumb}
+							style={{ height: `${(progress || 0).toFixed(1)}%` }}></div>
+					</div>
+
+					<div ref={scrollRef} className={styles.aboutUs__info}>
+						<span className={styles["aboutUs__info-active"]}>{a}</span>
+						<span className={styles["aboutUs__info-not"]}>{b}</span>
 					</div>
 				</div>
 
