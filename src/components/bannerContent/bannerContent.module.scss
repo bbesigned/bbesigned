@@ -93,6 +93,7 @@
 		display: flex;
 		flex-direction: column;
 		max-width: 955px;
+		width: 100%;
 
 		@media (max-width: 1920px) {
 			max-width: 716px;
@@ -228,17 +229,37 @@
 	.marqueeGroup {
 		display: flex;
 		gap: 50px;
+
 		white-space: nowrap;
-		margin-right: 100px;
+		text-transform: uppercase;
+		animation: slideIn 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+
+		@media (max-width: 1920px) {
+			font-size: 90px;
+		}
+		@media (max-width: 1440px) {
+			font-size: 66px;
+		}
+		@media (max-width: 1170px) {
+			font-size: 55px;
+		}
+		@media (max-width: 1024px) {
+			font-size: 48px;
+		}
+		@media (max-width: 768px) {
+			font-size: 72px;
+		}
 	}
 
+
 	@keyframes scroll-right {
+
 		0% {
-			transform: translateX(-50%);
+			transform: translateX(-100%);
 		}
 
 		100% {
-			transform: translateX(0%);
+			transform: translateX(0);
 		}
 	}
 }
