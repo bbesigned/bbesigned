@@ -222,7 +222,7 @@
 	.marquee {
 		display: flex;
 		width: max-content;
-		animation: scrollRight 10s linear infinite;
+		animation: scroll-right 10s linear infinite;
 	}
 
 	.marqueeGroup {
@@ -232,10 +232,11 @@
 		margin-right: 100px;
 	}
 
-	@keyframes scrollRight {
+	@keyframes scroll-right {
 		0% {
 			transform: translateX(-50%);
 		}
+
 		100% {
 			transform: translateX(0%);
 		}

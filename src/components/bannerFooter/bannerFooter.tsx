@@ -2,7 +2,6 @@ import ScrollButton from "components/scrollButton/scrollButton";
 
 import SupportButton from "../supportButton/supportButton";
 
-
 import styles from "./bannerFooter.module.scss";
 
 const BannerFooter = () => {

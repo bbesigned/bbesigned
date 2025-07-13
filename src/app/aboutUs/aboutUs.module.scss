@@ -3,7 +3,7 @@
 	flex-direction: column;
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 80px 75px 80px;
+	padding: 0 80px 75px;
 	position: relative;
 	overflow: hidden;
 
@@ -227,7 +227,6 @@
 		width: 100%;
 		max-width: 786px;
 		overflow-y: scroll;
-		font-family: Noto Sans;
 		font-weight: 500;
 		font-size: 42px;
 		scrollbar-width: none;
@@ -378,45 +377,6 @@
 		@media (max-width: 768px) {
 			width: 120px;
 			height: 120px;
-		}
-	}
-
-	//TODO: Анимация
-	&__loop {
-		position: absolute;
-		top: 5%;
-		right: 5%;
-		width: 300px;
-		height: 300px;
-		border-radius: 50%;
-		font-size: 23px;
-		text-transform: uppercase;
-		animation: spin 10s linear infinite;
-		transform-origin: center;
-		pointer-events: none;
-
-		span {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform-origin: 0 0;
-			transform: rotate(calc(var(--i) * (360deg / var(--n)))) translateX(140px);
-
-			b {
-				display: flex;
-				justify-content: space-between;
-				transform: rotate(calc(var(--i) * (-360deg / var(--n))));
-				text-align: center;
-			}
-		}
-	}
-
-	@keyframes spin {
-		0% {
-			transform: rotate(0deg);
-		}
-		100% {
-			transform: rotate(360deg);
 		}
 	}
 }

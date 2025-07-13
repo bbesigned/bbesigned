@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
 const useScrollProgress = () => {
-	const scrollRef = useRef(null);
+	const scrollRef = useRef<HTMLDivElement | null>(null);
 	const [progress, setProgress] = useState(0);
+	const numberPercent = 100;
 
 	useEffect(() => {
 		const el = scrollRef.current;
@@ -10,7 +11,7 @@ const useScrollProgress = () => {
 
 		const handleScroll = () => {
 			const { scrollTop, scrollHeight, clientHeight } = el;
-			const percent = (scrollTop / (scrollHeight - clientHeight)) * 100;
+			const percent = (scrollTop / (scrollHeight - clientHeight)) * numberPercent;
 			setProgress(percent);
 		};
 

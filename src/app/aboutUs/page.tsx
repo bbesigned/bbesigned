@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay  } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -82,10 +82,11 @@ const AboutUs = () => {
 							distinctio magnam mollitia vitae ipsum ratione sapiente molestias dicta! Quis,
 							molestiae eligendi. Totam vero quo facilis impedit delectus deleniti praesentium quia.
 							Dolorem, dicta et!`;
+	const finalText = 99;
+	const numberPercent = 100;
 
 	function splitByPercent(str: string, percent: number): [string, string] {
-		// eslint-disable-next-line no-magic-numbers
-		const index = Math.floor(str.length * (percent / 100));
+		const index = Math.floor(str.length * (percent / numberPercent));
 		return [str.slice(0, index), str.slice(index)];
 	}
 
@@ -115,20 +116,16 @@ const AboutUs = () => {
 					</div>
 				</div>
 
-				{/* //TODO: Анимация */}
 				<div className={styles.aboutUs__wrapper}>
 					<Image className={styles.aboutUs__image} src={aboutUs} alt="besigned" />
-					<div className={styles.aboutUs__loop}>
-						{"BESIGNED   BESIGNED   BESIGNED".split("").map((char, i, arr) => (
-							<span key={i} style={{ "--i": i, "--n": arr.length }}>
-								<b>{char === " " ? "\u00A0" : char}</b>
-							</span>
-						))}
-					</div>
 				</div>
 			</div>
 
-			<div className={cn(styles.aboutUs__swiper, progress >= 99 && styles.aboutUs__swiperVisible)}>
+			<div
+				className={cn(
+					styles.aboutUs__swiper,
+					progress >= finalText && styles.aboutUs__swiperVisible,
+				)}>
 				<p className={styles.aboutUs__proudly}>Proudly working with</p>
 				<Swiper
 					modules={[Autoplay]}
