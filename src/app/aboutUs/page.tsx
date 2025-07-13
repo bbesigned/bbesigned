@@ -1,12 +1,14 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay  } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import Image from "next/image";
+
+import cn from "classnames";
 
 import { useMemo } from "react";
 
@@ -82,13 +84,14 @@ const AboutUs = () => {
 							Dolorem, dicta et!`;
 
 	function splitByPercent(str: string, percent: number): [string, string] {
+		// eslint-disable-next-line no-magic-numbers
 		const index = Math.floor(str.length * (percent / 100));
 		return [str.slice(0, index), str.slice(index)];
 	}
 
 	const [a, b] = useMemo(() => {
 		return splitByPercent(text, progress);
-	}, [progress]);
+	}, [progress, text]);
 
 	return (
 		<div className={styles.aboutUs}>
@@ -124,16 +127,35 @@ const AboutUs = () => {
 					</div>
 				</div>
 			</div>
-			<div className="aboutUs__swiper">
+
+			<div className={cn(styles.aboutUs__swiper, progress >= 99 && styles.aboutUs__swiperVisible)}>
+				<p className={styles.aboutUs__proudly}>Proudly working with</p>
 				<Swiper
-					modules={[Navigation, Pagination, Autoplay]}
-					autoplay={{
-						delay: 2500,
-						disableOnInteraction: false,
-					}}
+					modules={[Autoplay]}
 					loop={true}
+					speed={4000}
+					slidesPerView="auto"
 					spaceBetween={130}
-					slidesPerView="auto">
+					breakpoints={{
+						1920: {
+							spaceBetween: 100,
+						},
+						1440: {
+							spaceBetween: 75,
+						},
+						1170: {
+							spaceBetween: 60,
+						},
+						1024: {
+							spaceBetween: 52,
+						},
+						768: {
+							spaceBetween: 60,
+						},
+					}}
+					autoplay={{
+						delay: 0,
+					}}>
 					{Array.from({ length: 12 }).map((_, index) => (
 						<SwiperSlide key={index} className={styles.aboutUs__slide}>
 							<div className={styles.aboutUs__imgWrapper}>
