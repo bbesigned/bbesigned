@@ -2,12 +2,36 @@
 
 import cn from "classnames";
 
+import { useEffect, useState } from "react";
+
 import { IBannerContent } from "../../types/common/ComponentsProps";
 
 import styles from "./bannerContent.module.scss";
 
 const BannerContent = ({ leftText, rightText }: IBannerContent) => {
 	const transformedRightText = [rightText[0], `${rightText[1]} ${rightText[2]}`];
+	const [currentWordIndex, setCurrentWordIndex] = useState(0);
+	const animatedWords = ["CONCEPTUALIZE", "PROTOTYPE", rightText[2]];
+	const currentWord = animatedWords[currentWordIndex];
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setCurrentWordIndex((prevIndex) => (prevIndex + 1) % animatedWords.length);
+		}, 3000);
+
+		return () => clearInterval(interval);
+	}, []);
+
+	const getWordClass = () => {
+		if (currentWordIndex < 2) {
+			return styles.transparentLetter;
+		} else {
+			return cn(
+				styles.rightBlockBannerContainer__letter,
+				styles.rightBlockBannerContainer__letter_shadow,
+			);
+		}
+	};
 
 	const renderLeftText = () =>
 		leftText.map((text, index) => (
@@ -53,36 +77,14 @@ const BannerContent = ({ leftText, rightText }: IBannerContent) => {
 
 				<div className={cn(styles.rightBlockBannerWrap, styles.desktopOnly)}>
 					{renderRightText()}
+					<div className={styles.marqueeWrapper}>
+						<div key={currentWord} className={cn(styles.animatedWord, getWordClass())}>
+							{currentWord}
+						</div>
+					</div>
 				</div>
 				<div className={cn(styles.rightBlockBannerWrap, styles.mobileOnly)}>
 					{renderTransformRightText()}
-				</div>
-			</div>
-
-			<div className={styles.marqueeWrapper}>
-				<div className={styles.marquee}>
-					<div className={styles.marqueeGroup}>
-						<p className={styles.transparentLetter}>CONCEPTUALIZE</p>
-						<p
-							className={cn(
-								styles.rightBlockBannerContainer__letter,
-								styles.rightBlockBannerContainer__letter_shadow,
-							)}>
-							{rightText[2]}
-						</p>
-						<p className={styles.transparentLetter}>PROTOTYPE</p>
-					</div>
-					<div className={styles.marqueeGroup}>
-						<p className={styles.transparentLetter}>CONCEPTUALIZE</p>
-						<p
-							className={cn(
-								styles.rightBlockBannerContainer__letter,
-								styles.rightBlockBannerContainer__letter_shadow,
-							)}>
-							{rightText[2]}
-						</p>
-						<p className={styles.transparentLetter}>PROTOTYPE</p>
-					</div>
 				</div>
 			</div>
 
