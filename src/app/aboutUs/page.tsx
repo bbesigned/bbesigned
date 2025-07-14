@@ -85,6 +85,33 @@ const AboutUs = () => {
 	const finalText = 99;
 	const numberPercent = 100;
 
+	function AboutUsSwiper() {
+		return (
+			<Swiper
+				modules={[Autoplay]}
+				loop={true}
+				speed={4000}
+				slidesPerView="auto"
+				spaceBetween={130}
+				breakpoints={{
+					1920: { spaceBetween: 100 },
+					1440: { spaceBetween: 75 },
+					1170: { spaceBetween: 60 },
+					1024: { spaceBetween: 52 },
+					768: { spaceBetween: 60 },
+				}}
+				autoplay={{ delay: 0 }}>
+				{Array.from({ length: 12 }).map((_, index) => (
+					<SwiperSlide key={index} className={styles.aboutUs__slide}>
+						<div className={styles.aboutUs__imgWrapper}>
+							<Image fill src={plug} alt="besigned" />
+						</div>
+					</SwiperSlide>
+				))}
+			</Swiper>
+		);
+	}
+
 	function splitByPercent(str: string, percent: number): [string, string] {
 		const index = Math.floor(str.length * (percent / numberPercent));
 		return [str.slice(0, index), str.slice(index)];
@@ -127,40 +154,7 @@ const AboutUs = () => {
 					progress >= finalText && styles.aboutUs__swiperVisible,
 				)}>
 				<p className={styles.aboutUs__proudly}>Proudly working with</p>
-				<Swiper
-					modules={[Autoplay]}
-					loop={true}
-					speed={4000}
-					slidesPerView="auto"
-					spaceBetween={130}
-					breakpoints={{
-						1920: {
-							spaceBetween: 100,
-						},
-						1440: {
-							spaceBetween: 75,
-						},
-						1170: {
-							spaceBetween: 60,
-						},
-						1024: {
-							spaceBetween: 52,
-						},
-						768: {
-							spaceBetween: 60,
-						},
-					}}
-					autoplay={{
-						delay: 0,
-					}}>
-					{Array.from({ length: 12 }).map((_, index) => (
-						<SwiperSlide key={index} className={styles.aboutUs__slide}>
-							<div className={styles.aboutUs__imgWrapper}>
-								<Image fill src={plug} alt="besigned" />
-							</div>
-						</SwiperSlide>
-					))}
-				</Swiper>
+				<AboutUsSwiper />
 			</div>
 
 			<BannerFooter />

@@ -6,18 +6,18 @@ const useScrollProgress = () => {
 	const numberPercent = 100;
 
 	useEffect(() => {
-		const el = scrollRef.current;
-		if (!el) return;
+		const element = scrollRef.current;
+		if (!element) return;
 
 		const handleScroll = () => {
-			const { scrollTop, scrollHeight, clientHeight } = el;
+			const { scrollTop, scrollHeight, clientHeight } = element;
 			const percent = (scrollTop / (scrollHeight - clientHeight)) * numberPercent;
 			setProgress(percent);
 		};
 
-		el.addEventListener("scroll", handleScroll);
+		element.addEventListener("scroll", handleScroll);
 
-		return () => el.removeEventListener("scroll", handleScroll);
+		return () => element.removeEventListener("scroll", handleScroll);
 	}, []);
 
 	return { scrollRef, progress };
