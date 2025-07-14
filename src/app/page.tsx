@@ -7,6 +7,7 @@ import Works from "components/works/works";
 import Banner from "../components/banner/banner";
 
 import styles from "./page.module.scss";
+import AboutUs from "./aboutUs/page";
 
 export default function Home() {
 	return (
@@ -21,6 +22,8 @@ export default function Home() {
 			</Link>
 
 			<Works />
+
+			<AboutUs />
 
 			<Footer />
 		</div>

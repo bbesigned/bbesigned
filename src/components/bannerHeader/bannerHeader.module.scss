@@ -1,31 +1,6 @@
 .headerWrap {
 	width: 100%;
 	background: transparent;
-	margin-bottom: 333px;
-
-	@media (max-width: 1920px) {
-		margin-bottom: 250px;
-	}
-
-	@media (max-width: 1440px) {
-		margin-bottom: 186px;
-	}
-
-	@media (max-width: 1170px) {
-		margin-bottom: 157px;
-	}
-
-	@media (max-width: 1024px) {
-		margin-bottom: 133px;
-	}
-
-	@media (max-width: 768px) {
-		margin-bottom: 215px;
-	}
-
-	@media (max-width: 320px) {
-		margin-bottom: 140px;
-	}
 
 	.headerContainer {
 		display: flex;

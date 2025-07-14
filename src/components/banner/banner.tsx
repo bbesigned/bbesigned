@@ -19,7 +19,9 @@ const Banner = () => {
 				Your browser does not support the video tag.
 			</video>
 			<div className={commonStyles.container}>
-				<BannerHeader />
+				<div className={styles.bannerWrap__header}>
+					<BannerHeader />
+				</div>
 				<BannerContent leftText={leftText} rightText={rightText} />
 				<BannerFooter />
 			</div>
